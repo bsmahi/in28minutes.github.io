@@ -98,7 +98,7 @@ After entering all the details, click```Start My Free Trial``` button.
 
 And at the end of it, you should land up on a screen like this. 
 
-![image info](resources/02-getting-started-with-kuberbetes-and-gke-step02-009.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-009.png)
 
  
  
