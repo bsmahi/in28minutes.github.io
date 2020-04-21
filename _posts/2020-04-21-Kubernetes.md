@@ -437,7 +437,7 @@ The most important thing is with just two simple commands, we were able to get t
 
 We were able to pick up an image from the Docker Hub, deploy to Kubernetes, and expose it as a service to the outside world. Congratulations for successfully deploying your first application to Kubernetes!
 
-
+### Tools/Plugins used in Kubernetes
 
  
  
