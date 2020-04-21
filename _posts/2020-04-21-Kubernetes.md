@@ -259,6 +259,184 @@ However, right now there is only about ```2.75 GB``` of memory that is available
 
 The answer is Kubernetes. Kubernetes needs to manage the nodes and like every manager, and takes a cut. It says - "Hey, I need to do a lot of work to manage these nodes. So, reserve some CPU and some memory for the work I need to do with these nodes".
 
+### How to deploy Hello World Rest API Image in Kubernetes Cluster
+
+We will go through the steps involved in deploying an application into Kubernetes Cluster..
+
+### Step1: Connecting To The Kubernetes Cluster 
+
+The first step is actually to connect to the Kubernetes cluster. We are awesome programmers; we will use the command line!
+
+Typically, when we want to use command line, we would need to install a lot of software. However, Google Cloud really makes it very very easy. It provides you something called ``Google Cloud Shell``. 
+
+### Step2: The Google Cloud Shell
+
+First thing, make sure that you are inside the cluster. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-001.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-002.png)
+
+Also, now activate cloud shell. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-003.png)
+
+There's an icon present down here to activate the cloud shell. When you click it, the cloud shell opens up. If this the first time you are launching up Cloud Shell, it might take a few minutes.  
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-004.png)
+
+We've customized our Cloud Shell to suit our purpose. We're using terminal preferences, color themes of light, and have made the text size large.
+
+The rest of the screen is actually your interface for the Google Cloud Platform, and that's not really convenient for us to use. That's why the way we prefer using cloud Shell is in its own window. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-005.png)
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-006.png)
+
+You can click this icon, which says: ```Open In New Window```. It's now launched up separately. 
+
+We have a complete UI for the cloud platform also available for us in Cloud Console. We'd want to connect to this cluster. 
+
+#### Step3: Connecting To The Cluster
+
+Click the ```Connect``` icon present in here, to copy the command to click, and run it in here. This command is a Google Cloud command to connect to the cluster. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-007.png)
+
+We're connecting to the in28minutes cluster that we created earlier. We are connecting to the cluster which is in zone ```us-central1-a``` and we're using the project ID for our project.
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-008.png)
+
+The project that we are using is ```My First Project```, the ID for hich is ```solid-course-258105```. 
+
+So, that's the entire command that we are executing to connect to the cluster. Now, we are connected to the cluster. We would want to run commands against this cluster. 
+
+### Overview of kubectl
+
+```kubectl``` is short form for ```Kube controller```. Kubectl is a command line interface for running commands against Kuberntes clusters. We have to remember this command and because we will be using frequently.
+
+```kubectl``` is an awesome Kubernetes command to interact with the cluster. Beautify of this command is, it will work with any Kubernetes cluster, irrespective of whether the cluster is in your ``local machine``, ``datacenter``, or ``in the cloud``.
+
+Use the following syntax to run ``kubectl`` commands from your terminal window:
+
+``kubectl [command] [TYPE] [NAME] [flags]``
+
+ where ``command``, ``TYPE``, ``NAME``, and ``flags`` are: 
+
+* ``command``: Specifies the operation that you want to perform on one or more resources, for example ``create``, ``get``, ``describe``, ``delete``.
+
+*  ``TYPE``: Specifies the resource type. Resource types are case-insensitive and you can specify the singular, plural, or abbreviated forms. For example, the following commands produce the same output: 
+
+    ``kubectl get pod pod1``
+
+    ``kubectl get pods pod1``
+
+    ``kubectl get po pod1``
+  
+ * ``NAME``: Specifies the name of the resource. Names are case-sensitive. If the name is ommitted, details for all resources are displayed, for example ``kubectl get pods``.
+
+Once you connect to the cluster, you can execute commands against any cluster using ```kubectl```. ```kubectl``` can do a lot of powerful things for you with Kubernetes. 
+
+* Deploy a new application
+* Increase the number of instances of an application
+* Deploy a new version of the application
+
+```kubectl``` is readily available and installed in the Cloud Shell. Let's go ahead and type in ```kubectl version```. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-009.png)
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-010.png)
+
+It displays both the client and server version. The server version is the cluster that we are connecting the ```kubectl``` to. 
+
+### Step4: Deploying An Application
+
+Now we have launched up Cloud Shell, are connected to the cluster, and are ready to execute commands against the cluster. 
+We would want to deploy an application. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-011.png)
+
+Execute below commands for deploying an application into a cluster.
+
+```kubectl create deployment [deployment application name] --image=[container image from DockerHub Repository]```
+
+```kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE``` 
+and call this deployment ```hello-world-rest-api``` .
+
+We are going to deploy a REST API which has just ```Hello World``` in ```hello-world-rest-api```, and say ```--image=...``` by providing the container image. 
+
+What does the container image that we would want to make use of? ```in28min/hello-world-rest-api:1.0.0.RELEASE```. Make sure you get this right. 
+
+#### Where The Docker Image Comes From
+
+Now, you might be wondering where is this image coming from? What does ```in28min/hello-world-rest-api:1.0.0.RELEASE``` contain, and how was it created? 
+
+This is the Docker image for the REST API that we would want to deploy. If you are familiar with Docker images, you know that there are a few steps which are involved in creating Docker images and pushing out to Docker Hub. 
+
+What we have done is to help you get started quickly, we have already created a Docker image for the Hello World REST API, and pushed it to the Docker repo which is Docker Hub. 
+
+If you go to [hub.docker.com/u/in28min](hub.docker.com/u/in28min) and look for ```in28min/hello-world-rest-api```, there is a repository which is already present in here. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-013.png)
+
+If you go to the tags, there are a few releases for these applications already present. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-014.png)
+
+The one which we are making use of right now is this ```0.0.1.RELEASE```. We are right now trying to deploy this image. For a moment let's not worry about creation of docker image. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-015.png)
+
+For subsequent applications, we'll create Docker images, deploy them to Docker Hub, and use them from Kubernetes. 
+For now, let's keep our focus on understanding Kubernetes. 
+
+You can find this command on the GitHub repository of the course []() as well. 
+
+Make sure that you don't have any typographic errors - it's ```--image=in28min/hello-world-rest-api:0.0.1.RELEASE```. You can also copy the entire tag from here.  
+
+```kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE```
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-016.png)
+
+This command would deploy the application to a Kubernetes cluster, and gives you a deployment ID. The deployment is now created. 
+
+### Exposing The Created Deployment
+
+We can expose our app publicly. For this, we have another command - ```kubectl expose deployment```. The name of the deployment we want to expose is ```hello-world-rest-api```. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-017.png)
+
+We would want to expose it as a load balancer - ```--type=load-balancer```. We want to expose it on port ```8080```. The entire command turns out to be  ```kubectl expose deployment hello-world-rest-api 123 --type=LoadBalancer 124 --port=8080```.
+
+This would expose our app publicly. There is a service which is being exposed right now. We want to find out the status of creation of these. 
+
+### Verifying The Deployment
+
+We will go to the UI and check that up. Let's go to ```Service & Ingress```. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-018.png)
+
+It's creating service endpoints. If you wait for a little while, you'd see that a ```OK``` button comes in. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-019.png)
+
+So, the status is now OK. 
+
+It says ```hello-world-rest-api``` is all available, and at the following endpoints. Let's see what's available at the endpoint, by clicking on the endpoint link. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-020.png)
+
+It says ```{healthy:true}``` and the REST API which is exposed from here is at ```/hello-world```. The message ```Hello World V1``` is also displayed. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step05-021.png)
+
+The important thing is when you execute this URL, you are getting a response back. The other URLs which are present in this specific services are ```hello-world-bean```, which returns a JSON response. 
+
+### The Kubernetes Deployment In Perspective
+
+The most important thing is with just two simple commands, we were able to get the entire thing working. 
+
+We were able to pick up an image from the Docker Hub, deploy to Kubernetes, and expose it as a service to the outside world. Congratulations for successfully deploying your first application to Kubernetes!
+
 
 
  
