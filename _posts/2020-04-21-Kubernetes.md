@@ -469,10 +469,7 @@ The package manager for Kubernetes and it is the best way to find, share, and us
 
 ### Important Kubernetes Commands
 
-Please refer to below link where we can consolidated a list of commands used in kubernetes
+Please refer to the below link where we have a consolidated list of commands used in kubernetes
 
 [Kubernetes Commands List](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-
-
- 
  
