@@ -21,3 +21,11 @@ More than just enabling a containerized application to scale, Kubernetes has rel
 And also using Kubernetes for solutions that are already containerized can drastically reduce development time spent on operations and deployment. However, the effort of migration existing brown-field applications or legacy solution to be container-based so that Kubernetes can be used may be a viable solution.
 
 ### Understanding Kubernetes Architecture
+
+Kubernetes Architecture has the following main components:
+ - Master Node(s)
+ - Worker/Slave Node(s)
+ - Distributed Key-Value Store(etcd)
+ 
+ ![image info](images/kubernetesarchitecture.jpg)
+ 
