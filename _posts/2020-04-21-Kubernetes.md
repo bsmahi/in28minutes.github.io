@@ -65,7 +65,7 @@ Using Kubernetes with Docker is that an automated system asks Docker to do those
 
 Let's start with creating a Google Cloud Account
 
-### Creating A Google Cloud Free Trial Account
+#### Creating A Google Cloud Free Trial Account
 
 Make sure that you're logged into your Google account and go to the website [cloud.google.com](cloud.google.com). 
 
