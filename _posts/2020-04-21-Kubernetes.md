@@ -23,9 +23,13 @@ And also using Kubernetes for solutions that are already containerized can drast
 ### Understanding Kubernetes Architecture
 
 Kubernetes Architecture has the following main components:
+
  - Master Node(s)
  - Worker/Slave Node(s)
  - Distributed Key-Value Store(etcd)
  
- ![image info](images/kubernetesarchitecture.jpg)
+ ![Kubernetes Architecture](../images/kubernetesarchitecture.jpg)
+ 
+ 
+ 
  
