@@ -1,9 +1,8 @@
 - What is Kubernetes
 - Why Kubernetes is Popular?
 - Understanding Kubernetes Architecture
-- How does Kubernetes work?
-- How to configure Kubernetes Cluster in Google Cloud
 - Role of Docker in Kubernetes
+- How to configure Kubernetes Cluster in Google Cloud
 - How to deploy Hello World Rest API Image in Kubernetes Cluster
 - Tools/Plugins used in Kubernetes
 - Kubernetes Commands
@@ -52,7 +51,55 @@ It consists of the following components:
 #### Distributed Key-Value Store(Etcd)
 
 etcd is written in the Go programming language. It is a distributed key-value store which stores the cluster state, it can be part of the Kubernetes master or, it can be configured externally. Along with storing the cluster state, it is also used to store configuration details such as subnets, ConfigMaps, Secrets, etc.
- 
+
+### Role of Docker in Kubernetes
+
+Docker plays a pivotal role in Kubernetes architecture. It can be used as a container runtime that Kubernetes orchestrates. When Kubernetes schedules a pod to a node, the kubelet on that node will instruct Docker to launch the specified containers.
+
+The kubelet then continuously collects the status of those containers from Docker and aggregates that information in the master. Docker pulls containers onto that node and starts and stops those containers.
+
+Using Kubernetes with Docker is that an automated system asks Docker to do those things instead of the admin doing so manually on all nodes for all containers.
+
+### How to configure Kubernetes Cluster in Google Cloud
+
+
+Let's start with creating a Google Cloud Account
+
+### Creating A Google Cloud Free Trial Account
+
+Make sure that you're logged into your Google account and go to the website [cloud.google.com](cloud.google.com). 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-002.png)
+
+Click the button ```Get Started For Free```. 
+
+Choose your country, read the ```Terms of Services```, and agree to them. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-003.png)
+
+At the time of writing this, Google free trial account gives you ```$300``` credit, as well as free access to a number of Google services for about 12 months. 
+
+> Google does not auto charge you after the free trial ends. 
+
+Click ```Continue```. 
+
+You will be asked a lot of details. Follow the screens and enter the requested details.
+- Choose your account type
+- Enter your tax information
+- Enter your address information
+- Choose your payment method and card details (Go through the card verification process which can change based on the country you are in)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-004.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-005.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-006.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-007.png)
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-008.png)
+
+After entering all the details, click```Start My Free Trial``` button. 
+
+And at the end of it, you should land up on a screen like this. 
+
+![image info](resources/02-getting-started-with-kuberbetes-and-gke-step02-009.png)
+
  
  
  
