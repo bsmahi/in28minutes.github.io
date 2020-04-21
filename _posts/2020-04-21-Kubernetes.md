@@ -47,6 +47,11 @@ It consists of the following components:
 1. Container runtime
 2. Kubelet
 3. Kube-proxy
+4. Pods
+
+#### Distributed Key-Value Store(Etcd)
+
+etcd is written in the Go programming language. It is a distributed key-value store which stores the cluster state, it can be part of the Kubernetes master or, it can be configured externally. Along with storing the cluster state, it is also used to store configuration details such as subnets, ConfigMaps, Secrets, etc.
  
  
  
