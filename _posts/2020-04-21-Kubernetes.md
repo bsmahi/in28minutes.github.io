@@ -30,6 +30,24 @@ Kubernetes Architecture has the following main components:
  
  ![Kubernetes Architecture](../images/kubernetesarchitecture.jpg)
  
+#### Master Node(s)
+
+It will perform all administrative tasks like responsible and managing the Kubernetes cluster. There can be more than one master node in the cluster to check for fault tolerance. If we have more than one master node which makes system in a High Availablity mode, in which one of them will be the main node which we perform all the tasks.
+It consists of 4 components:
+   1. API Server
+   2. Scheduler
+   3. Controller Manager
+   4. Etcd
+
+#### Worker Node(s)
+
+It acts like a physical server or you can say a VM which runs the applications using Pods (a pod scheduling unit) which is controlled by the master node. On a physical server (worker/slave node), pods are scheuduled. In order to access the application from the external world, we will connect to work nodes.
+
+It consists of the following components:
+1. Container runtime
+2. Kubelet
+3. Kube-proxy
+ 
  
  
  
