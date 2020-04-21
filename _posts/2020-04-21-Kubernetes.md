@@ -439,6 +439,40 @@ We were able to pick up an image from the Docker Hub, deploy to Kubernetes, and 
 
 ### Tools/Plugins used in Kubernetes
 
+ #### Minikube
+
+Minikube allows you to install and try out Kubernetes locally. The tool is a good starting point for Kubernetes exploration. Easily launch a single-node Kubernetes cluster inside a virtual machine (VM) on your computer/laptop. Minikube is available on Windows, Linux, and OSX. In just 5 minutes you will be able to explore Kubernete's main features. 
  
+[Minikube](https://github.com/kubernetes/minikube)
+
+#### kubectl
+
+kubectl is a command line tool used to interact with the Kubernetes cluster. It offers a host of features, including the ability to create, stop, and delete resources; describe active resources; and auto scale resources.
+
+#### Kubelet
+
+In a Kubernetes cluster, Kubelet acts as a bridge between the master and the worker nodes. It is the primary node agent that runs on each node and maintains a set of pods. Kubelet watches for PodSpecs via the Kubernetes API server and collects resource utilization statistics, pod and events status.
+
+#### Kubernetes Dashboard
+
+Kubernetes Dashboard is a web-based, UI add-on for Kubernetes clusters. It has many features that allow users to create and manage workloads as well as do discovery, load balancing, configuration, storage, and monitoring. It is helpful for small clusters and for people starting to learn Kubernetes.
+
+This tool offers different views for CPU and memory usage metrics aggregated across all nodes. It can also be used to monitor the health status of workloads (pods, deployments, replica sets, cron jobs, etc.). Installing Kubernetes Dashboard is quite easy and can be done using ready-to-use YAML files.
+
+#### Prometheus
+
+Prometheus is one of the most popular monitoring tools used with Kubernetes. It's community-driven and a member of the Cloud Native Computing Foundation. Prometheus stores all its data as a time series. This data can be queried via the PromQL query language and visualized with a built-in expression browser. Since Prometheus is not a dashboard, it relies on Grafana for visualizing data.
+
+#### Helm
+
+The package manager for Kubernetes and it is the best way to find, share, and use software built for Kubernetes, For more details on Helm [Helm](https://helm.sh/)
+
+### Important Kubernetes Commands
+
+Please refer to below link where we can consolidated a list of commands used in kubernetes
+
+[Kubernetes Commands List](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+
  
  
