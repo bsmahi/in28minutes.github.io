@@ -100,7 +100,7 @@ And at the end of it, you should land up on a screen like this.
 
 ![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-009.png)
 
-# Creating A Kubernetes Cluster With Google Kubernetes Engine - GKE
+#### Creating A Kubernetes Cluster With Google Kubernetes Engine - GKE
 
 Let's understand the important terminology used in Kubernetes - `cluster`, `nodes` and `master nodes`.
 
@@ -197,6 +197,67 @@ Let's go ahead and click ```Create```.
 
 
 This would kick start the creation of a Kubernetes cluster. It would take about five minutes to create the cluster.
+
+While the creation of the cluster is in progress, let's look at a few fun facts related to Kubernetes. 
+
+### How Kubernetes Is represented
+
+Kubernetes' abbreviation is ```K8S```. ```K8S``` actually stands for Kubernetes. So, K 8 letters, and S. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step04-001.png)
+
+The next interesting fact is Kubernetes is pronounced as ```Coo-ber-net-is```. The next time you see a friend of yours saying Cubernetis or something like that, correct him to say ```Kubernetes```. 
+
+The next interesting fact is logo - ```Helmsman```. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step04-002.png)
+
+The logo of Kubernetes represents somebody who is providing direction to a ship. In olden days on a ship, you had something like this to manage the direction of the ship, and this was the role of somebody called a ```Helmsman```. Kubernetes manages things, and that's where its logo, the Helmsman, comes from. 
+
+### Kubernetes And Cloud Providers
+
+The last interesting fact is Kubernetes on the cloud. Different cloud providers provide different services for Kubernetes. 
+
+* Azure calls it AKS, Azure Kubernetes service. 
+* Amazon calls it EKS, Elastic Kubernetes Service, and 
+* Google calls it GKE, Google Kubernetes Engine. 
+
+Okay, that's end of the fun facts! Let's see if our cluster is ready. 
+
+### Readiness of The Launched Kubernetes Cluster
+
+We can an icon saying that a cluster is running. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step04-004.png)
+
+On the screen, bit of generic information about this cluster is displayed. It has three nodes, three virtual CPUs, and ```11.25 GB``` of memory. 
+
+We saw that each of the nodes had three parts of ```3.75 GB```, which is summed up here as ```11.25 GB```. Now, let's go inside where you can see some more generic information about this cluster. 
+
+#### Viewing Generic Cluster Information
+
+You can see all the following: 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step04-005.png)
+
+* The version of Kubernetes it makes use of 
+* The total size
+* The location of where the master node and worker nodes are present 
+* And a few other details about the cluster. 
+
+If you go to the nodes, the details of all the nodes are also present. On the screen, you can see more information about the nodes. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step04-006.png)
+
+There are three nodes, and some amount of CPU has already been requested on these specific nodes. How much CPU and memory is available for new applications on these specific nodes, is also displayed. 
+
+#### Kubernetes Takes A Cut Of Resources
+
+Let's talk about something very very important before we move on. When we created the nodes, we created them with ```1 vCPU``` and about ```3.75 GB``` of memory. 
+
+However, right now there is only about ```2.75 GB``` of memory that is available on each of these nodes. What is happening with the rest of the memory? Who is making use of it? 
+
+The answer is Kubernetes. Kubernetes needs to manage the nodes and like every manager, and takes a cut. It says - "Hey, I need to do a lot of work to manage these nodes. So, reserve some CPU and some memory for the work I need to do with these nodes".
 
 
 
