@@ -2,7 +2,7 @@
 - Why Kubernetes is Popular?
 - Understanding Kubernetes Architecture
 - Role of Docker in Kubernetes
-- How to configure Kubernetes Cluster in Google Cloud
+- How to create and configure Kubernetes Cluster in Google Cloud
 - How to deploy Hello World Rest API Image in Kubernetes Cluster
 - Tools/Plugins used in Kubernetes
 - Kubernetes Commands
@@ -99,6 +99,106 @@ After entering all the details, click```Start My Free Trial``` button.
 And at the end of it, you should land up on a screen like this. 
 
 ![image info](../images/02-getting-started-with-kuberbetes-and-gke-step02-009.png)
+
+# Creating A Kubernetes Cluster With Google Kubernetes Engine - GKE
+
+Let's understand the important terminology used in Kubernetes - `cluster`, `nodes` and `master nodes`.
+
+This is the best way I found to define Kubernetes
+> Kubernetes is the best resource manager ever. 
+
+What does Kubernetes manage? 
+
+Among the important things that Kubernetes manages is your servers and these servers are in the cloud. So, Kubernetes manages your virtual servers.
+
+> Kubernetes can also manage servers in your data centers.
+
+Different cloud providers have different names for these virtual servers:
+- Amazon calls them EC2, or Elastic Compute Cloud. 
+- Azure calls them virtual machines
+- and Google Cloud calls them compute engines.
+
+Kubernetes uses a very generic terminology and calls virtual servers as `nodes`.
+
+Kubernetes can manage thousands of such `nodes`.
+
+What do we do when you have thousands of things to manage? 
+
+You introduce managers. 
+
+To manage thousands of Kubernetes nodes, you have a few `master nodes`. 
+
+Typically, you'll have one master node, but when you need high availability, you can have for multiple master nodes.
+
+Here is a picture showing the typical Kubernetes Cluster:
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-001.png)
+
+A cluster is nothing but a combination of nodes and the master node. 
+- The nodes that do the work are called worker nodes or simply `nodes`.
+- The nodes that do the management work are called `master nodes`. 
+
+## Prerequisites
+
+Here are the prerequisites for creating a Kubernetes cluster
+- Login into your Google Cloud Account [cloud.google.com](cloud.google.com) and launch up ```Console```. 
+- Choose the project - ```My First Project```. By default, this should be already chosen. 
+- Enable Kubernetes Engine - Type ```Kubernetes``` into search drop down, and click the ```Kubernetes Engine``` icon. It would take a little while before the Kubernetes Engine is activated. (screenshot below)
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-003.png)
+
+#### Overview of the Kubernetes Dashboard
+
+Let's get a quick overview of the Kubernetes Engine Dashboard.
+
+Here are some of the important items in your left hand side menu:
+- ```Clusters``` - You can create and manage clusters. 
+- ```Workloads``` - You can manage the applications or the containers that you would want to deploy into the cluster.
+- ```Services & Ingress```- Some of your workloads might be REST API or web applications. You would want to provide access to external world to these workloads. Services give external world access to applications which are deployed into Kubernetes clusters. 
+- ```Configuration``` to store your application configuration
+- ```Storage``` to provide persistent data storage for your application. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-005.png)
+
+
+#### Creating a Kubernetes Cluster
+
+Let's get started with creating a cluster. 
+
+Let's click ```Create Cluster```. 
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-006.png)
+
+When you're creating a cluster, you would need to choose 
+- How powerful your cluster is? You can choose the type of nodes and number of nodes
+- Where should your cluster be located?
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-007.png)
+
+
+Here are some of the choices we will make next:
+- Name the cluster as ```in28minutes-cluster```, locate it in ```us-central1-a```. 
+- Choose the default Kubernetes version. 
+- We will start with three nodes in our cluster, choosing general-purpose nodes. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-010.png)
+
+
+Google Cloud provides a variety of nodes: 
+* CPU optimized 
+* Memory optimized
+* GPU optimized, for graphics. 
+
+We'll stick to the basics and choose the defaults.
+
+With each of these nodes, we get one virtual CPU, and about ```3.75 GB``` of memory. 
+
+Let's go ahead and click ```Create```. 
+
+![image info](../images/02-getting-started-with-kuberbetes-and-gke-step03-011.png)
+
+
+This would kick start the creation of a Kubernetes cluster. It would take about five minutes to create the cluster.
+
+
 
  
  
