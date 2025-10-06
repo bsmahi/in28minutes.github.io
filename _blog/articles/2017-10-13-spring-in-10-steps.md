@@ -1,61 +1,66 @@
 ---
 layout:     post
 title:      Spring Framework Tutorial for Beginners - Your First 10 Steps
-date:       2023-03-13 12:31:19
+date:       2025-09-24 12:31:19
 summary:    Learn the basics of Spring Framework setting up a very simple example.
 categories: SpringFramework
 permalink:  /spring-tutorial-for-beginners
 image: /images/spring-framework-category.png
 ---
 
-The Spring Framework remains as popular today as it was when I first used it 12 years ago. How is this possible in an incredibly dynamic world where architecture has completely changed?
+The Spring Framework is just as popular today as it was 12 years ago when I first used it.  
+How has it managed to stay relevant in an ever-changing world where software architecture has evolved so dramatically?
 
 ### What you will learn
 
 - Spring Framework Fundamentals
-	- Dependency Injection
-	- Constructor and Setter Injections
-	- Autowiring
-- Important Annotations-@Component, @Autowired, @Primary
-- An Overview of Spring Modules
-- An Overview of Spring Projects
-
-
+    - Dependency Injection
+    - Constructor and Setter Injection
+    - Autowiring
+- Key Annotations: `@Component`, `@Autowired`, `@Primary`
+- Overview of Core Spring Modules
+- Overview of Major Spring Projects
 
 ### Section Introduction
 
-Welcome to this section where we will be introducing the Spring Framework to you. In this section, we will help you set up a simple Spring project. We will help you understand the concepts of tight coupling, loose coupling, dependency injection, inversion of control, and autowiring. We will also give you a high-level picture of the spring world.
-- What are Spring Modules? 
-- What are Spring projects? 
+Welcome to this section on the Spring Framework.  
+Here, we will guide you through setting up a simple Spring project and introduce key concepts such as tight coupling, loose coupling, dependency injection, inversion of control, and autowiring. You will also get a high-level overview of the Spring ecosystem:
 
-We’ll also understand why the Spring Framework is so popular. 
+- What are Spring Modules?
+- What are Spring Projects?
+
+Finally, we’ll explore why the Spring Framework continues to be so popular.
 
 ### The First 10 Steps in Spring
 
-#### Step 1: Create a Spring Project with HTTP: start.spring.io
+#### Step 1: Create a Spring Project with Spring Initializr
 
-One of the most important features of the Spring Framework is dependency injection. The Spring framework helps in creating loosely coupled applications. To be able to appreciate dependency injection, you should understand tight coupling and how to create loosely coupled applications. What we will start with is setting up a simple example to be able to understand tight couplings and also dependency injection. 
+One of the most important features of the Spring Framework is **dependency injection**, which enables the creation of loosely coupled applications. To fully appreciate dependency injection, it’s essential to first understand **tight coupling** and how Spring helps us move toward **loose coupling**.
 
-Creating a Spring Project with Spring Initializr is a cake walk. 
+We’ll begin by setting up a simple example that highlights these concepts.
 
-> Spring Initializr [http://start.spring.io/](http://start.spring.io/){:target="_blank"} is great tool to bootstrap your Spring Boot projects.
+Creating a Spring project with **Spring Initializr** is straightforward:
+
+> Spring Initializr [http://start.spring.io/](http://start.spring.io/) is a powerful tool to quickly bootstrap your Spring Boot projects.
+
 
 ![Image](/images/spring-initializr-spring-in-10-steps.png "Spring Initializr")   
 
-As shown in the image above, the following steps have to be taken.
+As shown in the image above, follow these steps:
 
-- Launch Spring Initializr and choose the following
-  - Choose `com.in28minutes.spring.basics` as Group
-  - Choose `spring-in-5-steps` as Artifact
-  - Do not choose any dependencies.
-    - By default, the Basic Starter is included, which has the core spring framework and the spring test starter.
-- To begin a new project, click the "Generate" button.
-- Import the project into Eclipse.
-- If you want to understand all the files that are part of this project, you can go here.
+- Launch **Spring Initializr** and configure it as follows:
+    - Group: `com.in28minutes.spring.basics`
+    - Artifact: `spring-in-5-steps`
+    - Do not select any additional dependencies.
+        - By default, the Basic Starter is included, which provides the core Spring Framework and the Spring Test Starter.
+- Click the **Generate** button to create a new project.
+- Import the project into **Eclipse**.
+- To understand all the files that are part of this project, refer to the provided resource.
 
-#### Step 2 : Understanding Tight Coupling with the Binary Search Algorithm Example
+#### Step 2: Understanding Tight Coupling with the Binary Search Algorithm Example
 
-Set up an example of tight coupling with the Binary Search and Bubble Sort Algorithms as shown in the picture below.
+Next, set up an example of **tight coupling** using the Binary Search and Bubble Sort algorithms, as illustrated in the diagram below.
+
 
 ![Image](/images/SpringIn10Steps-BinarySearchTightlyCoupleWithBubbleSort.png "Spring In 10 Steps - Tight Coupling") 
 
@@ -80,7 +85,9 @@ public interface SortAlgorithm {
 ```java
 public class BinarySearchImpl {
 
-	private SortAlgorithm sortAlgorithm;
+    private SortAlgorithm sortAlgorithm;
+
+}    
 ```	
 
 
@@ -93,6 +100,7 @@ That's where the Spring Framework comes in!
 Let's start using Spring to do autowiring.
 
 Notes
+
 - The sort algorithm is a dependency of the binary search.
 
 
@@ -117,17 +125,17 @@ public class BubbleSortAlgorithm implements SortAlgorithm {
 
 #### Step 5 : What is happening in the background?
 
-Enable debug logging and check what's happening in the background.
+Enable debug logging to observe what’s happening behind the scenes.
 
-/src/main/resources/application.properties
+**/src/main/resources/application.properties**
 ```properties
 logging.level.org.springframework = debug
 ```
 
-- Spring does a component scan on the parent package "com.in28minutes.spring.basics.springin5steps" to find the component classes that have @Component on them.
-- It identifies components and dependencies.
-- It determines that BinarySearchImpl is dependent. SortAlgorithm
-- It identifies that SortAlgorithm does not have a dependency. So, it creates an instance of it and autowires it into an instance of BinarySearchImpl.
+- Spring performs a component scan on the parent package com.in28minutes.spring.basics.springin5steps to discover classes annotated with @Component.
+- It identifies available components and their dependencies.
+- It determines that BinarySearchImpl depends on SortAlgorithm.
+- Since SortAlgorithm itself has no dependencies, Spring creates an instance of it and automatically wires it into an instance of BinarySearchImpl.
 
 #### Step 6 : Dynamic auto wiring and troubleshooting-@Primary
 
@@ -147,9 +155,9 @@ public class QuickSortAlgorithm implements SortAlgorithm {
 }
 ```
 
-There are now two matching SortAlgorithm instances. Spring throws an exception because it does not know which one to use.
+There are now two matching SortAlgorithm instances. Spring throws an exception because it doesn’t know which one to use.
 
-We use @Primary to mark one of the SortAlgorithm implementations as more important!
+We can use the @Primary annotation to mark one of the SortAlgorithm implementations as the default or preferred choice.
 
 ```java
 package com.in28minutes.spring.basics.springin5steps;
@@ -176,47 +184,51 @@ Setter Injection
  
 #### Step 8 : Spring Modules
 
-Spring is built in a very modular way, and this enables us to use specific modules without using the other modules of Spring.
+Spring is designed in a highly modular way, allowing us to use specific modules independently without needing the others.
 
 ![Image](/images/SpringIn10Steps-SpringModules.png "Spring In 10 Steps - Spring Modules") 
 
 Notes
-- Spring beans, core and context form the core of the spring framework—creating an application context, managing bean lifecycles, and autowiring. 
-- Spring also has very good integration with data and integration layers. 
-- One of the important data access modules is Spring JDBC, which makes JDBC much easier. Something which would take twenty-five lines of code with JDBC would typically take five to 10 lines of code with Spring JDBC. Spring has good integration with JPA and ORM-based frameworks like Hibernate.
-- Spring JMS You'd be able to talk to the other applications using JMS. You can put messages in the queue and wherever. Object to XML transformation is needed in those kind of scenarios. 
-- The Spring has really good connections with web frameworks like Struts. Spring also offers a web framework of its own. It's called Spring MVC.
-- Crosscutting concerns: concerns of more than one layer. Through aspect-oriented programming, Spring enables easy implementation of cross-cutting concerns like security and logging. Spring has a module of its own called Spring AOP to do basic aspect-oriented programming. Spring provides really good integration with AspectJ as well. 
-- Spring has good support for unit testing through the Spring test framework.
+- **Spring Beans, Core, and Context** form the foundation of the Spring Framework — they are responsible for creating the application context, managing bean lifecycles, and handling dependency injection (autowiring).
+- Spring provides excellent integration with both data access and integration layers. 
+- One of the key data access modules is Spring JDBC, which simplifies working with JDBC. Code that typically requires around twenty-five lines in plain JDBC can often be written in just five to ten lines using Spring JDBC. Spring also integrates seamlessly with JPA and ORM frameworks such as **Hibernate**.
+- **Spring JMS** enables communication between applications using JMS. You can send and receive messages through queues, and perform object-to-XML transformations when required.
+- **Spring** has strong integration with web frameworks like **Struts**, and it also offers its own web framework called **Spring MVC**.
+- **Cross-Cutting Concerns** refer to functionalities that affect multiple layers of an application, such as security and logging. Through **aspect-oriented programming (AOP)**, Spring makes it easy to handle these concerns. The **Spring AOP** module provides basic AOP capabilities, and Spring also offers excellent integration with **AspectJ**.
+- **Spring** provides robust support for unit testing through the **Spring Test** framework.
 
 #### Step 9 : Spring Projects
 
-Spring projects provide solutions for different problems faced by enterprise applications.
+Spring projects offer solutions to various challenges commonly faced by enterprise applications.
 
 ![Image](/images/SpringIn10Steps-SpringProjects.png "Spring In 10 Steps - Spring Projects")
 
-Notes
-- Spring Boot is one of the most popular frameworks to develop micro services today. Spring Boot makes it very easy to develop applications quickly. With features like starter projects, auto configuration, and actuators, Spring Boot makes developing production-ready applications a cakewalk. 
-- We know that the world is moving towards the cloud. Everybody wants to deploy their applications on the cloud. And therefore, it's not sufficient if we develop good applications. We have to develop cloud native applications. We would want to be able to dynamically configure applications. We would be able to dynamically connect them. Cloud native applications need a lot of different features. Spring Cloud can be used to cloud enable a micro service. 
-- Spring data provides consistent data access. If we go a few years back, there was only one kind of database that we connected to: a relational SQL database. Today, we have a mix of data sources. How do you ensure that the way we access data from all these sources remains consistent? That’s what Spring data aims to solve. 
-- Spring integration, on the other hand, addresses problems with application integration. Spring Integration implements the patterns which are recommended in the book "Enterprise Integration Patterns". -- Batch applications have their own requirements. For example, I would want to be able to restart a failed job from where it failed, or I would want to be able to track down exactly what's happening in a batch in much more minute detail. Spring Batch provides those kinds of features. It enables developing batch applications very easily. 
-- Security is one of the important parts of developing applications. You'd want your applications to be secure, whether you are developing a web application or a REST service. Spring Security provides solutions for securing your applications.
-- Spring HATEOAS enables you to develop HATEOAS compatible services. In REST, it’s not sufficient to just return the data. You'd also want to return the related links that would help the consumer understand where to go from here. Spring HATEOAS would help you to do that very easily. 
+### Notes
 
-What we're looking at are seven of the spring projects that are just touching the tip of the iceberg. There are a lot of other Spring projects like Spring webservices, Spring sessions, Spring social, Spring mobile, and Spring Android which are solving problems in various different spaces. 
+- **Spring Boot** is one of the most popular frameworks for developing microservices today. It makes application development fast and easy. With features like starter projects, auto-configuration, and actuators, Spring Boot simplifies building production-ready applications.
+- The world is moving towards the **cloud**, and everyone wants to deploy their applications there. Therefore, it’s not enough to just develop good applications — we need to build **cloud-native applications**. These applications should support dynamic configuration and connectivity. Cloud-native applications require many additional features, and **Spring Cloud** helps in enabling microservices for the cloud.
+- **Spring Data** provides a consistent and simplified way to access data. In the past, most applications connected only to relational SQL databases. Today, we have a mix of data sources — relational, NoSQL, and others. Spring Data ensures that accessing data from different sources remains consistent and easy to manage.
+- **Spring Integration** addresses the challenges of application integration. It implements the patterns described in the book *Enterprise Integration Patterns*.
+- **Spring Batch** focuses on batch processing applications, which have specific requirements — such as restarting failed jobs, tracking execution details, and monitoring progress. Spring Batch provides these capabilities, making it easy to develop robust batch applications.
+- **Spring Security** is an essential module for protecting applications. Whether you are developing a web application or a RESTful service, Spring Security provides comprehensive solutions to secure them.
+- **Spring HATEOAS** enables you to create HATEOAS-compliant REST services. In REST, it’s not enough to just return data — it’s also important to include related links that guide the consumer on possible next actions. Spring HATEOAS makes implementing this pattern simple and effective.
 
-> Spring has not really restricted itself to just the Spring framework and has gotten involved in a wide variety of projects.
+
+So far, we’ve explored seven Spring projects, which just scratch the surface. There are many more, including **Spring Web Services**, **Spring Sessions**, **Spring Social**, **Spring Mobile**, and **Spring Android**, each designed to solve problems in specific areas.
+
+> Spring has not limited itself to just the core framework; it has expanded into a wide range of projects.
+
 
 #### Step 10 : Why Is Spring Popular?
-![Image](/images/SpringIn10Steps-SpringPopularity.png "Spring In 10 Steps - Spring Popularity") 
-Spring is one of the very few frameworks that remains as popular today as it was 15 years ago. 
+![Image](/images/SpringIn10Steps-SpringPopularity.png "Spring In 10 Steps - Spring Popularity")
+Spring is one of the very few frameworks that remains as popular today as it was 15 years ago.
 
-How did Spring maintain its popularity over the past 15 years? 
-- *Unit Testing*: The most important reason Spring is so popular is because it enables writing testable code. The core feature of Spring is dependency injection. And if we use Dependency Injection properly, then we will be able to write unit tests for our code very easily. Spring has some really good integration frameworks like `Junit` and `Mockito`, and it enables us to write good unit tests very quickly. 
-- *Zero Plumbing Code* -Zero exception handling code because Spring makes all its exceptions unchecked.
-- *Architectural Flexibility* -Spring is very modular. There are Spring modules and Spring projects for very specific purposes. And I can use a specific Spring module without using all the others. So, even though Spring has a really good MVC framework (Spring MVC), it still offers good support with all the other MVC frameworks like Struts. Even though Spring has its own REST support through Spring MVC, it offers good support for JAX-RS and Jersey as well. If I use Spring in my project, my options are not really restricted. 
-- The last reason why spring is so popular is that it is able to stay with the trend. For example, in the last few years, there has been a lot of evolution in micro services and cloud. Spring is able to come up with projects that help it stay relevant.
+**How has Spring maintained its popularity over the past 15 years?**
 
+- **Unit Testing** – One of the main reasons for Spring’s popularity is that it enables writing highly testable code. The core feature of Spring is **dependency injection (DI)**. When used properly, DI makes writing unit tests for your code straightforward. Spring also integrates well with testing frameworks like `JUnit` and `Mockito`, allowing developers to write effective unit tests quickly.
+- **Zero Plumbing Code** – Spring reduces boilerplate code. For example, exception handling is simplified because Spring makes most exceptions unchecked, minimizing unnecessary plumbing code.
+- **Architectural Flexibility** – Spring is highly modular. It offers modules and projects for specific purposes, allowing you to use only the parts you need. For instance, even though Spring has a robust MVC framework (**Spring MVC**), it still provides excellent support for other MVC frameworks like Struts. Similarly, while Spring MVC provides REST support, Spring also integrates well with **JAX-RS** and **Jersey**. Using Spring does not restrict your architectural choices.
+- **Staying Current with Trends** – Spring remains relevant by evolving with industry trends. For example, with the rise of microservices and cloud computing, Spring has introduced projects like **Spring Cloud** and **Spring Boot** to help developers build modern, cloud-native applications efficiently.
 
 ## Example of Complete Code
 
@@ -239,12 +251,12 @@ How did Spring maintain its popularity over the past 15 years?
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.0.2</version>
+		<version>4.0.0-M2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 	</properties>
 
 	<dependencies>

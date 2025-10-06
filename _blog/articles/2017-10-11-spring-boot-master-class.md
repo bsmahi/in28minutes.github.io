@@ -1,271 +1,304 @@
 ---
-layout:     post
-title:      Spring Boot For Beginners in 100 Steps
-date:       2022-10-11 12:31:19
-summary:    Understand and love the power of Spring Boot - All its features are illustrated developing a web application managing todos and a basic API for survey questionnaire. Also covers unit testing, mocking and integration testing.
+layout: post
+title: Spring Boot For Beginners in 100 Steps
+date: 2025-09-18 12:31:19
+summary: Understand and love the power of Spring Boot - All its features are illustrated developing a web application managing todos and a basic API for survey questionnaire. Also covers unit testing, mocking and integration testing.
 categories: SpringBoot
-permalink:  /spring-boot-for-beginners-and-experts
+permalink: /spring-boot-for-beginners-and-experts
 image: /images/generic-category.png
 ---
 
-Spring Boot has a lot of magic going for it. 
+Spring Boot has a lot of **magic** going for it.
 
-Developing applications with it is cool and fun.
+Developing applications with Spring Boot is both **cool** and **fun**.
 
-Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. Most Spring Boot applications need very little Spring configuration.
+It makes it easy to create **stand-alone, production-grade Spring applications** that you can *just run*.  
+Most Spring Boot applications require **minimal configuration**, letting you focus on business logic rather than
+boilerplate setup.
 
-> In this course, you will learn the cool things about Spring Boot and Spring Boot Starter Projects. 
+> You will explore the key concepts of Spring Boot and discover how Starter projects simplify application development.
 
-[![Image](/images/Course-Learn-Spring-Boot-in-100-Steps---Beginner-to-Expert.png "Learn Spring Boot in 100 Steps - Beginner to Expert")](https://links.in28minutes.com/MISC-SPRING-BOOT){:target="_blank"}
+[![Image](/images/Course-Learn-Spring-Boot-in-100-Steps---Beginner-to-Expert.png "Learn Spring Boot in 100 Steps - Beginner to Expert")](https://links.in28minutes.com/MISC-SPRING-BOOT)
 
+## What you will learn
 
-## What You will learn
+You will build:
 
-We will develop 
-- A web application to manage your todos
-- A basic REST Service to manage questions of a survey
+- A web application to manage your to-dos
+- A basic REST service to manage survey questions
 
-This course would be a perfect first step as an introduction to Spring Boot.
+This course is a perfect first step into Spring Boot.
 
-> You will learn about Spring Boot step by step - in more than 90 steps. 
+> You will learn Spring Boot step by step — in more than **90** hands-on steps.
 
-You will be using REST Services, Spring (Dependency Management), Spring MVC, Spring Boot, Spring Security (Authentication and Authorization), BootStrap (Styling Pages), Maven (dependencies management), Eclipse (IDE) and Tomcat Embedded Web Server. We will help you set up each one of these. 
+You will work with:
 
-You will learn about
+- REST services
+- Spring (dependency management)
+- Spring MVC
+- Spring Boot and Spring Boot Starter projects
+- Spring Security (authentication & authorization)
+- Bootstrap (UI styling)
+- Maven (dependency management)
+- Eclipse (IDE) and embedded Tomcat (web server)
+
+We’ll help you set up each of these.
+
+### Topics covered
+
 - Basics of Spring Boot
-- Basics of Auto Configuration and Spring Boot Magic
-- Spring Boot Starter Projects
-- Spring Initializr
-- DispatcherServlet
-- Basic Todo Management Application with Login/Logout
-- Model, Controllers, ViewResolver and Filters
-- Forms - DataBinding, Validation
-- Annotation based approach - @RequestParam, @ModelAttribute, @SessionAttributes etc
-- Bootstrap to style the page
-- Basic REST Services using Spring Boot Starter Web
-- REST Service Content Negotiation with JSON and XML
-- Embedded servlet containers : Tomcat, Jetty and Undertow
-- Writing Unit and Integration tests using Spring Boot Starter Test
-- Profiles and Dynamic Configuration with Spring Boot
-- Spring Boot Data JPA
+- Auto-configuration and Spring Boot "magic"
+- Spring Boot Starter projects and Spring Initializr
+- DispatcherServlet and request flow
+- Todo management application with login/logout
+- Models, Controllers, ViewResolver, and Filters
+- Forms: data binding and validation
+- Annotation-based handling: `@RequestParam`, `@ModelAttribute`, `@SessionAttributes`, etc.
+- Using Bootstrap to style pages
+- Building REST APIs with Spring Boot Starter Web
+- Content negotiation (JSON and XML)
+- Embedded servlet containers: Tomcat, Jetty, Undertow
+- Unit and integration testing with Spring Boot Starter Test
+- Profiles and dynamic configuration
+- Spring Data JPA
 - Spring Boot Actuator
-- Spring Security
-- Spring Boot Developer Tools and LiveReload
-
-
+- Spring Security essentials and configuration
+- Developer tools and LiveReload
 
 ## Getting Started
 
 ### Installing Tools
 
-- Installation 
-	- Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-	- PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
-	- More Details : https://github.com/in28minutes/getting-started-in-5-steps
-- Troubleshooting
-	- [A 50 page troubleshooting guide with more than 200 Errors and Questions answered](https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ)
-	
+- **Installation Resources**
+    - 🎥 [Video Playlist](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
+    -
+  📄 [PDF Guide](https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf)
+    - 📚 [More Details](https://github.com/in28minutes/getting-started-in-5-steps)
+
+- **Troubleshooting**
+  -
+  🛠️ [Troubleshooting Guide (50 pages, 200+ errors and FAQs answered)](https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ)
+
 ### Running Examples
 
-- Download the zip or clone the Git repository.
-- Unzip the zip file (if you downloaded one)
-- Open Command Prompt and Change directory (cd) to folder containing pom.xml
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-   - Select the right project
-- Choose the Spring Boot Application file (search for @SpringBootApplication)
-- Right Click on the file and Run as Java Application
-- You are all Set
-- For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+1. Download the ZIP file or clone the Git repository.
+2. Unzip the ZIP file (if you downloaded one).
+3. Open **Command Prompt/Terminal** and navigate (`cd`) to the folder containing `pom.xml`.
+4. Open **Eclipse**:
+    - Go to **File → Import → Existing Maven Project**
+    - Navigate to the folder where you unzipped the project
+    - Select the correct project
+5. Locate the Spring Boot Application file (look for the class annotated with `@SpringBootApplication`).
+6. Right-click the file → **Run As → Java Application**.
+7. ✅ You’re all set!
+8. For
+   help: [Installation Guide (Video Playlist)](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
 
-## Spring Level 1 to Level 6 Section Overview
+---
 
-Here is a quick overview of different sections of the course:
-- Introduction to Spring in 10 Steps
-- Develop a Todo Management Web Application in 30 Steps
-- Introduction to Unit Testing with JUnit in 5 Steps 
-- Introduction to Mocking with Mockito in 5 Steps
-- Advanced Features of Spring Boot in 25 Steps - We learn these developing a simple API for managing survey questionnaire.
-- Introduction to JPA in 10 Steps
-- Connecting our Todo Management Web Application to JPA
+## Spring Level 1 to Level 6 — Section Overview
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring Framework in 10 Steps|Spring - Level 1|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Spring in Depth|Spring - Level 2|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Unit Testing with Spring Framework|Spring - Level 3|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Spring Boot in 10 Steps|Spring - Level 4|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps){:target='_blank'}|
-|Spring AOP|Spring - Level 5|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop){:target='_blank'}|
-|Spring JDBC and JPA|Spring - Level 6|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa){:target='_blank'}|
+Here’s a quick overview of the different sections of the course:
+
+- **Level 1**: Introduction to Spring in 10 Steps
+- **Level 2**: Develop a Todo Management Web Application in 30 Steps
+- **Level 3**: Introduction to Unit Testing with JUnit in 5 Steps
+- **Level 4**: Introduction to Mocking with Mockito in 5 Steps
+- **Level 5**: Advanced Features of Spring Boot in 25 Steps
+    - Build a simple API for managing a survey questionnaire
+- **Level 6**: Introduction to JPA in 10 Steps
+- **Level 7**: Connect the Todo Management Web Application to JPA
+
+| Title                              |     Category     | Github                                                                                                                                                             |
+|------------------------------------|:----------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spring Framework in 10 Steps       | Spring - Level 1 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth)                                                      |
+| Spring in Depth                    | Spring - Level 2 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth)                                                      |
+| Unit Testing with Spring Framework | Spring - Level 3 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth)                                                      |
+| Spring Boot in 10 Steps            | Spring - Level 4 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps) |
+| Spring AOP                         | Spring - Level 5 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop)                                                           |
+| Spring JDBC and JPA                | Spring - Level 6 | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa)                                                   |
 
 ## 5 Bonus Sections - Introduction to Tools and Frameworks
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Eclipse in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps){:target='_blank'}|
-|Maven in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps){:target='_blank'}|
-|JUnit in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps){:target='_blank'}|
-|Mockito in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps){:target='_blank'}|
-|Basic Web Application with Spring MVC|Introduction|[Project Folder on Github](){:target='_blank'}|
+| Title                                 |   Category   | Github                                                                                                                                                        |
+|---------------------------------------|:------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Eclipse in 5 Steps                    | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps) |
+| Maven in 5 Steps                      | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps)   |
+| JUnit in 5 Steps                      | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps)   |
+| Mockito in 5 Steps                    | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps) |
+| Basic Web Application with Spring MVC | Introduction | [Project Folder on Github]()                                                                                                                                  |
 
-## Step by Step Details
+# Step-by-Step Details
 
 ### Introductory Modules
 
-> Note : These introductory modules are organized across the course to enable you to learn JIT - Just In Time. If you are new to Spring, Do not forget to check out the introduction to Spring module in the appendix.
+> **Note:** These introductory modules are organized across the course to enable JIT (Just-In-Time) learning. If you are
+> new to Spring, don't forget to check the *Introduction to Spring* module in the appendix.
 
-- Introduction to JUnit in 5 Steps
-- Introduction to Mockito in 5 Steps
-- Introduction to JPA in 10 Steps
-- Introduction to Spring in 10 Steps
+- Introduction to JUnit — 5 steps
+- Introduction to Mockito — 5 steps
+- Introduction to JPA — 10 steps
+- Introduction to Spring — 10 steps
+
+---
 
 ### Web Application with Spring Boot
-- Step 01: Part 1 Basic Spring Boot Web Application Setup
-- Step 01: Part 2 Pom.xml, Spring Boot Application and application properties
-- Step 02: Part 1 First Spring MVC Controller, @ResponseBody, @Controller
-- Step 02: Part 2 Understanding HTTP Request Flow
-- Step 03: Demystifying some of the Spring Boot magic
-- Step 04: Redirect to Login JSP - @ResponseBody and View Resolver
-- Step 05: Show userid and password on welcome page - ModelMap and @RequestParam
-- Step 06: DispatcherServlet and Spring MVC Flow
-- Step 07: Your First HTML form
-- Step 08: Add hard-coded validation of userid and password
-- Step 09: Magic of Spring
-- Step 10: Create TodoController and list-todos view. Make TodoService a @Service
-- Step 11: Architecture of Web Applications
-- Step 12: Session vs Model vs Request - @SessionAttributes
-- Step 13: Add new todo
-- Step 14: Display Todos in a table using JSTL Tags
-- Step 15: Bootstrap for Page Formatting using webjars
-- Step 16: Let's delete a Todo
-- Step 17: Format Add Todo Page and Adding Basic HTML5 form validation
-- Step 18: Part 1 Validations with Hibernate Validator - Using Command Bean
-- Step 18: Part 2 Using JSR 349 Validations
-- Step 19: Updating a todo
-- Step 20: Let's add a Target Date for Todo - Use initBinder to Handle Date Fields
-- Step 21: JSP Fragments and Navigation Bar
-- Step 22: Preparing for Spring Security
-- Step 23: Initial Spring Security Setup
-- Step 24: Refactor and add Logout Functionality using Spring Security
-- Step 25: Exception Handling
+
+- **Step 01 — Part 1:** Basic Spring Boot web application setup
+- **Step 01 — Part 2:** `pom.xml`, Spring Boot application, and `application.properties`
+- **Step 02 — Part 1:** First Spring MVC controller — `@ResponseBody` vs `@Controller`
+- **Step 02 — Part 2:** Understanding HTTP request flow
+- **Step 03:** Demystifying some of the Spring Boot "magic"
+- **Step 04:** Redirect to Login JSP — `@ResponseBody` and view resolver
+- **Step 05:** Show user id and password on welcome page — `ModelMap` and `@RequestParam`
+- **Step 06:** `DispatcherServlet` and Spring MVC flow
+- **Step 07:** Your first HTML form
+- **Step 08:** Add hard-coded validation of user id and password
+- **Step 09:** More Spring "magic"
+- **Step 10:** Create `TodoController` and `list-todos` view. Make `TodoService` a `@Service`
+- **Step 11:** Architecture of web applications
+- **Step 12:** Session vs Model vs Request — `@SessionAttributes`
+- **Step 13:** Add new to-do
+- **Step 14:** Display to-dos in a table using JSTL tags
+- **Step 15:** Bootstrap for page formatting using webjars
+- **Step 16:** Delete a to-do
+- **Step 17:** Format "Add Todo" page and add basic HTML5 form validation
+- **Step 18 — Part 1:** Validations with Hibernate Validator — using command bean
+- **Step 18 — Part 2:** Using JSR 349 (Bean Validation)
+- **Step 19:** Updating a to-do
+- **Step 20:** Add a target date for to-do — use `initBinder` to handle date fields
+- **Step 21:** JSP fragments and navigation bar
+- **Step 22:** Preparing for Spring Security
+- **Step 23:** Initial Spring Security setup
+- **Step 24:** Refactor and add logout functionality using Spring Security
+- **Step 25:** Exception handling
+
+---
 
 ### Connecting Web Application with JPA
 
-> Note : Ensure that you complete the introduction to JPA module before doing this section
+> **Note:** Ensure you complete the *Introduction to JPA* module before starting this section.
 
-- Step 26: Adding Dependencies for JPA and H2
-- Step 27: Configuring H2 Console
-- Step 28: Create Todo Entity and JPA Repository
-- Step 29: Insert Todo using JPA Repository
-- Step 30: Update, Delete and Retrieve Todos using JPA Repository
-- Step 31: Data initialization with data.sql
-- Step 32: Connecting JPA to other databases
-- Step 33: Upgrading to Spring Boot 2 and Spring 5
+- **Step 26:** Add dependencies for JPA and H2
+- **Step 27:** Configure H2 console
+- **Step 28:** Create `Todo` entity and JPA repository
+- **Step 29:** Insert `Todo` using JPA repository
+- **Step 30:** Update, delete, and retrieve to-dos using JPA repository
+- **Step 31:** Data initialization with `data.sql`
+- **Step 32:** Connecting JPA to other databases
+- **Step 33:** Upgrading to Spring Boot 2 and Spring 5
 
+---
 
-### Spring Boot Deep Dive with a simple API
-- Step 01: Setup and Launch Spring Boot Application with Maven and Eclipse
-- Step 02: Creating your first RestController
-- Step 03: Understanding Spring Boot Magic : Spring Boot Starter Web
-- Step 04: Understanding Spring Boot Magic : Spring Boot Starter Parent
-- Step 05: Spring Boot vs Spring
-- Step 06: Create all Services for Survey and Questions
-- Step 07: What is REST? Creating REST Service with @GetMapping and @PathVariable
-- Step 08: Second REST Service to retrieve a specific question
-- Step 09: Spring Boot Developer Tools and LiveReload : Develop faster!
-- Step 10: Create a REST Service to add a new question to survey : @PostMapping, Postman 
-- Step 11: Understand Content Negotiation. Deliver XML Responses from the REST Services
-- Step 12: Spring Initializr : Create Spring Boot Projects on the fly!
-- Step 13: Spring Boot Actuator : Monitor your Spring Boot applications!
-- Step 14: Understanding Embedded servlet containers : Switch to Jetty or Undertow
-- Step 15: Adding Dynamic Configuration to your application : YAML & More..
-- Step 16: Basics of Profiles
-- Step 17: Advanced Application Configuration with Type Safe Configuration Properties
-- Step 18: Spring Boot Starter : Spring Data JPA with CommandLineRunner
-- Step 19: In Memory Database H2 Console and add a new JPA Repository Method
-- Step 20: Spring Boot Starter : Introduction to Spring Data Rest
-- Step 21: Spring Boot Integration Test
-- Step 22: Adding Integration Test for POST Request
-- Step 23: Small Refactoring to organise ourselves
-- Step 24: Writing Unit Tests with Spring Boot and Mockito
-- Step 25: Writing Unit test for createTodo
-- Step 26: Securing our services with Basic Authentication using Spring Security
-- Step 27: Configure Spring Security user roles for survey and other services
-- Step 28: A Deep Dive into Spring Boot Auto Configuration
+### Spring Boot Deep Dive — Simple API
 
+- **Step 01:** Setup and launch Spring Boot application with Maven and Eclipse
+- **Step 02:** Create your first `@RestController`
+- **Step 03:** Understanding Spring Boot magic: `spring-boot-starter-web`
+- **Step 04:** Understanding Spring Boot magic: `spring-boot-starter-parent`
+- **Step 05:** Spring Boot vs Spring framework
+- **Step 06:** Create services for survey and questions
+- **Step 07:** What is REST? Create REST service with `@GetMapping` and `@PathVariable`
+- **Step 08:** Second REST service to retrieve a specific question
+- **Step 09:** Spring Boot Developer Tools and LiveReload — develop faster!
+- **Step 10:** Create a REST service to add a new question: `@PostMapping`, Postman
+- **Step 11:** Content negotiation — deliver XML responses from REST services
+- **Step 12:** Spring Initializr — create Spring Boot projects on the fly
+- **Step 13:** Spring Boot Actuator — monitor your application
+- **Step 14:** Embedded servlet containers — switch to Jetty or Undertow
+- **Step 15:** Add dynamic configuration: YAML & more
+- **Step 16:** Basics of profiles
+- **Step 17:** Advanced configuration with type-safe `@ConfigurationProperties`
+- **Step 18:** Spring Data JPA with `CommandLineRunner`
+- **Step 19:** H2 console and add a custom JPA repository method
+- **Step 20:** Introduction to Spring Data REST
+- **Step 21:** Spring Boot integration tests
+- **Step 22:** Add integration test for POST requests
+- **Step 23:** Small refactor to organize code
+- **Step 24:** Unit tests with Spring Boot and Mockito
+- **Step 25:** Unit test for `createTodo`
+- **Step 26:** Secure services with Basic Authentication using Spring Security
+- **Step 27:** Configure Spring Security roles for survey and other services
+- **Step 28:** Deep dive into Spring Boot auto-configuration
 
-## Step By Step Notes and Code Examples
+---
 
-### 02.Spring-Boot-Web-Application
+## Step-by-Step Notes and Code Examples
 
-## Step01.md
+### 02. Spring-Boot-Web-Application
 
-#### What You Will Learn during this Step:
-- Lets create a simple web application using Spring Boot
-- Lets run the Spring Boot Application
-- There is a lot of magic happening in here! We will take a deep dive into the magic in Step 03. 
+#### Step01.md
 
-#### Files List
+##### What you will learn in this step
+
+- Let's create a simple web application using Spring Boot.
+- How to run the Spring Boot application.
+- An overview of the "magic" that Spring Boot provides (deep dive in Step 03).
+
+##### Files list
+
+- *(Add list of files for this step —
+  e.g., `pom.xml`, `src/main/java/...`, `src/main/resources/application.properties`, `src/main/resources/templates/*`)*
 
 pom.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.in28minutes.springboot.web</groupId>
-	<artifactId>spring-boot-first-web-application</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.in28minutes.springboot.web</groupId>
+    <artifactId>spring-boot-first-web-application</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>spring-boot-first-web-application</name>
-	<description>Demo project for Spring Boot</description>
+    <name>spring-boot-first-web-application</name>
+    <description>Demo project for Spring Boot</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.3.RELEASE</version> 
-		<!-- We will upgrade to 2.3.1.RELEASE in Step 33: Upgrading to Spring Boot 2 and Spring 5 ->
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.0-M2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>21</java.version>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/SpringBootFirstWebApplication.java
 
@@ -278,49 +311,53 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringBootFirstWebApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootFirstWebApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootFirstWebApplication.class, args);
+    }
 }
 ```
+
 ---
 src/main/resources/application.properties
 
 ```
 ```
+
 ---
 src/test/java/com/in28minutes/springboot/web/SpringBootFirstWebApplicationTests.java
 
 ```java
 package com.in28minutes.springboot.web;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringBootFirstWebApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
 ```
+
 ---
+
 ## Step02.md
 
 #### What You Will Learn during this Step:
-- @RequestMapping(value = "/login", method = RequestMethod.GET)
-- http://localhost:8080/login
-- Why @ResponseBody?
-- Important of RequestMapping method
-- How do web applications work? Request and Response
- - Browser sends Http Request to Web Server
- - Code in Web Server => Input:HttpRequest, Output: HttpResponse
- - Web Server responds with Http Response
+
+- Using `@RequestMapping(value = "/login", method = RequestMethod.GET)`
+- Accessing endpoint: `http://localhost:8080/login`
+- Why use `@ResponseBody`?
+- Importance of the `@RequestMapping` method
+- How web applications work — Request and Response cycle:
+    - Browser sends **HTTP Request** to the web server
+    - Code in the web server executes
+        - **Input:** `HttpRequest`
+        - **Output:** `HttpResponse`
+    - Web server responds with an **HTTP Response**
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java New
 
@@ -332,41 +369,51 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LoginController {
-	
-	@RequestMapping("/login")
-	public String loginMessage(){
-		return "Hello World";
-	}
+
+    @RequestMapping("/login")
+    public String loginMessage() {
+        return "Hello World";
+    }
 }
 ```
+
 ---
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 logging.level.org.springframework.web: DEBUG
 ```
+
 ## Step03.md
 
 #### What You Will Learn during this Step:
-- Demystifying some of the magic
- - Spring Boot Starter Parent
- - Spring Boot Starter Web
- - Embedded Tomcat
- - Dev Tools
+
+- Demystifying some of the Spring Boot magic:
+    - **Spring Boot Starter Parent**
+    - **Spring Boot Starter Web**
+    - **Embedded Tomcat**
+    - **Spring Boot DevTools**
+
+---
 
 ## Step04.md
 
 #### What You Will Learn during this Step:
-- Your First JSP
- - There is a bit of setup before we get there!
-- Introduction to View Resolver
+
+- Creating your **first JSP**
+    - (Note: A bit of setup is required before this step!)
+- Introduction to **ViewResolver**
 
 #### Useful Snippets and References
-First Snippet - /src/main/webapp/WEB-INF/jsp/login.jsp
-```
+
+- First Snippet: `/src/main/webapp/WEB-INF/jsp/login.jsp`
+
+```html
+
 <html>
 <head>
-<title>Yahoo!!</title>
+    <title>Yahoo!!</title>
 </head>
 <body>
 My First JSP!!!
@@ -375,6 +422,7 @@ My First JSP!!!
 ```
 
 Second Snippet - /src/main/resources/application.properties
+
 ```
 spring.mvc.view.prefix: /WEB-INF/jsp/
 spring.mvc.view.suffix: .jsp
@@ -382,16 +430,19 @@ logging.level.: DEBUG
 ```
 
 Third Snippet : To enable jsp support in embedded tomcat server!
-```
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>
+
+```xml
+
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+    <scope>provided</scope>//default for IntelliJ IDEA
+</dependency>
 
 ```
 
 #### Exercises
+
 - Create a new jsp and a new controller method to redirect to it!
 - Play around!
 
@@ -399,15 +450,19 @@ Third Snippet : To enable jsp support in embedded tomcat server!
 
 pom.xml Modified
 New Lines
-```
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>		
+
+```xml
+
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+    <scope>provided</scope>
+    //default for IntelliJ IDEA
+</dependency>        
 ```
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
+
 ```java
 package com.in28minutes.springboot.web.controller;
 
@@ -417,28 +472,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginController {
-	
-	@RequestMapping("/login")
-	public String loginMessage(){
-		return "login";
-	}
+
+    @RequestMapping("/login")
+    public String loginMessage() {
+        return "login";
+    }
 }
 ```
+
 ---
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.org.springframework.web=DEBUG
 ```
+
 src/main/webapp/WEB-INF/jsp/login.jsp New
 
-```
+```html
+
 <html>
 
 <head>
-<title>First Web Application</title>
+    <title>First Web Application</title>
 </head>
 
 <body>
@@ -447,26 +506,32 @@ My First JSP!!
 
 </html>
 ```
+
 ## Step05.md
 
 #### What You Will Learn during this Step:
+
 - You first GET Parameter
 - Problem with using GET
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
+
 ```java
+
 @Controller
 public class LoginController {
-	@RequestMapping("/login")
-	public String loginMessage(@RequestParam String name, ModelMap model){
-		model.put("name", name);
-		return "login";
-	}
+    @RequestMapping("/login")
+    public String loginMessage(@RequestParam String name, ModelMap model) {
+        model.put("name", name);
+        return "login";
+    }
 }
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/login.jsp Modified
 New Lines
+
 ```
 My First JSP!! Welcome ${name}!
 ```
@@ -474,43 +539,57 @@ My First JSP!! Welcome ${name}!
 ## Step06.md
 
 #### What You Will Learn during this Step:
-- Understand importance of DispatcherServlet.
+
+- Importance of the **DispatcherServlet** in Spring MVC.
+
+---
 
 #### Spring MVC Request Flow
-- DispatcherServlet receives HTTP Request.
-- DispatcherServlet identifies the right Controller based on the URL.
-	- Controller executes Business Logic.
-	- Controller returns a) Model b) View Name Back to DispatcherServlet.
-- DispatcherServlet identifies the correct view 
-	- ViewResolver
-- DispatcherServlet makes the model available to view and executes it.
-- DispatcherServlet returns HTTP Response Back.
-- Flow : http://docs.spring.io/spring-framework/docs/2.0.8/reference/images/mvc.png
+
+1. **DispatcherServlet** receives the HTTP Request.
+2. **DispatcherServlet** identifies the correct Controller based on the URL.
+    - The Controller executes business logic.
+    - The Controller returns:  
+      a) **Model**  
+      b) **View Name** back to DispatcherServlet.
+3. **DispatcherServlet** uses a **ViewResolver** to identify the correct view.
+4. **DispatcherServlet** makes the Model available to the View and executes it.
+5. **DispatcherServlet** sends the final HTTP Response back to the client.
+
+📌 Reference Flow Diagram:  
+[Spring MVC Request Flow](http://docs.spring.io/spring-framework/docs/2.0.8/reference/images/mvc.png)
 
 ## Step07.md
 
 #### What You Will Learn during this Step:
+
 - Lets get the name from the user in a form
 
 #### Useful Snippets and References
+
 First Snippet
-```
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String showLoginPage(ModelMap model, @RequestParam String name) {
-        return "login";
-    }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String handleLogin(ModelMap model, @RequestParam String name) {
-        model.put("name", name);
-        return "welcome";
-    }
+```java
+
+@RequestMapping(value = "/login", method = RequestMethod.GET)
+public String showLoginPage(ModelMap model, @RequestParam String name) {
+    return "login";
+}
+
+@RequestMapping(value = "/login", method = RequestMethod.POST)
+public String handleLogin(ModelMap model, @RequestParam String name) {
+    model.put("name", name);
+    return "welcome";
+}
 
 ```
+
 Second Snippet
-```
+
+```html
+
 <form method="POST">
-        Name : <input name="name" type="text" /> <input type="submit" />
+    Name : <input name="name" type="text"/> <input type="submit"/>
 </form>
 
 ```
@@ -518,6 +597,7 @@ Second Snippet
 #### Files List
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
+
 ```java
 package com.in28minutes.springboot.web.controller;
 
@@ -529,23 +609,25 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-	
-	@RequestMapping(value="/login", method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model){
-		return "login";
-	}
-	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String showWelcomePage(ModelMap model, @RequestParam String name){
-		model.put("name", name);
-		return "welcome";
-	}
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String showLoginPage(ModelMap model) {
+        return "login";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String showWelcomePage(ModelMap model, @RequestParam String name) {
+        model.put("name", name);
+        return "welcome";
+    }
 
 }
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/login.jsp Modified
 New Lines
+
 ```
 	<form method="post">
 		Name : <input type="text" name="name" />
@@ -553,63 +635,79 @@ New Lines
 		<input type="submit" />
 	</form>
 ```
+
 src/main/webapp/WEB-INF/jsp/welcome.jsp New
 
-```
+```html
+
 <html>
 
 <head>
-<title>First Web Application</title>
+    <title>First Web Application</title>
 </head>
 
 <body>
-	Welcome ${name}!!
+Welcome ${name}!!
 </body>
 
 </html>
 ```
+
 ---
+
 ## Step08.md
 
 #### What You Will Learn during this Step:
 
-- Add validation for userid and password
- - Hard coded validation!!
+- Add validation for **userid** and **password**.
+- Understand the concept of **hard-coded validation** (checking credentials against fixed values).
+- Show appropriate **error messages** when invalid credentials are entered.
+- Learn the flow of form submission:
+    - User submits login form.
+    - Application checks credentials against hard-coded values.
+    - On success → Redirect to welcome page.
+    - On failure → Stay on login page and display error message.
 
+---
+
+✅ This step introduces **basic login validation**, preparing the ground for more flexible and secure authentication
+approaches later in the course.
 
 #### Files List
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
 
 ```java
+
 @Controller
 public class LoginController {
-	
-	@Autowired
-	LoginService service;
-	
-	@RequestMapping(value="/login", method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model){
-		return "login";
-	}
-	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password){
-		boolean isValidUser = service.validateUser(name, password);
-		
-		if (!isValidUser) {
-			model.put("errorMessage", "Invalid Credentials");
-			return "login";
-		}
-		
-		model.put("name", name);
-		model.put("password", password);
-		
-		return "welcome";
-	}
+
+    @Autowired
+    LoginService service;
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String showLoginPage(ModelMap model) {
+        return "login";
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password) {
+        boolean isValidUser = service.validateUser(name, password);
+
+        if (!isValidUser) {
+            model.put("errorMessage", "Invalid Credentials");
+            return "login";
+        }
+
+        model.put("name", name);
+        model.put("password", password);
+
+        return "welcome";
+    }
 
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/service/LoginService.java New
 
@@ -621,17 +719,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginService {
 
-	public boolean validateUser(String userid, String password) {
-		// in28minutes, dummy
-		return userid.equalsIgnoreCase("in28minutes")
-				&& password.equalsIgnoreCase("dummy");
-	}
+    public boolean validateUser(String userid, String password) {
+        // in28minutes, dummy
+        return userid.equalsIgnoreCase("in28minutes")
+                && password.equalsIgnoreCase("dummy");
+    }
 
 }
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/login.jsp Modified
 New Lines
+
 ```
 	<font color="red">${errorMessage}</font>
 ```
@@ -639,24 +739,32 @@ New Lines
 ## Step09.md
 
 #### What You Will Learn during this Step:
-- Magic of Spring
- - Learn about Spring Auto-wiring and Dependency Management.
- - @Autowired, @Component
+
+- Understand the **magic of Spring**.
+- Learn about **Spring Auto-wiring** and **Dependency Injection**.
+- Key concepts: `@Autowired`, `@Component`.
+- How Spring manages dependencies automatically to reduce boilerplate code.
+
+---
 
 ## Step10.md
 
-#### What we will do:
-- Create TodoController and list-todos.jsp
-- Make TodoService a @Service and inject it
+#### What You Will Do:
 
-#### Pending for Next Step
-- ${name} is not available in list-todos.jsp
-- in28Minutes is hardcoded in TodoController
+- Create `TodoController` and the `list-todos.jsp` page.
+- Implement `TodoService` as a Spring `@Service` and inject it into the controller.
 
-#### Snippets
+#### Pending for Next Step:
 
-Snippet -  /src/main/java/com/in28minutes/springboot/web/model/Todo.java
-```
+- The variable `${name}` is not yet available in `list-todos.jsp`.
+- The username "in28Minutes" is still hardcoded in `TodoController`.
+
+#### Notes:
+
+- In this step, you will see **controller-service interaction** in action.
+- Prepare for dynamic data handling and model binding in the next step.
+
+```java
 package com.in28minutes.springboot.web.model;
 
 import java.util.Date;
@@ -669,7 +777,7 @@ public class Todo {
     private boolean isDone;
 
     public Todo(int id, String user, String desc, Date targetDate,
-            boolean isDone) {
+                boolean isDone) {
         super();
         this.id = id;
         this.user = user;
@@ -755,7 +863,8 @@ public class Todo {
 ```
 
 Snippet - /src/main/java/com/in28minutes/springboot/web/service/TodoService.java
-```
+
+```java
 package com.in28minutes.springboot.web.service;
 
 import java.util.ArrayList;
@@ -769,7 +878,7 @@ import com.in28minutes.springboot.web.model.Todo;
 
 @Service
 public class TodoService {
-    private static List<Todo> todos = new ArrayList<Todo>();
+    private static List<Todo> todos = new ArrayList<>();
     private static int todoCount = 3;
 
     static {
@@ -781,7 +890,7 @@ public class TodoService {
     }
 
     public List<Todo> retrieveTodos(String user) {
-        List<Todo> filteredTodos = new ArrayList<Todo>();
+        List<Todo> filteredTodos = new ArrayList<>();
         for (Todo todo : todos) {
             if (todo.getUser().equals(user)) {
                 filteredTodos.add(todo);
@@ -791,38 +900,47 @@ public class TodoService {
     }
 
     public void addTodo(String name, String desc, Date targetDate,
-            boolean isDone) {
+                        boolean isDone) {
         todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 
     public void deleteTodo(int id) {
-        Iterator<Todo> iterator = todos.iterator();
-        while (iterator.hasNext()) {
-            Todo todo = iterator.next();
-            if (todo.getId() == id) {
-                iterator.remove();
-            }
-        }
+        todos.removeIf(todo -> todo.getId() == id);
     }
 }
 ```
+
 ## Step11.md
 
-#### What we will do:
-- Lets discuss about Architecture of web applications
+#### What You Will Do:
+
+- Discuss the **architecture of web applications**.
+- Understand how different layers (Controller, Service, View) interact.
+- Learn about the responsibilities of each layer and how they contribute to **separation of concerns**.
+
+---
 
 ## Step12.md
 
 #### What You Will Learn during this Step:
-- Session vs Model vs Request.
-- Be cautious about what you use Session for.
-- @SessionAttributes("name") and how it works?
-- Why use Model? "adding elements directly to the HttpServletRequest (as request attributes) would seem to serve the same purpose. The reason to do this is obvious when taking a look at one of the requirements we have set for the MVC framework: It should be as view-agnostic as possible, which means we’d like to be able to incorporate view technologies not bound to the HttpServletRequest as well." - Rod Johnson et. al’s book Professional Java Development with the Spring Framework
-- Spring documentation states that the @SessionAttributes annotation “list the names of model attributes which should be transparently stored in the session or some conversational storage.”
 
-#### Useful Snippets and References
+- Differences between **Session**, **Model**, and **Request** scopes.
+- Best practices for using **Session** data — avoid storing unnecessary information.
+- How `@SessionAttributes("name")` works to store model attributes in the session.
+- Why **Model** is preferred over adding elements directly to `HttpServletRequest`:
+    - Ensures **view-agnostic design**.
+    - Allows the use of different view technologies not tied to `HttpServletRequest`.
+- Understanding Spring documentation on `@SessionAttributes`:
+    - Lists model attribute names to be **transparently stored** in session or conversational storage.
+
+#### Notes:
+
+- This step is crucial for handling user-specific data across multiple requests.
+- Helps prepare for form handling, login sessions, and dynamic content rendering.
+
 First Snippet
-```
+
+```java
 @SessionAttributes("name")
 ```
 
@@ -830,17 +948,23 @@ First Snippet
 
 src/main/java/com/in28minutes/springboot/web/SpringBootFirstWebApplication.java Modified
 New Lines
-```
+
+```java
 import org.springframework.context.annotation.ComponentScan;
+
 @ComponentScan("com.in28minutes.springboot.web")
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
+
 ```java
+
 @Controller
 @SessionAttributes("name")
 public class LoginController {
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java New
 
@@ -861,18 +985,19 @@ import com.in28minutes.springboot.web.service.TodoService;
 @Controller
 @SessionAttributes("name")
 public class TodoController {
-	
-	@Autowired
-	TodoService service;
-	
-	@RequestMapping(value="/list-todos", method = RequestMethod.GET)
-	public String showTodos(ModelMap model){
-		String name = (String) model.get("name");
-		model.put("todos", service.retrieveTodos(name));
-		return "list-todos";
-	}
+
+    @Autowired
+    TodoService service;
+
+    @RequestMapping(value = "/list-todos", method = RequestMethod.GET)
+    public String showTodos(ModelMap model) {
+        String name = (String) model.get("name");
+        model.put("todos", service.retrieveTodos(name));
+        return "list-todos";
+    }
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/model/Todo.java New
 
@@ -889,7 +1014,7 @@ public class Todo {
     private boolean isDone;
 
     public Todo(int id, String user, String desc, Date targetDate,
-            boolean isDone) {
+                boolean isDone) {
         super();
         this.id = id;
         this.user = user;
@@ -958,10 +1083,7 @@ public class Todo {
             return false;
         }
         Todo other = (Todo) obj;
-        if (id != other.id) {
-            return false;
-        }
-        return true;
+        return id == other.id;
     }
 
     @Override
@@ -973,13 +1095,17 @@ public class Todo {
 
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/service/LoginService.java Modified
+
 ```java
+
 @Service
 public class LoginService {
 
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/service/TodoService.java New
 
@@ -997,7 +1123,7 @@ import com.in28minutes.springboot.web.model.Todo;
 
 @Service
 public class TodoService {
-    private static List<Todo> todos = new ArrayList<Todo>();
+    private static List<Todo> todos = new ArrayList<>();
     private static int todoCount = 3;
 
     static {
@@ -1009,7 +1135,7 @@ public class TodoService {
     }
 
     public List<Todo> retrieveTodos(String user) {
-        List<Todo> filteredTodos = new ArrayList<Todo>();
+        List<Todo> filteredTodos = new ArrayList<>();
         for (Todo todo : todos) {
             if (todo.getUser().equals(user)) {
                 filteredTodos.add(todo);
@@ -1019,97 +1145,105 @@ public class TodoService {
     }
 
     public void addTodo(String name, String desc, Date targetDate,
-            boolean isDone) {
+                        boolean isDone) {
         todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 
     public void deleteTodo(int id) {
-        Iterator<Todo> iterator = todos.iterator();
-        while (iterator.hasNext()) {
-            Todo todo = iterator.next();
-            if (todo.getId() == id) {
-                iterator.remove();
-            }
-        }
+        todos.removeIf(todo -> todo.getId() == id);
     }
 }
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/list-todos.jsp New
 
-```
+```html
+
 <html>
 
 <head>
-<title>First Web Application</title>
+    <title>First Web Application</title>
 </head>
 
 <body>
-	Here are the list of your todos:
-	${todos} 
-	<BR/>
-	Your Name is : ${name}
+Here are the list of your todos:
+${todos}
+<BR/>
+Your Name is : ${name}
 </body>
 
 </html>
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/welcome.jsp Modified
 New Lines
+
 ```
 	Welcome ${name}!! <a href="/list-todos">Click here</a> to manage your todo's.
 ```
 
 ## Step13.md
 
-#### What we will do:
-- Add Facility to add New Todo
-- todo.jsp
-- Importance of redirect:/list-todos
+#### What You Will Do:
 
-#### Files List
+- Add functionality to **create a new Todo**.
+- Work with the **todo.jsp** page for adding todos.
+- Learn the importance of using **redirect:/list-todos** after form submission:
+    - Prevents duplicate form submissions on page refresh.
+    - Updates the list view to show the newly added todo.
 
-src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
+#### Notes:
+
+- Controller handles the form submission and redirects to the list view.
+- Model and view interaction ensures the new todo is displayed correctly.
+
+#### Files Modified:
+
+- `src/main/java/com/in28minutes/springboot/web/controller/TodoController.java`
 
 ```java
-	
-	@RequestMapping(value="/add-todo", method = RequestMethod.GET)
-	public String showAddTodoPage(ModelMap model){
-		return "todo";
-	}
 
-	@RequestMapping(value="/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @RequestParam String desc){
-		service.addTodo((String) model.get("name"), desc, new Date(), false);
-		return "redirect:/list-todos";
-	}
+@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+public String showAddTodoPage(ModelMap model) {
+    return "todo";
+}
+
+@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
+public String addTodo(ModelMap model, @RequestParam String desc) {
+    service.addTodo((String) model.get("name"), desc, new Date(), false);
+    return "redirect:/list-todos";
+}
 ```
 
 ---
 
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
-```
-	Here are the list of ${name}'s todos:
-	${todos}.
-	<a href="/add-todo">Add a Todo</a> 
+
+```html
+    Here are the list of ${name}'s todos:
+${todos}.
+<a href="/add-todo">Add a Todo</a> 
 ```
 
 src/main/webapp/WEB-INF/jsp/todo.jsp New
 
-```
+```html
+
 <html>
 
 <head>
-<title>First Web Application</title>
+    <title>First Web Application</title>
 </head>
 
 <body>
 ADD Todo Page for ${name}
 
 <form method="post">
-	Description : <input name="desc" type="text"/> 
-	<input type="submit"/>	
+    Description : <input name="desc" type="text"/>
+    <input type="submit"/>
 </form>
 
 </body>
@@ -1119,27 +1253,47 @@ ADD Todo Page for ${name}
 
 ## Step14.md
 
-#### What we will do:
-- Display Todos in a table using JSTL Tags
-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-- Add Dependency for jstl
+#### What You Will Do:
 
-#### Snippet
-```       
-       <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
+- Display the list of **Todos in a table** using **JSTL tags**.
+- Use the JSTL core tag library:
+    - `<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>`
+- Add the necessary **JSTL dependency** to your project.
+
+#### Notes:
+
+- JSTL tags make it easier to **iterate over collections**, conditionally display content, and reduce scriptlets in JSP.
+- This step focuses on **dynamic content rendering** using standard JSP techniques.
+
+#### Files Modified:
+
+- `list-todos.jsp` (to use JSTL tags for displaying todos)
+
+```xml       
+
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
 ```
 
 ## Step15.md
 
-#### What we will do:
-- Add bootstrap to give basic formatting to the page : We use bootstrap classes container,table and table-striped.
-- We will use webjars
- - Already auto configured by Spring Boot : o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+#### What You Will Do:
+
+- Add **Bootstrap** to give basic styling and formatting to pages.
+    - Use Bootstrap classes like `container`, `table`, and `table-striped`.
+- Use **WebJars** to manage Bootstrap dependencies.
+- Leverage **Spring Boot auto-configuration** for WebJars:
+    - `SimpleUrlHandlerMapping` automatically maps `/webjars/**` URLs to the appropriate resource handler.
+
+#### Notes:
+
+- WebJars allow you to include client-side libraries (like Bootstrap) via Maven.
+- This step improves **UI presentation** without manual setup of static resources.
 
 #### Useful Snippets
+
 ```     
         <dependency>
             <groupId>org.webjars</groupId>
@@ -1165,109 +1319,130 @@ ADD Todo Page for ${name}
 
 pom.xml Modified
 New Lines
-```
 
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>3.3.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>1.9.1</version>
-        </dependency>
-        <dependency>
-        	<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-        </dependency>
-        <dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-        </dependency>
+```xml
+
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>bootstrap</artifactId>
+    <version>5.1.3</version>
+</dependency>
+
+<dependency>
+<groupId>org.webjars</groupId>
+<artifactId>jquery</artifactId>
+<version>3.6.0</version>
+</dependency>
+<dependency>
+<groupId>org.apache.tomcat.embed</groupId>
+<artifactId>tomcat-embed-jasper</artifactId>
+<scope>provided</scope> <!--default for IntelliJ -->
+</dependency>
+<dependency>
+<groupId>jakarta.servlet.jsp.jstl</groupId>
+<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
 ```
 
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 logging.level.org.springframework.web=INFO
 ```
 
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
-```
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+```html
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <title>Todo's for ${name}</title>
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet">
-	<div class="container">
-		<table class="table table-striped">
-			<caption>Your todos are</caption>
-			<thead>
-				<tr>
-					<th>Description</th>
-					<th>Target Date</th>
-					<th>Is it Done?</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach items="${todos}" var="todo">
-					<tr>
-						<td>${todo.desc}</td>
-						<td>${todo.targetDate}</td>
-						<td>${todo.done}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<div> <a class="button" href="/add-todo">Add a Todo</a></div>
-		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-		<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	</div>
+      rel="stylesheet">
+<div class="container">
+    <table class="table table-striped">
+        <caption>Your todos are</caption>
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Target Date</th>
+            <th>Is it Done?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${todos}" var="todo">
+            <tr>
+                <td>${todo.desc}</td>
+                <td>${todo.targetDate}</td>
+                <td>${todo.done}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+    <div><a class="button" href="/add-todo">Add a Todo</a></div>
+    <script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</div>
 ```
 
 ## Step16.md
 
 #### What we will do:
+
 - Add functionality to delete a todo
 
 #### Useful Snippets
-```     
-	<a type="button" class="btn btn-warning" 
-		href="/delete-todo?id=${todo.id}">Delete</a>
+
+```html    
+    <a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a>
 ```
+
 #### Files List
 
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
 New Lines
-```
-	@RequestMapping(value="/delete-todo", method = RequestMethod.GET)
-	public String deleteTodo(@RequestParam int id){
-		service.deleteTodo(id);
-	}
+
+```java
+
+@RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
+public String deleteTodo(@RequestParam int id) {
+    service.deleteTodo(id);
+}
 ```
 
 ---
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
+
 ```
-		<td><a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a></td>
+   <td><a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a></td>
 ```
+
 ## Step17.md
 
-#### What we will do:
+## Step17.md
 
-In this short step:
-- Format Add Todo Page
-- Add Html5 Form Validations
+#### What You Will Do:
 
-#### Useful Snippets
-```     
-	<fieldset class="form-group">
-		<label>Description</label>
-		<input name="desc" type="text" class="form-control" required="required"/>
-	</fieldset>
+- Format the **Add Todo** page for better presentation.
+- Add **HTML5 form validations** to ensure proper input from the user.
+    - Examples: required fields, date format checks, and text length constraints.
+
+#### Notes:
+
+- HTML5 validations provide **basic client-side checks** before the form is submitted.
+- Improves user experience by preventing invalid data entry.
+
+#### Useful Snippets:
+
+- Form fields with HTML5 validation attributes (`required`, `type="date"`, etc.).
+
+```html     
+
+<fieldset class="form-group">
+    <label>Description</label>
+    <input name="desc" type="text" class="form-control" required="required"/>
+</fieldset>
 
 ```
 
@@ -1275,68 +1450,76 @@ In this short step:
 
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 Snippets
-```
+
+```html
+
 <td><a type="button" class="btn btn-warning"
-	href="/delete-todo?id=${todo.id}">Delete</a></td>
+       href="/delete-todo?id=${todo.id}">Delete</a></td>
 
 <div>
-	<a class="button" href="/add-todo">Add a Todo</a>
+    <a class="button" href="/add-todo">Add a Todo</a>
 </div>
 
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 ```
 
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Lines
-```
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet">
-	<div class="container">
-		<form method="post">
-			<fieldset class="form-group">
-				<label>Description</label> 
-				<input name="desc" type="text"
-					class="form-control" required="required"/>
-			</fieldset>
-			<button type="submit" class="btn btn-success">Add</button>
-		</form>
-	</div>
-	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+```html
+
+<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet">
+<div class="container">
+    <form method="post">
+        <fieldset class="form-group">
+            <label>Description</label>
+            <input name="desc" type="text"
+                   class="form-control" required="required"/>
+        </fieldset>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
+<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 ```
 
 ## Step18.md
 
 #### What we will do:
+
 - Lets use a command bean for Todo
 - Add Validations
-- The JSR 303 and JSR 349 defines specification for the Bean Validation API (version 1.0 and 1.1, respectively), and Hibernate Validator is the reference implementation.
+- The JSR 303 and JSR 349 defines specification for the Bean Validation API (version 1.0 and 1.1, respectively), and
+  Hibernate Validator is the reference implementation.
 - org.hibernate:hibernate-validator
 
 #### Useful Snippets
-```     
-		<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-		<form:form method="post" commandName="todo">
-		<!-- use modelAttribute instead of commandName for Spring Boot Versions > 2.*
-		<form:form method="post" modelAttribute="todo"> -->
-			<fieldset class="form-group">
-				<form:label path="desc">Description</form:label>
-				<form:input path="desc" type="text" class="form-control" required="required"/>
-			</fieldset>
-		</form:form>
+```html   
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-		@Size(min = 10, message = "Enter atleast 10 Characters.")
-		
-		@Valid Todo todo, BindingResult result
+<form:form method="post" commandName="todo">
+    <!-- use modelAttribute instead of commandName for Spring Boot Versions > 2.*
+    <form:form method="post" modelAttribute="todo"> -->
+    <fieldset class="form-group">
+        <form:label path="desc">Description</form:label>
+        <form:input path="desc" type="text" class="form-control" required="required"/>
+    </fieldset>
+</form:form>
 
-		if (result.hasErrors())
-			return "todo";
-		
-		<form:errors path="desc" cssClass="text-warning" />
-		
+@Size(min = 10, message = "Enter atleast 10 Characters.")
+
+@Valid Todo todo, BindingResult result
+
+if (result.hasErrors())
+return "todo";
+
+<form:errors path="desc" cssClass="text-warning"/>
+
 ```
+
 #### Files List
 
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
@@ -1347,95 +1530,113 @@ src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modi
 @SessionAttributes("name")
 public class TodoController {
 
-	@Autowired
-	TodoService service;
+    @Autowired
+    TodoService service;
 
-	@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
-	public String showTodos(ModelMap model) {
-		String name = (String) model.get("name");
-		model.put("todos", service.retrieveTodos(name));
-		return "list-todos";
-	}
+    @RequestMapping(value = "/list-todos", method = RequestMethod.GET)
+    public String showTodos(ModelMap model) {
+        String name = (String) model.get("name");
+        model.put("todos", service.retrieveTodos(name));
+        return "list-todos";
+    }
 
-	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
-	public String showAddTodoPage(ModelMap model) {
-		model.addAttribute("todo", new Todo(0, (String) model.get("name"), "Default Desc",
-				new Date(), false));
-		return "todo";
-	}
+    @RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+    public String showAddTodoPage(ModelMap model) {
+        model.addAttribute("todo", new Todo(0, (String) model.get("name"), "Default Desc",
+                new Date(), false));
+        return "todo";
+    }
 
-	@RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
-	public String deleteTodo(@RequestParam int id) {
-		service.deleteTodo(id);
-		return "redirect:/list-todos";
-	}
+    @RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
+    public String deleteTodo(@RequestParam int id) {
+        service.deleteTodo(id);
+        return "redirect:/list-todos";
+    }
 
-	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
-		
-		if(result.hasErrors()){
-			return "todo";
-		}
-		
-		service.addTodo((String) model.get("name"), todo.getDesc(), new Date(),
-				false);
-		return "redirect:/list-todos";
-	}
+    @RequestMapping(value = "/add-todo", method = RequestMethod.POST)
+    public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+
+        if (result.hasErrors()) {
+            return "todo";
+        }
+
+        service.addTodo((String) model.get("name"), todo.getDesc(), new Date(),
+                false);
+        return "redirect:/list-todos";
+    }
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/model/Todo.java Modified
 New Lines
-```
+
+```java
     public Todo() {
-    		super();
-    }
-    
-    @Size(min=10, message="Enter at least 10 Characters...")
-    private String desc;
+    super();
+}
+
+@Size(min = 10, message = "Enter at least 10 Characters...")
+private String desc;
 
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Lines
-```
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-		<form:form method="post" commandName="todo">
 
-				<!-- use modelAttribute instead of commandName for Spring Boot Versions > 2.*
-		<form:form method="post" modelAttribute="todo"> -->
+```html
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<form:form method="post" commandName="todo">
 
-				<form:label path="desc">Description</form:label> 
-				<form:input path="desc" type="text"
-				<form:errors path="desc" cssClass="text-warning"/>
-		</form:form>
+    <!-- use modelAttribute instead of commandName for Spring Boot Versions > 2.*
+<form:form method="post" modelAttribute="todo"> -->
+
+    <form:label path="desc">Description</form:label>
+    <form:input path="desc" type="text"
+    <form:errors path="desc" cssClass="text-warning"/>
+</form:form>
 ```
 
 ## Step19.md
 
-#### What we will do:
-- Add Update Functionality
-- Lets Use the Same JSP as earlier.
+#### What You Will Do:
+
+- Add **update functionality** for existing todos.
+- Reuse the **same JSP page** used for adding todos to handle updates.
+
+#### Notes:
+
+- Updating a todo involves **pre-populating the form** with existing data.
+- This step demonstrates **reusing views** and keeping the UI consistent.
+- Controller logic will differentiate between **add** and **update** operations based on the presence of an existing
+  todo.
 
 #### Useful Snippets
-```
-	public Todo retrieveTodo(int id) {
-		for (Todo todo : todos) {
-			if (todo.getId() == id)
-				return todo;
-		}
-		return null;
-	}
 
-	public void updateTodo(Todo todo) {
-		todos.remove(todo);
-		todos.add(todo);
-	}
+```java
+    public Todo retrieveTodo(int id) {
+    for (Todo todo : todos) {
+        if (todo.getId() == id)
+            return todo;
+    }
+    return null;
+}
+
+public void updateTodo(Todo todo) {
+    todos.remove(todo);
+    todos.add(todo);
+}
    
-   todo.setUser("in28Minutes"); //TODO:Remove Hardcoding Later
-   service.updateTodo(todo);
+   todo.
+
+setUser("in28Minutes"); //TODO:Remove Hardcoding Later
+   service.
+
+updateTodo(todo);
    
-   <form:hidden path="id"/>  
+   <form:
+hidden path = "id" / >  
 ```
 
 #### Files List
@@ -1444,182 +1645,183 @@ src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modi
 
 ```java
 
-	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
-	public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
-		Todo todo = service.retrieveTodo(id);
-		model.put("todo", todo);
-		return "todo";
-	}
-
-	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
-	public String updateTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
-
-		if (result.hasErrors()) {
-			return "todo";
-		}
-		
-		todo.setUser((String) model.get("name"));
-		
-		service.updateTodo(todo);
-
-		return "redirect:/list-todos";
-	}
-
+@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
+public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
+    Todo todo = service.retrieveTodo(id);
+    model.put("todo", todo);
+    return "todo";
 }
+
+@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
+public String updateTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+
+    if (result.hasErrors()) {
+        return "todo";
+    }
+
+    todo.setUser((String) model.get("name"));
+
+    service.updateTodo(todo);
+
+    return "redirect:/list-todos";
+}
+
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/service/TodoService.java Modified
 
 ```java
     public List<Todo> retrieveTodos(String user) {
-        List<Todo> filteredTodos = new ArrayList<Todo>();
-        for (Todo todo : todos) {
-            if (todo.getUser().equalsIgnoreCase(user)) {
-                filteredTodos.add(todo);
-            }
+    List<Todo> filteredTodos = new ArrayList<>();
+    for (Todo todo : todos) {
+        if (todo.getUser().equalsIgnoreCase(user)) {
+            filteredTodos.add(todo);
         }
-        return filteredTodos;
     }
-    
-    public Todo retrieveTodo(int id) {
-        for (Todo todo : todos) {
-            if (todo.getId()==id) {
-                return todo;
-            }
-        }
-        return null;
-    }
+    return filteredTodos;
+}
 
-    public void updateTodo(Todo todo){
-    		todos.remove(todo);
-    		todos.add(todo);
+public Todo retrieveTodo(int id) {
+    for (Todo todo : todos) {
+        if (todo.getId() == id) {
+            return todo;
+        }
     }
+    return null;
+}
+
+public void updateTodo(Todo todo) {
+    todos.remove(todo);
+    todos.add(todo);
+}
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
+
+```html
+
+<td><a type="button" class="btn btn-success" href="/update-todo?id=${todo.id}">Update</a></td>
 ```
-		<td><a type="button" class="btn btn-success"
-			href="/update-todo?id=${todo.id}">Update</a></td>
-```
+
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Lines
-```
-		
-		<form:hidden path="id"/>
+
+```html
+
+<form:hidden path="id"/>
 ```
 
 ## Step20.md
 
-#### What we will do:
-- Make real use of the Target Date Field
-- initBinder method
+#### What You Will Do:
+
+- Utilize the **Target Date** field in the Todo form.
+- Learn about the **`initBinder` method** to handle date formatting and binding.
+
+#### Notes:
+
+- `initBinder` allows customization of how **form input is converted** to Java objects.
+- Ensures that date fields are properly parsed and bound to the command bean.
+- Prepares the application for handling other complex data types in forms.
 
 #### Useful Snippets
-```
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-	<fmt:formatDate pattern="dd/MM/yyyy"
-									value="${todo.targetDate}" />
-									
-	
-	@InitBinder
-	protected void initBinder(WebDataBinder binder) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(
-				dateFormat, false));
-	}
-	
-	<dependency>
-		<groupId>org.webjars</groupId>
-		<artifactId>bootstrap-datepicker</artifactId>
-		<version>1.0.1</version>
-	</dependency>
-	
-	<script
-		src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
 
-	<script>
-		$('#targetDate').datepicker({
-			format : 'dd/mm/yyyy'
-		});
-	</script>
-		
+```html
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<fmt:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}"/>
+
+
+@InitBinder
+protected void initBinder(WebDataBinder binder) {
+SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+binder.registerCustomEditor(Date.class, new CustomDateEditor(
+dateFormat, false));
+}
+
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>bootstrap-datepicker</artifactId>
+    <version>1.9.0</version>
+</dependency>
+
+<script
+        src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+
+<script>
+    $('#targetDate').datepicker({
+        format: 'dd/mm/yyyy'
+    });
+</script>
+
 ```
 
 #### Files List
 
 pom.xml Modified
 New Lines
+
+```xml
+
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>bootstrap-datepicker</artifactId>
+    <version>1.9.0</version>
+</dependency>
+<dependency>
+<groupId>org.webjars</groupId>
+<artifactId>bootstrap</artifactId>
+<version>5.1.3</version>
+</dependency>
+<dependency>
+<groupId>org.webjars</groupId>
+<artifactId>jquery</artifactId>
+<version>3.6.0</version>
+</dependency>
+
+
 ```
-	<dependency>
-		<groupId>org.webjars</groupId>
-		<artifactId>bootstrap-datepicker</artifactId>
-		<version>1.0.1</version>
-	</dependency>
-    <dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>bootstrap</artifactId>
-        <version>3.3.6</version>
-    </dependency>
-    <dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>jquery</artifactId>
-        <version>1.9.1</version>
-    </dependency>
-    
-  		
-```
+
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
 
 ```java
 
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		// Date - dd/MM/yyyy
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(
-				dateFormat, false));
-	}
+@RequestMapping(value = "update-todo", method = RequestMethod.POST)
+public String updateTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
 
-	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
-	public String updateTodo(ModelMap model, @Valid Todo todo,
-			BindingResult result) {
+    if (result.hasErrors()) {
+        return "todo";
+    }
 
-		if (result.hasErrors()) {
-			return "todo";
-		}
+    String username = getLoggedInUsername(model);
+    todo.setUsername(username);
+    todoService.updateTodo(todo);
+    return "redirect:list-todos";
+}
 
-		todo.setUser((String) model.get("name"));
+@RequestMapping(value = "add-todo", method = RequestMethod.POST)
+public String addNewTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
 
-		service.updateTodo(todo);
+    if (result.hasErrors()) {
+        return "todo";
+    }
 
-		return "redirect:/list-todos";
-	}
-
-	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
-
-		if (result.hasErrors()) {
-			return "todo";
-		}
-
-		service.addTodo((String) model.get("name"), todo.getDesc(), todo.getTargetDate(),
-				false);
-		return "redirect:/list-todos";
-	}
+    String username = getLoggedInUsername(model);
+    todoService.addTodo(username, todo.getDescription(),
+            LocalDate.now().plusYears(1), false);
+    return "redirect:list-todos";
+}
 ```
+
 ---
-src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
-New Lines
-```
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-						<td><fmt:formatDate value="${todo.targetDate}" pattern="dd/MM/yyyy"/></td>
-```
-
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Snippets
+
 ```
-<form:hidden path="id" />
+<form:input type="hidden" path="id"/>
+<form:input type="hidden" path="done"/>
 <form:label path="desc">Description</form:label>
 <form:input path="desc" type="text" class="form-control"
 	required="required" />
@@ -1630,12 +1832,11 @@ New Snippets
 <form:errors path="targetDate" cssClass="text-warning" />
 
 
-<script
-	src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
+<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 
-<script>		
+<script type="text/javascript">
 	$('#targetDate').datepicker({
-		format : 'dd/mm/yyyy'
+	    format: 'yyyy-mm-dd'
 	});
 </script>
 ```
@@ -1643,24 +1844,26 @@ New Snippets
 ## Step21.md
 
 #### What we will do:
+
 - Add a navigation bar
 - Use JSP Fragments
 - Exercise : Align the login & welcome pages.
 - Exercise : Highlight the correct menu item.
 
 #### Useful Snippets
-```
-<nav role="navigation" class="navbar navbar-default">
-	<div class="">
-		<a href="http://www.in28minutes.com" class="navbar-brand">in28Minutes</a>
-	</div>
-	<div class="navbar-collapse">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="/login">Home</a></li>
-			<li><a href="/list-todos">Todos</a></li>
 
+```
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+	<a class="navbar-brand m-1" href="https://courses.in28minutes.com">in28minutes</a>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/list-todos">Todos</a></li>
 		</ul>
 	</div>
+	<ul class="navbar-nav">
+		<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+	</ul>	
 </nav>
 ```
 
@@ -1669,58 +1872,55 @@ New Snippets
 src/main/webapp/WEB-INF/jsp/common/footer.jspf New
 
 ```
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script
-	src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
-<script>
-	$('#targetDate').datepicker({
-		format : 'dd/mm/yyyy'
-	});
-</script>
-
-</body>
+<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+		<script src="webjars/jquery/3.6.0/jquery.min.js"></script>
+		<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+						
+	</body>
 </html>
 ```
+
 ---
 
 src/main/webapp/WEB-INF/jsp/common/header.jspf New
 
 ```
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 
 <html>
-
-<head>
-<title>First Web Application</title>
-<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
-	rel="stylesheet">
-
-</head>
-
-<body>
+	<head>
+		<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
+		<link href="webjars/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" >
+		
+		<title>Manage Your Todos</title>		
+	</head>
+	<body>
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/common/navigation.jspf New
 
 ```
-	<nav role="navigation" class="navbar navbar-default">
-	    <div class="">
-	        <a href="http://www.in28minutes.com" class="navbar-brand">in28Minutes</a>
-	    </div>
-	    <div class="navbar-collapse">
-	        <ul class="nav navbar-nav">
-	            <li class="active"><a href="/login">Home</a></li>
-	            <li><a href="/list-todos">Todos</a></li>
-	        </ul>
-	    </div>
-	</nav>
+<nav class="navbar navbar-expand-md navbar-light bg-light mb-3 p-1">
+	<a class="navbar-brand m-1" href="https://courses.in28minutes.com">in28minutes</a>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/list-todos">Todos</a></li>
+		</ul>
+	</div>
+	<ul class="navbar-nav">
+		<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+	</ul>	
+</nav>
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/list-todos.jsp Modified
 New Lines
+
 ```
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
@@ -1729,6 +1929,7 @@ New Lines
 
 src/main/webapp/WEB-INF/jsp/login.jsp Modified
 New Lines
+
 ```
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
@@ -1742,6 +1943,7 @@ New Lines
 
 src/main/webapp/WEB-INF/jsp/todo.jsp Modified
 New Lines
+
 ```
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
@@ -1767,8 +1969,10 @@ New Lines
 </div>
 <%@ include file="common/footer.jspf" %>
 ```
+
 src/main/webapp/WEB-INF/jsp/welcome.jsp Modified
 New Lines
+
 ```
 <%@ include file="common/header.jspf"%>
 <%@ include file="common/navigation.jspf"%>
@@ -1782,192 +1986,322 @@ New Lines
 ## Step22.md
 
 #### What we will do:
-- Prepare for Using Spring Security
-- Remove All the Login Related Functionality
-- Make Welcome the default page - with some hardcoding to start with.
-- Refactor getLoggedInUserName
-- Update Home Page Link in navigation
+
+- Set up the application for Spring Security
+- Remove all custom login-related functionality
+- Make the Welcome page the default (with initial hardcoding)
+- Refactor the `getLoggedInUserName` method
+- Update the Home Page link in the navigation
 
 #### Files List
 
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Modified
 New Lines
+
+```java
+
+@RequestMapping(value = "/", method = RequestMethod.GET)
+public String showLoginPage(ModelMap model) {
+    model.put("name", "in28Minutes");
+}
 ```
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
-		model.put("name", "in28Minutes");
-```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
 
 ```java
-	@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
-	public String showTodos(ModelMap model) {
-		String name = getLoggedInUserName(model);
-		model.put("todos", service.retrieveTodos(name));
-		return "list-todos";
-	}
 
-	private String getLoggedInUserName(ModelMap model) {
-		return (String) model.get("name");
-	}
+@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
+public String showTodos(ModelMap model) {
+    String name = getLoggedInUserName(model);
+    model.put("todos", service.retrieveTodos(name));
+    return "list-todos";
+}
+
+private String getLoggedInUserName(ModelMap model) {
+    return (String) model.get("name");
+}
 
 ```
+
 ---
 src/main/webapp/WEB-INF/jsp/common/navigation.jspf Modified
 New Lines
+
+```html
+
+<li class="active"><a href="/">Home</a></li>
 ```
-	            <li class="active"><a href="/">Home</a></li>
-```
+
 src/main/webapp/WEB-INF/jsp/login.jsp Deleted
 
 ## Step23.md
 
 #### What we will do:
+
 - Get Setup for Spring Security
 
-
 #### Useful Snippets
+
+```xml
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
 ```
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
 
-package com.in28minutes.security;
+```java
+package com.in28minutes.springboot.myfirstwebapp.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.security.config.Customizer.withDefaults;
+
+import java.util.function.Function;
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class SpringSecurityConfiguration {
+    //LDAP or Database
+    //In Memory 
 
-	@Autowired
-	public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
-			throws Exception {
-		auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
-				.roles("USER", "ADMIN");
-	}
+    //InMemoryUserDetailsManager
+    //InMemoryUserDetailsManager(UserDetails... users)
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/login").permitAll()
-				.antMatchers("/", "/*todo*/**").access("hasRole('USER')").and()
-				.formLogin();
-	}
+    @Bean
+    public InMemoryUserDetailsManager createUserDetailsManager() {
+
+        UserDetails userDetails1 = createNewUser("in28minutes", "dummy");
+        UserDetails userDetails2 = createNewUser("ranga", "dummydummy");
+
+        return new InMemoryUserDetailsManager(userDetails1, userDetails2);
+    }
+
+    private UserDetails createNewUser(String username, String password) {
+        Function<String, String> passwordEncoder
+                = input -> passwordEncoder().encode(input);
+
+        UserDetails userDetails = User.builder()
+                .passwordEncoder(passwordEncoder)
+                .username(username)
+                .password(password)
+                .roles("USER", "ADMIN")
+                .build();
+        return userDetails;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    //All URLs are protected
+    //A login form is shown for unauthorized requests
+    //CSRF disable
+    //Frames
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        http.authorizeHttpRequests(
+                auth -> auth.anyRequest().authenticated());
+        http.formLogin(withDefaults());
+
+        http.csrf(AbstractHttpConfigurer::disable);
+        // OR
+        // http.csrf(AbstractHttpConfigurer::disable);
+
+        http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable)); // Starting from SB 3.1.x
+
+        return http.build();
+    }
+
 }
 
 ```
 
 Not Needed anymore with Spring Boot Auto Configuration
-```
-	   <filter>
-	    		<filter-name>springSecurityFilterChain</filter-name>
-	    		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-	   </filter>
-	 
-	   <filter-mapping>
-	   		<filter-name>springSecurityFilterChain</filter-name>
-	    		<url-pattern>/*</url-pattern>
-	   </filter-mapping> 
+
+```xml
+
+<filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>springSecurityFilterChain</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping> 
 ```
 
 #### Files List
 
 pom.xml Modified
 New Lines
+
+```xml
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
 ```
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-```
+
 src/main/java/com/in28minutes/springboot/web/security/SecurityConfiguration.java New
 
 ```java
-package com.in28minutes.springboot.web.security;
+package com.in28minutes.springboot.myfirstwebapp.security;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.security.config.Customizer.withDefaults;
+
+import java.util.function.Function;
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
-	//Create User - in28Minutes/dummy
-	@Autowired
-    public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
-            throws Exception {
-        auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
-                .roles("USER", "ADMIN");
+public class SpringSecurityConfiguration {
+    //LDAP or Database
+    //In Memory 
+
+    //InMemoryUserDetailsManager
+    //InMemoryUserDetailsManager(UserDetails... users)
+
+    @Bean
+    public InMemoryUserDetailsManager createUserDetailsManager() {
+
+        UserDetails userDetails1 = createNewUser("in28minutes", "dummy");
+        UserDetails userDetails2 = createNewUser("ranga", "dummydummy");
+
+        return new InMemoryUserDetailsManager(userDetails1, userDetails2);
     }
-	
-	@Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/login").permitAll()
-                .antMatchers("/", "/*todo*/**").access("hasRole('USER')").and()
-                .formLogin();
+
+    private UserDetails createNewUser(String username, String password) {
+        Function<String, String> passwordEncoder
+                = input -> passwordEncoder().encode(input);
+
+        UserDetails userDetails = User.builder()
+                .passwordEncoder(passwordEncoder)
+                .username(username)
+                .password(password)
+                .roles("USER", "ADMIN")
+                .build();
+        return userDetails;
     }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    //All URLs are protected
+    //A login form is shown for unauthorized requests
+    //CSRF disable
+    //Frames
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        http.authorizeHttpRequests(
+                auth -> auth.anyRequest().authenticated());
+        http.formLogin(withDefaults());
+
+        http.csrf(AbstractHttpConfigurer::disable);
+        // OR
+        // http.csrf(AbstractHttpConfigurer::disable);
+
+        http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable)); // Starting from SB 3.1.x
+
+        return http.build();
+    }
+
 }
 ```
+
 ---
 
 ## Step24.md
 
 #### What we will do:
-- Remove Hardcoding of User Name
-- Remove LoginService
-- Rename LoginController to WelcomeController
-- Add Logout Functionality
+
+- Remove hardcoded user name
+- Delete the `LoginService`
+- Rename `LoginController` to `WelcomeController`
+- Implement logout functionality
 
 #### Useful Snippets
+
+```java
+    private String getLoggedInUserName(ModelMap model) {
+    Object principal = SecurityContextHolder.getContext()
+            .getAuthentication().getPrincipal();
+
+    if (principal instanceof UserDetails)
+        return ((UserDetails) principal).getUsername();
+
+    return principal.toString();
+}
 ```
-	private String getLoggedInUserName(ModelMap model) {
-		Object principal = SecurityContextHolder.getContext()
-				.getAuthentication().getPrincipal();
 
-		if (principal instanceof UserDetails)
-			return ((UserDetails) principal).getUsername();
+```html
 
-		return principal.toString();
-	}
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/logout">Logout</a></li>
+</ul>
+```
 
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/logout">Logout</a></li>
-		</ul>
+```java
 
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletRequest request,
-			HttpServletResponse response) {
-		Authentication auth = SecurityContextHolder.getContext()
-				.getAuthentication();
-		if (auth != null) {
-			new SecurityContextLogoutHandler().logout(request, response, auth);
-		}
-		return "redirect:/";
-	}
+@RequestMapping(value = "/logout", method = RequestMethod.GET)
+public String logout(HttpServletRequest request,
+                     HttpServletResponse response) {
+    Authentication auth = SecurityContextHolder.getContext()
+            .getAuthentication();
+    if (auth != null) {
+        new SecurityContextLogoutHandler().logout(request, response, auth);
+    }
+    return "redirect:/";
+}
 
 ```
+
 ## Step25.md
 
 #### What we will do:
-- Basic Exception Handling
-- Exception Handling is a cross cutting concern
-- Do not handle exceptions in Controllers or Services, if you cannot add value to them.
-- Bit of refactoring on the controllers
-- Whitelabel Error Page provided by default by Spring Boot
- - You can see a few details of the errors
-- We can customize if we would want to
-- @ControllerAdvice and Controller Specific Exception Handling
-- Handling Errors thrown from Views
+
+- Introduce basic exception handling
+- Understand that exception handling is a cross-cutting concern
+- Avoid handling exceptions in Controllers or Services unless additional value is added
+- Refactor controllers for cleaner error management
+- Explore the default Spring Boot Whitelabel Error Page
+- Review the details shown on error pages
+- Learn how to customize error pages if needed
+- Use `@ControllerAdvice` for global and controller-specific exception handling
+- Handle errors thrown from views
+
 
 #### Useful Snippets
+
 ```
 @Controller("error")
 public class ExceptionController {
@@ -2004,21 +2338,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller("error")
 public class ErrorController {
-	
-	@ExceptionHandler(Exception.class)
-	public ModelAndView handleException
-		(HttpServletRequest request, Exception ex){
-		ModelAndView mv = new ModelAndView();
 
-		mv.addObject("exception", ex.getLocalizedMessage());
-		mv.addObject("url", request.getRequestURL());
-		
-		mv.setViewName("error");
-		return mv;
-	}
+    @ExceptionHandler(Exception.class)
+    public ModelAndView handleException
+            (HttpServletRequest request, Exception ex) {
+        ModelAndView mv = new ModelAndView();
+
+        mv.addObject("exception", ex.getLocalizedMessage());
+        mv.addObject("url", request.getRequestURL());
+
+        mv.setViewName("error");
+        return mv;
+    }
 
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/LoginController.java Deleted
 
@@ -2043,39 +2378,41 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LogoutController {
 
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletRequest request,
-			HttpServletResponse response) {
-		
-		Authentication authentication = SecurityContextHolder.getContext()
-				.getAuthentication();
-		
-		if (authentication != null) {
-			new SecurityContextLogoutHandler().logout(request, response,
-					authentication);
-		}
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response) {
 
-		return "redirect:/";
-	}
+        Authentication authentication = SecurityContextHolder.getContext()
+                .getAuthentication();
+
+        if (authentication != null) {
+            new SecurityContextLogoutHandler().logout(request, response,
+                    authentication);
+        }
+
+        return "redirect:/";
+    }
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
 
 ```java
 
-	private String getLoggedInUserName(ModelMap model) {
-		Object principal = SecurityContextHolder.getContext()
-				.getAuthentication().getPrincipal();
-		
-		if (principal instanceof UserDetails) {
-			return ((UserDetails) principal).getUsername();
-		}
-		
-		return principal.toString();
-	}
+private String getLoggedInUserName(ModelMap model) {
+    Object principal = SecurityContextHolder.getContext()
+            .getAuthentication().getPrincipal();
+
+    if (principal instanceof UserDetails) {
+        return ((UserDetails) principal).getUsername();
+    }
+
+    return principal.toString();
+}
 
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/controller/WelcomeController.java New
 
@@ -2092,31 +2429,33 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WelcomeController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String showWelcomePage(ModelMap model) {
-		model.put("name", getLoggedinUserName());
-		return "welcome";
-	}
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String showWelcomePage(ModelMap model) {
+        model.put("name", getLoggedinUserName());
+        return "welcome";
+    }
 
-	private String getLoggedinUserName() {
-		Object principal = SecurityContextHolder.getContext()
-				.getAuthentication().getPrincipal();
-		
-		if (principal instanceof UserDetails) {
-			return ((UserDetails) principal).getUsername();
-		}
-		
-		return principal.toString();
-	}
+    private String getLoggedinUserName() {
+        Object principal = SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
+
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal).getUsername();
+        }
+
+        return principal.toString();
+    }
 
 }
 ```
+
 ---
 src/main/java/com/in28minutes/springboot/web/service/LoginService.java Deleted
 
 src/main/webapp/WEB-INF/jsp/common/navigation.jspf Modified
 New Lines
-```
+
+```html
 <nav role="navigation" class="navbar navbar-default">
 	<div class="">
 		<a href="http://www.in28minutes.com" class="navbar-brand">in28Minutes</a>
@@ -2132,6 +2471,7 @@ New Lines
 	</div>
 </nav>
 ```
+
 src/main/webapp/WEB-INF/jsp/error.jsp New
 
 ```
@@ -2142,19 +2482,22 @@ An exception occurred! Please contact Support!
 </div>
 <%@ include file="common/footer.jspf"%>
 ```
+
 ---
+
 ## Connecting Web Application with JPA
 
-> Note : Ensure that you complete the introduction to JPA module before doing this section
+> Note: Complete the "Introduction to JPA" module before starting this section.
 
-- Step 26: Adding Dependencies for JPA and H2
-- Step 27: Configuring H2 Console
-- Step 28: Create Todo Entity and JPA Repository
-- Step 29: Insert Todo using JPA Repository
-- Step 30: Update, Delete and Retrieve Todos using JPA Repository
-- Step 31: Data initialization with data.sql
-- Step 32: Connecting JPA to other databases
-- Step 33: Upgrading to Spring Boot 2 and Spring 5
+- Step 26: Add dependencies for JPA and H2
+- Step 27: Configure the H2 Console
+- Step 28: Create the `Todo` entity and JPA repository
+- Step 29: Insert a `Todo` using the JPA repository
+- Step 30: Update, delete, and retrieve `Todos` using the JPA repository
+- Step 31: Initialize data with `data.sql`
+- Step 32: Connect JPA to other databases
+- Step 33: Upgrade to Spring Boot 2 and Spring 5
+
 
 ## Step 26 to 32
 
@@ -2163,106 +2506,112 @@ An exception occurred! Please contact Support!
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.in28minutes.springboot.web</groupId>
-	<artifactId>spring-boot-first-web-application-git</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.in28minutes.springboot.web</groupId>
+    <artifactId>spring-boot-first-web-application-git</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>spring-boot-first-web-application</name>
-	<description>Demo project for Spring Boot</description>
+    <name>spring-boot-first-web-application</name>
+    <description>Demo project for Spring Boot</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.3.RELEASE</version>
-		<relativePath /> <!-- lookup parent from repository -->
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>21</java.version>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>3.3.6</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap-datepicker</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>jquery</artifactId>
-			<version>1.9.1</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope> <!--default for IntelliJ -->
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>5.1.3</version>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap-datepicker</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/SpringBootFirstWebApplication.java New
@@ -2278,11 +2627,12 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.in28minutes.springboot.web")
 public class SpringBootFirstWebApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootFirstWebApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootFirstWebApplication.class, args);
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/controller/ErrorController.java New
@@ -2299,21 +2649,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller("error")
 public class ErrorController {
-	
-	@ExceptionHandler(Exception.class)
-	public ModelAndView handleException
-		(HttpServletRequest request, Exception ex){
-		ModelAndView mv = new ModelAndView();
 
-		mv.addObject("exception", ex.getLocalizedMessage());
-		mv.addObject("url", request.getRequestURL());
-		
-		mv.setViewName("error");
-		return mv;
-	}
+    @ExceptionHandler(Exception.class)
+    public ModelAndView handleException
+            (HttpServletRequest request, Exception ex) {
+        ModelAndView mv = new ModelAndView();
+
+        mv.addObject("exception", ex.getLocalizedMessage());
+        mv.addObject("url", request.getRequestURL());
+
+        mv.setViewName("error");
+        return mv;
+    }
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/controller/LogoutController.java New
@@ -2337,22 +2688,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LogoutController {
 
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(HttpServletRequest request,
-			HttpServletResponse response) {
-		
-		Authentication authentication = SecurityContextHolder.getContext()
-				.getAuthentication();
-		
-		if (authentication != null) {
-			new SecurityContextLogoutHandler().logout(request, response,
-					authentication);
-		}
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response) {
 
-		return "redirect:/";
-	}
+        Authentication authentication = SecurityContextHolder.getContext()
+                .getAuthentication();
+
+        if (authentication != null) {
+            new SecurityContextLogoutHandler().logout(request, response,
+                    authentication);
+        }
+
+        return "redirect:/";
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/controller/TodoController.java New
@@ -2383,93 +2735,94 @@ import com.in28minutes.springboot.web.service.TodoRepository;
 
 @Controller
 public class TodoController {
-	
-	@Autowired
-	TodoRepository repository;
 
-	@InitBinder
-	public void initBinder(WebDataBinder binder) {
-		// Date - dd/MM/yyyy
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(
-				dateFormat, false));
-	}
+    @Autowired
+    TodoRepository repository;
 
-	@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
-	public String showTodos(ModelMap model) {
-		String name = getLoggedInUserName(model);
-		model.put("todos", repository.findByUser(name));
-		//model.put("todos", service.retrieveTodos(name));
-		return "list-todos";
-	}
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        // Date - dd/MM/yyyy
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(
+                dateFormat, false));
+    }
 
-	private String getLoggedInUserName(ModelMap model) {
-		Object principal = SecurityContextHolder.getContext()
-				.getAuthentication().getPrincipal();
-		
-		if (principal instanceof UserDetails) {
-			return ((UserDetails) principal).getUsername();
-		}
-		
-		return principal.toString();
-	}
+    @RequestMapping(value = "/list-todos", method = RequestMethod.GET)
+    public String showTodos(ModelMap model) {
+        String name = getLoggedInUserName(model);
+        model.put("todos", repository.findByUser(name));
+        //model.put("todos", service.retrieveTodos(name));
+        return "list-todos";
+    }
 
-	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
-	public String showAddTodoPage(ModelMap model) {
-		model.addAttribute("todo", new Todo(0, getLoggedInUserName(model),
-				"Default Desc", new Date(), false));
-		return "todo";
-	}
+    private String getLoggedInUserName(ModelMap model) {
+        Object principal = SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
 
-	@RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
-	public String deleteTodo(@RequestParam int id) {
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal).getUsername();
+        }
 
-		//if(id==1)
-			//throw new RuntimeException("Something went wrong");
-		repository.delete(id);
-		//service.deleteTodo(id);
-		return "redirect:/list-todos";
-	}
+        return principal.toString();
+    }
 
-	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
-	public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
-		Todo todo = repository.findOne(id);
-		//Todo todo = service.retrieveTodo(id);
-		model.put("todo", todo);
-		return "todo";
-	}
+    @RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+    public String showAddTodoPage(ModelMap model) {
+        model.addAttribute("todo", new Todo(0, getLoggedInUserName(model),
+                "Default Desc", new Date(), false));
+        return "todo";
+    }
 
-	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
-	public String updateTodo(ModelMap model, @Valid Todo todo,
-			BindingResult result) {
+    @RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
+    public String deleteTodo(@RequestParam int id) {
 
-		if (result.hasErrors()) {
-			return "todo";
-		}
+        //if(id==1)
+        //throw new RuntimeException("Something went wrong");
+        repository.delete(id);
+        //service.deleteTodo(id);
+        return "redirect:/list-todos";
+    }
 
-		todo.setUser(getLoggedInUserName(model));
+    @RequestMapping(value = "/update-todo", method = RequestMethod.GET)
+    public String showUpdateTodoPage(@RequestParam int id, ModelMap model) {
+        Todo todo = repository.findOne(id);
+        //Todo todo = service.retrieveTodo(id);
+        model.put("todo", todo);
+        return "todo";
+    }
 
-		repository.save(todo);
-		//service.updateTodo(todo);
+    @RequestMapping(value = "/update-todo", method = RequestMethod.POST)
+    public String updateTodo(ModelMap model, @Valid Todo todo,
+                             BindingResult result) {
 
-		return "redirect:/list-todos";
-	}
+        if (result.hasErrors()) {
+            return "todo";
+        }
 
-	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+        todo.setUser(getLoggedInUserName(model));
 
-		if (result.hasErrors()) {
-			return "todo";
-		}
+        repository.save(todo);
+        //service.updateTodo(todo);
 
-		todo.setUser(getLoggedInUserName(model));
-		repository.save(todo);
+        return "redirect:/list-todos";
+    }
+
+    @RequestMapping(value = "/add-todo", method = RequestMethod.POST)
+    public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
+
+        if (result.hasErrors()) {
+            return "todo";
+        }
+
+        todo.setUser(getLoggedInUserName(model));
+        repository.save(todo);
 		/*service.addTodo(getLoggedInUserName(model), todo.getDesc(), todo.getTargetDate(),
 				false);*/
-		return "redirect:/list-todos";
-	}
+        return "redirect:/list-todos";
+    }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/controller/WelcomeController.java New
@@ -2487,25 +2840,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WelcomeController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String showWelcomePage(ModelMap model) {
-		model.put("name", getLoggedinUserName());
-		return "welcome";
-	}
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String showWelcomePage(ModelMap model) {
+        model.put("name", getLoggedinUserName());
+        return "welcome";
+    }
 
-	private String getLoggedinUserName() {
-		Object principal = SecurityContextHolder.getContext()
-				.getAuthentication().getPrincipal();
-		
-		if (principal instanceof UserDetails) {
-			return ((UserDetails) principal).getUsername();
-		}
-		
-		return principal.toString();
-	}
+    private String getLoggedinUserName() {
+        Object principal = SecurityContextHolder.getContext()
+                .getAuthentication().getPrincipal();
+
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal).getUsername();
+        }
+
+        return principal.toString();
+    }
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/model/Todo.java New
@@ -2522,25 +2876,25 @@ import javax.validation.constraints.Size;
 
 @Entity
 public class Todo {
-    
-	@Id
-	@GeneratedValue
-	private int id;
-    
-	private String user;
-    
-    @Size(min=10, message="Enter at least 10 Characters...")
+
+    @Id
+    @GeneratedValue
+    private int id;
+
+    private String user;
+
+    @Size(min = 10, message = "Enter at least 10 Characters...")
     private String desc;
 
     private Date targetDate;
     private boolean isDone;
 
     public Todo() {
-    		super();
+        super();
     }
-    
+
     public Todo(int id, String user, String desc, Date targetDate,
-            boolean isDone) {
+                boolean isDone) {
         super();
         this.id = id;
         this.user = user;
@@ -2624,6 +2978,7 @@ public class Todo {
 
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/security/SecurityConfiguration.java New
@@ -2638,26 +2993,27 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
-	//Create User - in28Minutes/dummy
-	@Autowired
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+    //Create User - in28Minutes/dummy
+    @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth)
             throws Exception {
         auth.inMemoryAuthentication().passwordEncoder(org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance()).withUser("in28Minutes").password("dummy")
                 .roles("USER", "ADMIN");
     }
-	
-	@Override
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/login", "/h2-console/**").permitAll()
                 .antMatchers("/", "/*todo*/**").access("hasRole('USER')").and()
                 .formLogin();
-        
+
         http.csrf().disable();
         http.headers().frameOptions().disable();
     }
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/service/TodoRepository.java New
@@ -2671,17 +3027,18 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.in28minutes.springboot.web.model.Todo;
 
-public interface TodoRepository extends JpaRepository<Todo, Integer>{
-	List<Todo> findByUser(String user);
-	
-	//service.retrieveTodos(name)
+public interface TodoRepository extends JpaRepository<Todo, Integer> {
+    List<Todo> findByUser(String user);
 
-	//service.deleteTodo(id);
-	//service.retrieveTodo(id)
-	//service.updateTodo(todo)
-	//service.addTodo(getLoggedInUserName(model), todo.getDesc(), todo.getTargetDate(),false);
+    //service.retrieveTodos(name)
+
+    //service.deleteTodo(id);
+    //service.retrieveTodo(id)
+    //service.updateTodo(todo)
+    //service.addTodo(getLoggedInUserName(model), todo.getDesc(), todo.getTargetDate(),false);
 }
 ```
+
 ---
 
 ### /src/main/java/com/in28minutes/springboot/web/service/TodoService.java New
@@ -2720,23 +3077,23 @@ public class TodoService {
         }
         return filteredTodos;
     }
-    
+
     public Todo retrieveTodo(int id) {
         for (Todo todo : todos) {
-            if (todo.getId()==id) {
+            if (todo.getId() == id) {
                 return todo;
             }
         }
         return null;
     }
 
-    public void updateTodo(Todo todo){
-    		todos.remove(todo);
-    		todos.add(todo);
+    public void updateTodo(Todo todo) {
+        todos.remove(todo);
+        todos.add(todo);
     }
 
     public void addTodo(String name, String desc, Date targetDate,
-            boolean isDone) {
+                        boolean isDone) {
         todos.add(new Todo(++todoCount, name, desc, targetDate, isDone));
     }
 
@@ -2751,6 +3108,7 @@ public class TodoService {
     }
 }
 ```
+
 ---
 
 ### /src/main/resources/application.properties New
@@ -2759,12 +3117,12 @@ public class TodoService {
 spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
 logging.level.org.springframework.web=INFO
-
 spring.jpa.show-sql=true
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.data.jpa.repositories.bootstrap-mode=default
 spring.h2.console.enabled=true
 ```
+
 ---
 
 ### /src/main/resources/data.sql New
@@ -2777,6 +3135,7 @@ values(10002, 'Learn Angular JS', false, sysdate(), 'in28Minutes');
 insert into TODO
 values(10003, 'Learn to Dance', false, sysdate(), 'in28Minutes');
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/common/footer.jspf New
@@ -2795,6 +3154,7 @@ values(10003, 'Learn to Dance', false, sysdate(), 'in28Minutes');
 </body>
 </html>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/common/header.jspf New
@@ -2815,6 +3175,7 @@ values(10003, 'Learn to Dance', false, sysdate(), 'in28Minutes');
 
 <body>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/common/navigation.jspf New
@@ -2836,6 +3197,7 @@ values(10003, 'Learn to Dance', false, sysdate(), 'in28Minutes');
 	</div>
 </nav>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/error.jsp New
@@ -2848,6 +3210,7 @@ An exception occurred! Please contact Support!
 </div>
 <%@ include file="common/footer.jspf"%>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/list-todos.jsp New
@@ -2888,6 +3251,7 @@ An exception occurred! Please contact Support!
 	</div>
 <%@ include file="common/footer.jspf" %>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/todo.jsp New
@@ -2919,6 +3283,7 @@ An exception occurred! Please contact Support!
 </div>
 <%@ include file="common/footer.jspf" %>
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/welcome.jsp New
@@ -2932,6 +3297,7 @@ An exception occurred! Please contact Support!
 </div>
 <%@ include file="common/footer.jspf"%>
 ```
+
 ---
 
 ### /src/test/java/com/in28minutes/springboot/web/SpringBootFirstWebApplicationTests.java New
@@ -2948,9 +3314,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class SpringBootFirstWebApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }
 ```
@@ -2958,20 +3324,28 @@ public class SpringBootFirstWebApplicationTests {
 ## step33-Upgrade-To-Sprint-Boot-2-M3.md
 
 ### /pom.xml Modified
+
 New Lines
+
 ```
 		<version>2.3.1.RELEASE</version>
 ```
+
 ### /src/main/java/com/in28minutes/springboot/web/controller/TodoController.java Modified
+
 New Lines
+
 ```
 	repository.deleteById(id);
 	Todo todo = repository.findById(id).get();
 ```
+
 ---
 
 ### /src/main/webapp/WEB-INF/jsp/todo.jsp Modified
+
 New Lines
+
 ```
 	<form:form method="post" modelAttribute="todo">
 ```
@@ -2980,31 +3354,31 @@ New Lines
 
 ### 02.Spring-Boot-Web-Application/notes.md
 
-
 ## Schema
 
-
 ```sql
-create table todo 
-(id integer not null, 
-desc varchar(255), 
-is_done boolean not null, 
-target_date timestamp, 
-user varchar(255), 
-primary key (id))
+create table todo
+(
+    id          integer not null,
+    desc        varchar(255),
+    is_done     boolean not null,
+    target_date timestamp,
+    user        varchar(255),
+    primary key (id)
+)
 ```
 
 ### Data
 
 ```sql
 INSERT INTO TODO
-VALUES(10001, 'Learn Spring Boot', false, sysdate(),'in28Minutes')
+VALUES (10001, 'Learn Spring Boot', false, sysdate(), 'in28Minutes')
+    INSERT
+INTO TODO
+VALUES (10002, 'Learn RESTful Web Services', false, sysdate(), 'in28Minutes')
 
 INSERT INTO TODO
-VALUES(10002, 'Learn RESTful Web Services', false, sysdate(),'in28Minutes')
-
-INSERT INTO TODO
-VALUES(10003, 'Learn SOAP Web Services', false, sysdate(),'in28Minutes')
+VALUES (10003, 'Learn SOAP Web Services', false, sysdate(), 'in28Minutes')
 ```
 
 ### 02.Spring-Boot-Web-Application/README.md
@@ -3014,11 +3388,11 @@ Developing your first Spring Boot Web Application is fun.
 ## Installing and Setting Up MySQL
 
 - Install MySQL https://dev.mysql.com/doc/en/installing.html
-  - More details : http://www.mysqltutorial.org/install-mysql/
-  - Trouble Shooting - https://dev.mysql.com/doc/refman/en/problems.html
+    - More details : http://www.mysqltutorial.org/install-mysql/
+    - Trouble Shooting - https://dev.mysql.com/doc/refman/en/problems.html
 - Startup the Server (as a service)
 - Go to command prompt (or terminal)
-   - Execute following commands to create a database and a user
+    - Execute following commands to create a database and a user
 
 ```
 mysql --user=user_name --password db_name
@@ -3030,36 +3404,44 @@ grant all on todo_example.* to 'todouser'@'localhost';
 - Execute following sql queries to create the table and insert the data
 
 Table
+
 ```sql
-create table todo 
-(id integer not null, 
-desc varchar(255), 
-is_done boolean not null, 
-target_date timestamp, 
-user varchar(255), 
-primary key (id));
+create table todo
+(
+    id          integer not null,
+    desc        varchar(255),
+    is_done     boolean not null,
+    target_date timestamp,
+    user        varchar(255),
+    primary key (id)
+);
 ```
 
 Data
+
 ```sql
 INSERT INTO TODO
-VALUES(10001, 'Learn Spring Boot', false, sysdate(),'in28Minutes');
+VALUES (10001, 'Learn Spring Boot', false, sysdate(), 'in28Minutes');
 
 INSERT INTO TODO
-VALUES(10002, 'Learn RESTful Web Services', false, sysdate(),'in28Minutes');
+VALUES (10002, 'Learn RESTful Web Services', false, sysdate(), 'in28Minutes');
 
 INSERT INTO TODO
-VALUES(10003, 'Learn SOAP Web Services', false, sysdate(),'in28Minutes');
+VALUES (10003, 'Learn SOAP Web Services', false, sysdate(), 'in28Minutes');
 ```
 
 ## Code changes to connect to MySQL
+
 - Add dependency to pom.xml (and remove H2 dependency)
+
 ```xml
+
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
 </dependency>
 ```
+
 - Configure application.properties
 
 ```properties
@@ -3088,30 +3470,40 @@ You will learn about
 - Spring Boot Actuator
 - Spring Boot Developer Tools and LiveReload
 
-
 ## Step01.md
+
 #### What You Will Learn during this Step:
-- Set up an Maven Project with Eclipse. 
- - Intellij Link : https://www.jetbrains.com/help/idea/2016.2/getting-started-with-maven.html#create_maven_project
+
+- Set up an Maven Project with Eclipse.
+- Intellij Link : https://www.jetbrains.com/help/idea/2016.2/getting-started-with-maven.html#create_maven_project
 - Copy Two Files pom.xml and Application.java
 - Launch Your First Spring Boot Application.
 - You will be introduced to Maven
-  - Dependency Management
+    - Dependency Management
 
 #### Cool thing to note!
+
 - Without a lot of configuration, we are up and running with a web application
- - Refer https://github.com/in28minutes/SpringMvcStepByStep/blob/master/Step15.md to understand the sort of stuff - web.xml, dispatcher servlet configuration, maven dependency management and plugins - that are need to launch a typical web application without Spring Boot!
+- Refer https://github.com/in28minutes/SpringMvcStepByStep/blob/master/Step15.md to understand the sort of stuff -
+  web.xml, dispatcher servlet configuration, maven dependency management and plugins - that are need to launch a typical
+  web application without Spring Boot!
 
 #### What You Will NOT Learn during this Step:
-- Spring Boot does a lot of magic. This magic is called Auto Configuration. We will discuss about different terms related to Spring Boot - Starter Parent, Starter projects, Auto configuration - in depth during our first 10 steps.
-- As far as this step is concerned, we will focus on getting up and running with Spring Boot. We will understand all the magic a little later. 
+
+- Spring Boot does a lot of magic. This magic is called Auto Configuration. We will discuss about different terms
+  related to Spring Boot - Starter Parent, Starter projects, Auto configuration - in depth during our first 10 steps.
+- As far as this step is concerned, we will focus on getting up and running with Spring Boot. We will understand all the
+  magic a little later.
 - We will copy a lot of code in this step - just to avoid typos
 
 #### Exercises
+
 - If you are comfortable with Spring, try to create a few dependencies and see if are automatically auto-wired!
 
 #### Files List
+
 pom.xml
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -3147,7 +3539,9 @@ pom.xml
 	</build>
 </project>
 ```
+
 src/main/java/com/in28minutes/springboot/Application.java
+
 ```
 package com.in28minutes.springboot;
 
@@ -3165,18 +3559,22 @@ public class Application {
 
 }
 ```
+
 ## Step02.md
 
 #### What You Will Learn during this Step:
+
 - Lets add a RestController with a dependency and see Spring Boot Magic live
 
 #### Theory Break : Quick Spring and Spring MVC Primer
+
 - What is dependency?
 - @Component
 - @Autowired
 - @RestController
 
 #### Useful Snippets and References
+
 ```
 package com.in28minutes.springboot;
 
@@ -3207,8 +3605,11 @@ class WelcomeService {
 	}
 }
 ```
+
 #### Files List
+
 src/main/java/com/in28minutes/service/WelcomeService.java New
+
 ```
 package com.in28minutes.service;
 
@@ -3223,12 +3624,15 @@ public class WelcomeService {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/Application.java Modified
 New Lines
+
 ```
 import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.in28minutes")
 ```
+
 ```
 package com.in28minutes.springboot;
 
@@ -3248,7 +3652,9 @@ public class Application {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeController.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -3271,37 +3677,50 @@ public class WelcomeController {
 	}
 }
 ```
+
 ## Step03.md
 
 #### What You Will Learn during this Step:
-- First installment of revealing how magic happens with Spring Boot. As a Spring Boot developer, you need to understand what's happening beneath the hood of Spring Boot! 
+
+- First installment of revealing how magic happens with Spring Boot. As a Spring Boot developer, you need to understand
+  what's happening beneath the hood of Spring Boot!
 - spring-boot-starter-web : starter for building applications with Spring MVC. Tomcat is default embedded container.
 - We already added this starter in the first step! Now we will explore the features it provides
 - We will enable logging in DEBUG mode to understand further
 
 ## spring-boot-starter-web
-- Spring Boot Starter Web brings all dependencies needed to build normal and RESTful web applications. Look at the dependency tree. 
- - All the dependencies are added in because of spring-boot-starter-web
- - Also look at /META-INF/spring.provides inside the spring-boot-starter-web.jar
+
+- Spring Boot Starter Web brings all dependencies needed to build normal and RESTful web applications. Look at the
+  dependency tree.
+- All the dependencies are added in because of spring-boot-starter-web
+- Also look at /META-INF/spring.provides inside the spring-boot-starter-web.jar
 - Spring Boot Starter Web auto configures things needed to startup a web application. Look at the log
- - Mapping servlet: 'dispatcherServlet' to [/]
- - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
- - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
- - Look at package org.springframework.boot.autoconfigure.web in spring-boot-autoconfigure-*.jar
+- Mapping servlet: 'dispatcherServlet' to [/]
+- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String,
+  java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(
+  javax.servlet.http.HttpServletRequest)
+- Mapped URL path [/webjars/**] onto handler of
+  type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+- Look at package org.springframework.boot.autoconfigure.web in spring-boot-autoconfigure-*.jar
 - Go to url http://localhost:8080/some-non-existing-url
 
 #### Useful Snippets
+
 /src/main/resources/application.properties
+
 ```
 logging.level.org.springframework: DEBUG
 ```
 
 #### Files List
+
 src/main/java/com/in28minutes/service/WelcomeService.java Deleted
 src/main/java/com/in28minutes/springboot/Application.java Modified
 New Lines
+
 ```
 ```
+
 ```
 package com.in28minutes.springboot;
 
@@ -3319,10 +3738,13 @@ public class Application {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeController.java Modified
 New Lines
+
 ```
 ```
+
 ```
 package com.in28minutes.springboot;
 
@@ -3343,7 +3765,9 @@ public class WelcomeController {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeService.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -3358,23 +3782,29 @@ public class WelcomeService {
 	}
 }
 ```
+
 src/main/resources/application.properties New
+
 ```
 logging.level.org.springframework: DEBUG
 ```
+
 ## Step04.md
 
 #### What You Will Learn during this Step:
+
 - Understand Starter Parent
 - How to override things defined in Starter Parent
 - Other starter projects
 
 #### Starter Parent
+
 - Dependency Versions
 - Java Versions
 - Default Plugins
 
 #### Other Starter Projects
+
 - spring-boot-starter-web-services
 - spring-boot-starter-test
 - spring-boot-starter-jdbc
@@ -3384,7 +3814,9 @@ logging.level.org.springframework: DEBUG
 - More at https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#using-boot-starter
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -3392,52 +3824,62 @@ First Snippet
         <version>1.4.0.RELEASE</version>
     </parent>
 ```
+
 ## Step05.md
 
 #### What You Will Learn during this Step:
+
 - Spring Boot vs Spring
 - What Spring Boot is Not!
 
 #### Spring Boot vs Spring
 
 ### Applications with Spring Framework New
+
 - Over the next few years, a number of applications were developed with Spring Framework
- - Testable but
- - Lot of configuration (XML and Java)
-  - Developing Spring Based application need configuration of a lot of beans!
-  - Integration with other frameworks need configuration as well!
-- In the last few years, focus is moving from monolith applications to microservices. We need to be able to start project quickly. Minimum or Zero start up time
- - Framework Setup
- - Deployment - Configurability
- - Logging, Transaction Management
- - Monitoring
- - Web Server Configuration
- 
+- Testable but
+- Lot of configuration (XML and Java)
+- Developing Spring Based application need configuration of a lot of beans!
+- Integration with other frameworks need configuration as well!
+- In the last few years, focus is moving from monolith applications to microservices. We need to be able to start
+  project quickly. Minimum or Zero start up time
+- Framework Setup
+- Deployment - Configurability
+- Logging, Transaction Management
+- Monitoring
+- Web Server Configuration
+
 ### Spring New
-- Spring is just a dependency injection framework. Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
+
+- Spring is just a dependency injection framework. Spring focuses on the "plumbing" of enterprise applications so that
+  teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
 - First half of the 2000 decade! EJBs
-- EJBs were NOT easy to develop. 
- - Write a lot of xml and plumbing code to get EJBs running
- - Impossible to Unit Test
- - Alternative - Writing simple JDBC Code involved a lot of plumbing
-- Spring framework started with aim of making Java EE development simpler. 
- - Goals
-  - Make applications testable. i.e. easier to write unit tests
-  - Reduce plumbing code of JDBC and JMS
-  - Simple architecture. Minus EJB.
-  - Integrates well with other popular frameworks.
+- EJBs were NOT easy to develop.
+- Write a lot of xml and plumbing code to get EJBs running
+- Impossible to Unit Test
+- Alternative - Writing simple JDBC Code involved a lot of plumbing
+- Spring framework started with aim of making Java EE development simpler.
+- Goals
+- Make applications testable. i.e. easier to write unit tests
+- Reduce plumbing code of JDBC and JMS
+- Simple architecture. Minus EJB.
+- Integrates well with other popular frameworks.
 
 ### Spring Boot New
-- Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”. 
-- We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. 
+
+- Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can “just run”.
+- We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss.
 - Example Problem Statements
- - You want to add Hibernate to your project. You dont worry about configuring a data source and a session factory. I will do if for you! 
+- You want to add Hibernate to your project. You dont worry about configuring a data source and a session factory. I
+  will do if for you!
 - Goals
-  - Provide quick start for projects with Spring.
-  - Be opinionated but provide options.
-  - Provide a range of non-functional features that are common to large classes of projects (e.g. embedded servers, security, metrics, health checks, externalized configuration).
+    - Provide quick start for projects with Spring.
+    - Be opinionated but provide options.
+    - Provide a range of non-functional features that are common to large classes of projects (e.g. embedded servers,
+      security, metrics, health checks, externalized configuration).
 
 ###### What Spring Boot is NOT?
+
 - It’s not an app or a web server
 - Does not implement any specific framework - for example, JPA or JMS
 - Does not generate code
@@ -3447,20 +3889,27 @@ src/main/java/com/in28minutes/springboot/Application.java Deleted
 src/main/java/com/in28minutes/springboot/WelcomeController.java Deleted
 src/main/java/com/in28minutes/springboot/WelcomeService.java Deleted
 src/main/resources/application.properties Deleted
+
 ## Step06.md
 
 #### What You Will Learn during this Step:
-- We want to prepare for creating a Rest Service 
- - Survey
- - Question
- - SurveyService
+
+- We want to prepare for creating a Rest Service
+- Survey
+- Question
+- SurveyService
 - We use hard-coded data to get started
 
 #### Files List
+
 ### Applications with Spring Framework Deleted
+
 ### Spring Deleted
+
 ### Spring Boot Deleted
+
 pom.xml New
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -3496,7 +3945,9 @@ pom.xml New
 	</build>
 </project>
 ```
+
 src/main/java/com/in28minutes/springboot/Application.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -3514,7 +3965,9 @@ public class Application {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeController.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -3535,7 +3988,9 @@ public class WelcomeController {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeService.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -3550,7 +4005,9 @@ public class WelcomeService {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/model/Question.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -3634,7 +4091,9 @@ public class Question {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/model/Survey.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -3695,7 +4154,9 @@ public class Survey {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/service/SurveyService.java New
+
 ```
 package com.in28minutes.springboot.service;
 
@@ -3793,35 +4254,45 @@ public class SurveyService {
 	}
 }
 ```
+
 src/main/resources/application.properties New
+
 ```
 logging.level.org.springframework: DEBUG
 ```
+
 ## Step07.md
 
 #### What You Will Learn during this Step:
+
 - Create a REST Service for Retrieving all questions for a survey
- - Autowire SurveyService
- - Create @GetMapping("/surveys/{surveyId}/questions")
- - Use @PathVariable String surveyId
+- Autowire SurveyService
+- Create @GetMapping("/surveys/{surveyId}/questions")
+- Use @PathVariable String surveyId
 - http://localhost:8080/surveys/Survey1/questions/
- - How does the Bean get converted to a JSON?
-  - Auto Configuration : If Jackson jar is on the class path, message converters are auto created! (Search in log :Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter')
+- How does the Bean get converted to a JSON?
+- Auto Configuration : If Jackson jar is on the class path, message converters are auto created! (Search in log :
+  Creating shared instance of singleton bean 'mappingJackson2HttpMessageConverter')
 
 #### Some Theory
+
 - What is REST?
 - Architectural style for the web. REST specifies a set of constraints.
-   - Client - Server : Server (service provider) should be different from a client (service consumer). 
-     - Enables loose coupling and independent evolution of server and client as new technologies emerge. 
-   - Each service should be stateless.
-   - Each Resource has a resource identifier.
-   - It should be possible to cache response.
-   - Consumer of the service may not have a direct connection to the Service Provider. Response might be sent from a middle layer cache.
-   - A resource can have multiple representations. Resource can modified through a message in any of the these representations.
-   
+    - Client - Server : Server (service provider) should be different from a client (service consumer).
+        - Enables loose coupling and independent evolution of server and client as new technologies emerge.
+    - Each service should be stateless.
+    - Each Resource has a resource identifier.
+    - It should be possible to cache response.
+    - Consumer of the service may not have a direct connection to the Service Provider. Response might be sent from a
+      middle layer cache.
+    - A resource can have multiple representations. Resource can modified through a message in any of the these
+      representations.
+
 #### Useful Snippets and References
+
 - JSON View : https://jsonview.com/
-First Snippet
+  First Snippet
+
 ```
 @RestController
 class SurveyController {
@@ -3836,11 +4307,14 @@ class SurveyController {
 ```
 
 #### Exercise
+
 - Try to think about how the URI for retrieving the details of a specific question should be!
 
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 		
             <groupId>org.springframework.boot</groupId>
@@ -3848,7 +4322,9 @@ New Lines
             <optional>true</optional>
         </dependency>
 ```
+
 src/main/java/com/in28minutes/springboot/controller/SurveyController.java New
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -3873,21 +4349,25 @@ class SurveyController {
 	}
 }
 ```
+
 ## Step08.md
 
 #### What You Will Learn during this Step:
+
 - Adding the second method to rest service to retrieve a specific question
 - This will be a very short step
 - http://localhost:8080/surveys/Survey1/questions/Question1
 - Different Request Methods
-  - GET - Retrieve details of a resource
-  - POST - Create a new resource
-  - PUT	- Update an existing resource
-  - PATCH - Update part of a resource
-  - DELETE - Delete a resource
+    - GET - Retrieve details of a resource
+    - POST - Create a new resource
+    - PUT - Update an existing resource
+    - PATCH - Update part of a resource
+    - DELETE - Delete a resource
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
     @GetMapping(path = "/surveys/{surveyId}/questions/{questionId}")
     public Question retrieveQuestion(@PathVariable String surveyId,
@@ -3898,11 +4378,14 @@ First Snippet
 ```
 
 #### Exercises
-- Write the method to retrieve all surveys! 
+
+- Write the method to retrieve all surveys!
 
 #### Files List
+
 src/main/java/com/in28minutes/springboot/controller/SurveyController.java Modified
 New Lines
+
 ```
 	// GET "/surveys/{surveyId}/questions/{questionId}"
 	@GetMapping("/surveys/{surveyId}/questions/{questionId}")
@@ -3910,6 +4393,7 @@ New Lines
 			@PathVariable String questionId) {
 		return surveyService.retrieveQuestion(surveyId, questionId);
 ```
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -3942,22 +4426,26 @@ class SurveyController {
 
 }
 ```
+
 ## Step09.md
 
 #### What You Will Learn during this Step:
+
 - I hate the fact that I've to stop and start the server each time. Can somebody save me?
- - Yeah. Spring Boot Developer Tools
-  - By default, any entry on the classpath that points to a folder  will be monitored for changes.
-  - These will not trigger restart - /META-INF/maven, /META-INF/resources ,/resources ,/static ,/public or /templates 
-  - Folders can be configured : spring.devtools.restart.exclude=static/**,public/** 
-  - Additional Paths : spring.devtools.restart.additional-paths
-  - LiveReload http://livereload.com/extensions/
-   - Technology in progress!! So, expect a few problems!
-- Programming Tip 
- - Become an expert at your IDE - https://www.youtube.com/watch?v=dN9GYsG1v_c
+- Yeah. Spring Boot Developer Tools
+- By default, any entry on the classpath that points to a folder will be monitored for changes.
+- These will not trigger restart - /META-INF/maven, /META-INF/resources ,/resources ,/static ,/public or /templates
+- Folders can be configured : spring.devtools.restart.exclude=static/**,public/**
+- Additional Paths : spring.devtools.restart.additional-paths
+- LiveReload http://livereload.com/extensions/
+- Technology in progress!! So, expect a few problems!
+- Programming Tip
+- Become an expert at your IDE - https://www.youtube.com/watch?v=dN9GYsG1v_c
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -3967,28 +4455,32 @@ First Snippet
 ```
 
 #### Exercises
+
 - Make changes and see if they reflect immediately
 
 ## Step10.md
 
 #### What You Will Learn during this Step:
+
 - Create a REST Service to add a new question to survey
- - @PostMapping("/surveys/{surveyId}/questions")
- - @RequestBody Question question
- - What should be Response Status for create?
- - ResponseEntity.created(location).build()
- - ResponseEntity.noContent().build()
- - Using Postman : https://www.getpostman.com
- - URL to POST to - http://localhost:8080/surveys/Survey1/questions
+- @PostMapping("/surveys/{surveyId}/questions")
+- @RequestBody Question question
+- What should be Response Status for create?
+- ResponseEntity.created(location).build()
+- ResponseEntity.noContent().build()
+- Using Postman : https://www.getpostman.com
+- URL to POST to - http://localhost:8080/surveys/Survey1/questions
 
 #### Useful Snippets and References
 
 Sample Body for POST Request
+
 ```
 {"description":"Second Most Populous Country in the World","correctAnswer":"India","options":["India","Russia","United States","China"]}
 ```
 
 First Snippet
+
 ```
     @PostMapping("/surveys/{surveyId}/questions")
     ResponseEntity<?> add(@PathVariable String surveyId,
@@ -4009,11 +4501,14 @@ First Snippet
 ```
 
 #### Exercises
+
 - Create more REST services of your choice
 
 #### Files List
+
 src/main/java/com/in28minutes/springboot/controller/SurveyController.java Modified
 New Lines
+
 ```
 import java.net.URI;
 import org.springframework.http.ResponseEntity;
@@ -4036,6 +4531,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 		// Status
 		return ResponseEntity.created(location).build();
 ```
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -4098,13 +4594,16 @@ class SurveyController {
 ## Step11.md
 
 #### What You Will Learn during this Step:
+
 - Understand Content Negotiation
- - Accept:application/xml
+- Accept:application/xml
 - Deliver XML Responses from the REST Services
 - http://localhost:8080/surveys/Survey1/questions/
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -4112,7 +4611,9 @@ First Snippet
         </dependency>
 
 ```
+
 Second Snippet
+
 ```
 <List>
     <item>
@@ -4162,33 +4663,38 @@ Second Snippet
 </List>
 ```
 
-
-
 #### Exercises
+
 - Execute other services using xml and see what happens!
+
 ## Step12.md
 
 #### What You Will Learn during this Step:
+
 - Spring Initializr
 - https://start.spring.io
 - Create a few projects!
 
 #### Exercises
+
 - Create more projects with Spring Initializr and play around with it!
 
 ## Step13.md
 
 #### What You Will Learn during this Step:
+
 - Spring Boot Actuator
- - /env, /metrics, /trace, /dump, /shutdown, /beans, / autoconfig, /configprops, /mappings 
+- /env, /metrics, /trace, /dump, /shutdown, /beans, / autoconfig, /configprops, /mappings
 - HAL Browser
- - http://localhost:8080/actuator/
+- http://localhost:8080/actuator/
 - Execute individual REST Services for each of above
 - Programming Tip
- - Use static code analysis - https://www.youtube.com/watch?v=rB_BaftN3nE
+- Use static code analysis - https://www.youtube.com/watch?v=rB_BaftN3nE
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -4203,8 +4709,10 @@ First Snippet
 ```
 
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
@@ -4216,17 +4724,20 @@ New Lines
 ## Step14.md
 
 #### What You Will Learn during this Step:
+
 - Embedded servlet containers
- - Default Tomcat
- - We did not install Tomcat. Did we? Magic is done by Spring Boot!
- - Switching to Jetty or Undertow
+- Default Tomcat
+- We did not install Tomcat. Did we? Magic is done by Spring Boot!
+- Switching to Jetty or Undertow
 - Configuration
- - server.port
+- server.port
 - Programming Tip
- - Always review code : https://www.youtube.com/watch?v=hVJGu0xdXII
+- Always review code : https://www.youtube.com/watch?v=hVJGu0xdXII
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -4245,11 +4756,16 @@ First Snippet
 ```
 
 #### Exercises
-- Find out from documentation (https://docs.spring.io/spring-boot/docs/current/reference/html/howto-embedded-servlet-containers.html) how to switch to undertow!
+
+- Find out from
+  documentation (https://docs.spring.io/spring-boot/docs/current/reference/html/howto-embedded-servlet-containers.html)
+  how to switch to undertow!
 
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 			<exclusions>
 				<exclusion>
@@ -4263,17 +4779,20 @@ New Lines
 ## Step15.md
 
 #### What You Will Learn during this Step:
+
 - Using Dynamic Configuration in your application
 - Customize Welcome Message
 - Different ways of configuration
- - --welcome.message="SomethingElse" in Program Arguments
- - --spring.config.location=classpath:/default.properties
- - We will learn about profiles in next step
+- --welcome.message="SomethingElse" in Program Arguments
+- --spring.config.location=classpath:/default.properties
+- We will learn about profiles in next step
 - Using Placeholders
 - YAML
 
 #### Snippets
+
 First Snippet
+
 ```
 logging:
   level:
@@ -4286,13 +4805,16 @@ welcome:
 ```
 
 Second Snippet
+
 ```
 @Value("${welcome.message}")
 ```
 
 #### Files List
+
 src/main/java/com/in28minutes/springboot/WelcomeService.java Modified
 New Lines
+
 ```
 import org.springframework.beans.factory.annotation.Value;
 //Spring to manage this bean and create an instance of this
@@ -4300,6 +4822,7 @@ import org.springframework.beans.factory.annotation.Value;
 	private String welcomeMessage;
 		return welcomeMessage;
 ```
+
 ```
 package com.in28minutes.springboot;
 
@@ -4319,14 +4842,18 @@ public class WelcomeService {
 	}
 }
 ```
+
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 logging.level.org.springframework.web.servlet: DEBUG
 app.name=in28Minutes
 welcome.message=Welcome message from property file! Welcome to ${app.name}
 ```
+
 src/main/resources/application.yaml New
+
 ```
 logging:
  level:
@@ -4337,19 +4864,22 @@ logging:
 ## Step16.md
 
 #### What You Will Learn during this Step:
+
 - Understand Basics of Profiles
 - Setting a profile
- - Using -Dspring.profiles.active=prod in VM Arguments
- - spring.profiles.active=prod 
+- Using -Dspring.profiles.active=prod in VM Arguments
+- spring.profiles.active=prod
 - Using a profile
- - application-{profile-name}.properties
- - @Profile("dev") on a bean
+- application-{profile-name}.properties
+- @Profile("dev") on a bean
 - Usage
- - Configure Resources - Databases, Queues, External Services
- 
+- Configure Resources - Databases, Queues, External Services
+
 #### Files List
+
 src/main/java/com/in28minutes/springboot/Application.java Modified
 New Lines
+
 ```
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
@@ -4358,6 +4888,7 @@ import org.springframework.context.annotation.Profile;
 	public String dummy() {
 		return "something";
 ```
+
 ```
 package com.in28minutes.springboot;
 
@@ -4382,33 +4913,43 @@ public class Application {
 	}
 }
 ```
+
 src/main/resources/application-dev.properties New
+
 ```
 logging.level.org.springframework: TRACE
 ```
+
 src/main/resources/application-prod.properties New
+
 ```
 logging.level.org.springframework: INFO
 ```
+
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 spring.profiles.active=prod
 
  
 ```
+
 src/main/resources/application.yaml Deleted
 
 ## Step17.md
 
 #### What You Will Learn during this Step:
+
 - Even better configuration management than @Value
 - Type-safe Configuration Properties
 - http://localhost:8080/dynamic-configuration
 - Also look at http://localhost:8080/actuator/#http://localhost:8080/configprops
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
 package com.in28minutes.springboot.configuration;
 
@@ -4449,7 +4990,9 @@ public class BasicConfiguration {
 }
 
 ```
+
 Second Snippet
+
 ```
         @Autowired
         private BasicConfiguration configuration;
@@ -4465,13 +5008,17 @@ Second Snippet
         }
 
 ```
+
 Third Snippet
+
 ```
 basic.value: true
 basic.message: Dynamic Message
 basic.number: 100
 ```
+
 Fourth Snippet
+
 ```
 basic: 
    value: true
@@ -4504,6 +5051,7 @@ Update your application's configuration
 ```
 
 #### Files List
+
 src/main/java/com/in28minutes/springboot/WelcomeController.java Modified
 New Lines
 
@@ -4560,7 +5108,9 @@ public class WelcomeController {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/configuration/BasicConfiguration.java New
+
 ```
 package com.in28minutes.springboot.configuration;
 
@@ -4599,35 +5149,42 @@ public class BasicConfiguration {
 	}
 }
 ```
+
 src/main/resources/application.properties Modified
 New Lines
+
 ```
 basic.value=true
 basic.message=Welcome to in28minutes
 basic.number=200
 ```
+
 ## Step18.md
 
 #### What You Will Learn during this Step:
+
 - Let's switch back to tomcat first!
 - Get introduced to Spring Data JPA
 - Create a very simple example with Spring Data JPA
 - Use CommandLineRunner!
 
 #### Some Notes
+
 - Useful Properties
- - spring.datasource.driver-class-name=com.mysql.jdbc.Driver
- - spring.datasource.url=jdbc:mysql://localhost:3306/test 
- - spring.datasource.username=root
- - spring.datasource.password=admin
- - spring.datasource.initialize=true 
- - spring.jpa.hibernate.ddl-auto=update
- - spring.jpa.show-sql=true
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.data.jpa.repositories.bootstrap-mode=default
+- spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+- spring.datasource.url=jdbc:mysql://localhost:3306/test
+- spring.datasource.username=root
+- spring.datasource.password=admin
+- spring.datasource.initialize=true
+- spring.jpa.hibernate.ddl-auto=update
+- spring.jpa.show-sql=true
+  spring.datasource.url=jdbc:h2:mem:testdb
+  spring.data.jpa.repositories.bootstrap-mode=default
 
 #### Useful Snippets and References
+
 First Snippet - Add H2 Later after showing the error
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -4640,7 +5197,9 @@ First Snippet - Add H2 Later after showing the error
         </dependency>
 
 ```
+
 Second Snippet
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4688,7 +5247,9 @@ public class User {
 }
 
 ```
+
 Third Snippet
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4727,7 +5288,9 @@ public class UserCommandLineRunner implements CommandLineRunner {
 }
 
 ```
+
 Fourth Snippet
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4740,17 +5303,22 @@ public interface UserRepository extends CrudRepository<User, Long> {
 ```
 
 #### Exercises
+
 - Look at other methods provided by the UserRepository
 
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/User.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4797,7 +5365,9 @@ public class User {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserCommandLineRunner.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4838,7 +5408,9 @@ public class UserCommandLineRunner implements CommandLineRunner {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4853,25 +5425,28 @@ public interface UserRepository extends CrudRepository<User, Long> {
 ## Step19.md
 
 #### What You Will Learn during this Step:
+
 - Look at H2 Console : http://localhost:8080/h2-console
- - Use db url jdbc:h2:mem:testdb
-- Add findByRole method 
+- Use db url jdbc:h2:mem:testdb
+- Add findByRole method
 
 #### Some Notes
+
 - Useful Properties
- - spring.datasource.driver-class-name=com.mysql.jdbc.Driver
- - spring.datasource.url=jdbc:mysql://localhost:3306/test 
- - spring.datasource.username=root
- - spring.datasource.password=admin
- - spring.datasource.initialize=true 
- - spring.jpa.hibernate.ddl-auto=update
- - spring.jpa.show-sql=true
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.data.jpa.repositories.bootstrap-mode=default
+- spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+- spring.datasource.url=jdbc:mysql://localhost:3306/test
+- spring.datasource.username=root
+- spring.datasource.password=admin
+- spring.datasource.initialize=true
+- spring.jpa.hibernate.ddl-auto=update
+- spring.jpa.show-sql=true
+  spring.datasource.url=jdbc:h2:mem:testdb
+  spring.data.jpa.repositories.bootstrap-mode=default
 
 #### Useful Snippets and References
 
 First Snippet
+
 ```
 
         log.info("-------------------------------");
@@ -4889,7 +5464,9 @@ First Snippet
         }
 
 ```
+
 Second Snippet
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4903,11 +5480,14 @@ public interface UserRepository extends CrudRepository<User, Long> {
 ```
 
 #### Files List
+
 src/main/java/com/in28minutes/springboot/jpa/UserRepository.java Modified
 New Lines
+
 ```
 	List<User> findByRole(String role);
 ```
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4923,17 +5503,20 @@ public interface UserRepository extends CrudRepository<User, Long> {
 ## Step20.md
 
 #### What You Will Learn during this Step:
+
 - Introduction to Spring Data Rest
- - Hit http://localhost:8080/users in POSTMAN
- - http://localhost:8080/users/1
- - http://localhost:8080/users/?size=4
- - http://localhost:8080/users/?sort=name,desc
- - @Param("role")
- - http://localhost:8080/users/search/findByRole?role=Admin
+- Hit http://localhost:8080/users in POSTMAN
+- http://localhost:8080/users/1
+- http://localhost:8080/users/?size=4
+- http://localhost:8080/users/?sort=name,desc
+- @Param("role")
+- http://localhost:8080/users/search/findByRole?role=Admin
 - Good for quick prototype! Be cautious about using this in Big applications!
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -4941,7 +5524,9 @@ First Snippet
         </dependency>
 
 ```
+
 Second Snippet
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -4959,6 +5544,7 @@ PagingAndSortingRepository<User, Long> {
 ```
 
 Third Snippet : POST to http://localhost:8080/users
+
 ```
 HEADER
 Content-Type:application/json
@@ -4969,7 +5555,9 @@ BODY
   "role": "Admin"
 }
 ```
+
 Fourth Snippet : POST to http://localhost:8080/users/5
+
 ```
 HEADER
 Content-Type:application/json
@@ -4980,13 +5568,18 @@ BODY
   "role": "Admin"
 }
 ```
+
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserRestRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -5002,9 +5595,11 @@ public interface UserRestRepository extends
 	List<User> findByRole(@Param("role") String role);
 }
 ```
+
 ## Step21.md
 
 ### /pom.xml New
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -5089,7 +5684,9 @@ public interface UserRestRepository extends
 
 </project>
 ```
+
 ### /src/main/java/com/in28minutes/springboot/Application.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -5155,7 +5752,9 @@ public class Application {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/configuration/BasicConfiguration.java New
+
 ```
 package com.in28minutes.springboot.configuration;
 
@@ -5195,7 +5794,9 @@ public class BasicConfiguration {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/controller/SurveyController.java New
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -5249,7 +5850,9 @@ class SurveyController {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/jpa/User.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -5296,7 +5899,9 @@ public class User {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserCommandLineRunner.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -5347,7 +5952,9 @@ public class UserCommandLineRunner implements CommandLineRunner {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -5359,7 +5966,9 @@ public interface UserRepository extends CrudRepository<User, Long> {
     List<User> findByRole(String description);
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserRestRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -5375,7 +5984,9 @@ PagingAndSortingRepository<User, Long> {
     List<User> findByRole(@Param("role") String role);
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/model/Question.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -5464,7 +6075,9 @@ public class Question {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/model/Survey.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -5510,7 +6123,9 @@ public class Survey {
 
 }
 ```
+
 ### /src/main/java/com/in28minutes/springboot/service/SurveyService.java New
+
 ```
 package com.in28minutes.springboot.service;
 
@@ -5608,7 +6223,9 @@ public class SurveyService {
     }
 }
 ```
+
 ### /src/main/resources/application.properties New
+
 ```
 logging.level.org.springframework: INFO
 app.name: In28Minutes
@@ -5618,7 +6235,9 @@ basic.value: true
 basic.message: Dynamic Message
 basic.number: 123
 ```
+
 ### /src/main/resources/application.yaml New
+
 ```
 logging:
   level:
@@ -5636,7 +6255,9 @@ basic:
    message: Dynamic Message YAML
    number: 100
 ```
+
 ### /src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java New
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -5693,14 +6314,19 @@ public class SurveyControllerIT {
 
 }
 ```
+
 #### What You Will Learn during this Step:
+
 - First thing first : I hate the fact that we did not write tests until Step 20 of this course
- - I love TDD and use it in all my projects. However, when learning something new, I think it is important to focus on one thing at a time!
+- I love TDD and use it in all my projects. However, when learning something new, I think it is important to focus on
+  one thing at a time!
 - You can learn more about unit testing here - https://www.youtube.com/playlist?list=PL83C941BB0D27A6AF
-- Let's write a Integration Test for our service 
+- Let's write a Integration Test for our service
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -5709,7 +6335,9 @@ First Snippet
         </dependency>
 
 ```
+
 UnRefactored Snippet
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -5763,7 +6391,9 @@ public class SurveyControllerIT {
 
 
 ```
+
 Refactored Snippet
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -5822,6 +6452,7 @@ public class SurveyControllerIT {
 ```
 
 #### Exercises
+
 - Try writing integration test for retrieveAllQuestions
 
 #### Files List
@@ -5842,28 +6473,46 @@ src/main/java/com/in28minutes/springboot/service/SurveyService.java Deleted
 src/main/resources/application-dev.properties Deleted
 src/main/resources/application-prod.properties Deleted
 src/main/resources/application.properties Deleted
+
 ## Step22.md
 
 ### /pom.xml Deleted
+
 ### /src/main/java/com/in28minutes/springboot/Application.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/configuration/BasicConfiguration.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/controller/SurveyController.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/jpa/User.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserCommandLineRunner.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserRepository.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/jpa/UserRestRepository.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/model/Question.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/model/Survey.java Deleted
+
 ### /src/main/java/com/in28minutes/springboot/service/SurveyService.java Deleted
+
 ### /src/main/resources/application.properties Deleted
+
 ### /src/main/resources/application.yaml Deleted
+
 ### /src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java Deleted
+
 #### What You Will Learn during this Step:
+
 - Exercise from previous step
 - Integration Test for POST Request - Add To do
 
 #### Useful Snippets and References
+
 First Snippet
+
 ```
     @Test
     public void retrieveSurveyQuestions() throws Exception {
@@ -5881,7 +6530,9 @@ First Snippet
     }
 
 ```
+
 Before Refactoring Snippet
+
 ```
 	//NEEDS REFACTORING
 	@Test
@@ -5909,7 +6560,9 @@ Before Refactoring Snippet
 	}
 
 ```
+
 After Refactoring Snippet - We will discuss this in Step 23
+
 ```
 
     @Test
@@ -5928,7 +6581,9 @@ After Refactoring Snippet - We will discuss this in Step 23
 ```
 
 #### Files List
+
 pom.xml New
+
 ```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -6001,7 +6656,9 @@ pom.xml New
 	</build>
 </project>
 ```
+
 src/main/java/com/in28minutes/springboot/Application.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -6026,7 +6683,9 @@ public class Application {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeController.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -6066,7 +6725,9 @@ public class WelcomeController {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/WelcomeService.java New
+
 ```
 package com.in28minutes.springboot;
 
@@ -6086,7 +6747,9 @@ public class WelcomeService {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/configuration/BasicConfiguration.java New
+
 ```
 package com.in28minutes.springboot.configuration;
 
@@ -6125,7 +6788,9 @@ public class BasicConfiguration {
 	}
 }
 ```
+
 src/main/java/com/in28minutes/springboot/controller/SurveyController.java New
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -6184,7 +6849,9 @@ class SurveyController {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/User.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -6231,7 +6898,9 @@ public class User {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserCommandLineRunner.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -6272,7 +6941,9 @@ public class UserCommandLineRunner implements CommandLineRunner {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -6284,7 +6955,9 @@ public interface UserRepository extends CrudRepository<User, Long> {
 	List<User> findByRole(String role);
 }
 ```
+
 src/main/java/com/in28minutes/springboot/jpa/UserRestRepository.java New
+
 ```
 package com.in28minutes.springboot.jpa;
 
@@ -6300,7 +6973,9 @@ public interface UserRestRepository extends
 	List<User> findByRole(@Param("role") String role);
 }
 ```
+
 src/main/java/com/in28minutes/springboot/model/Question.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -6384,7 +7059,9 @@ public class Question {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/model/Survey.java New
+
 ```
 package com.in28minutes.springboot.model;
 
@@ -6445,7 +7122,9 @@ public class Survey {
 
 }
 ```
+
 src/main/java/com/in28minutes/springboot/service/SurveyService.java New
+
 ```
 package com.in28minutes.springboot.service;
 
@@ -6543,15 +7222,21 @@ public class SurveyService {
 	}
 }
 ```
+
 src/main/resources/application-dev.properties New
+
 ```
 logging.level.org.springframework: TRACE
 ```
+
 src/main/resources/application-prod.properties New
+
 ```
 logging.level.org.springframework: INFO
 ```
+
 src/main/resources/application.properties New
+
 ```
 logging.level.org.springframework: DEBUG
 app.name=in28Minutes
@@ -6561,7 +7246,9 @@ basic.value=true
 basic.message=Welcome to in28minutes
 basic.number=200
 ```
+
 src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java New
+
 ```
 package com.in28minutes.springboot.controller;
 
@@ -6675,14 +7362,17 @@ public class SurveyControllerIT {
 ## Step23.md
 
 #### What You Will Learn during this Step:
+
 - Lets do some cleanup
- - Lets Refactor the SurveyControllerIT.java
+- Lets Refactor the SurveyControllerIT.java
 
 #### Exercises
+
 - Test and make sure everything is working fine
 
 #### Files List
-src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java 
+
+src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java
 
 ```
 package com.in28minutes.springboot.controller;
@@ -6797,11 +7487,12 @@ public class SurveyControllerIT {
 
 > Programming Tip - Become an expert at Mockito - https://courses.in28minutes.com/p/mockito-for-beginner-in-5-steps
 
-
 #### Exercises
+
 - Write unit test for retrieve all questions for a survey
 
 #### Files List
+
 src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java New
 
 ```
@@ -6866,10 +7557,12 @@ public class SurveyControllerTest {
 ## Step25.md
 
 #### What You Will Learn during this Step:
+
 - Exercise from previous step
 - Unit test for createTodo
 
 #### Files List
+
 src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java Modified
 
 ```
@@ -6905,14 +7598,16 @@ src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java Mo
 ## Step26.md
 
 #### What You Will Learn during this Step:
+
 - Securing our services with Basic Authentication using Spring Security
 - Executing Requests using Basic Authentication with Postman
- - default user name is user
- - default security password is printed in console
+- default user name is user
+- default security password is printed in console
 
 #### Useful Snippets and References
 
 First Snippet
+
 ```
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -6921,11 +7616,13 @@ First Snippet
 ```
 
 Second Snippet
+
 ```
 Using default security password:
 ```
 
 Third Snippet : Executing a GET to http://localhost:8080/surveys/Survey1/questions/
+
 ```
 {
   "timestamp": 1483514297025,
@@ -6939,21 +7636,25 @@ Third Snippet : Executing a GET to http://localhost:8080/surveys/Survey1/questio
 ## Step27.md
 
 #### What You Will Learn during this Step:
+
 - Configure different user roles for survey and other services
 - Update integration tests
 - Update unit tests
 
-
 #### Files List
+
 pom.xml Modified
 New Lines
+
 ```
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-security</artifactId>
 </dependency>
 ```
+
 src/main/java/com/in28minutes/springboot/security/SecurityConfig.java New
+
 ```
 package com.in28minutes.springboot.security;
 
@@ -6983,6 +7684,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 }
 ```
+
 src/test/java/com/in28minutes/springboot/controller/SurveyControllerIT.java Modified
 New Lines
 
@@ -7021,6 +7723,7 @@ public class SurveyControllerIT {
 ```
 
 src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java Modified
+
 ```
 @WebMvcTest(value = SurveyController.class, secure = false)
 ```
@@ -7028,21 +7731,23 @@ src/test/java/com/in28minutes/springboot/controller/SurveyControllerTest.java Mo
 ## Step28.md
 
 #### What You Will Learn during this Step:
+
 - A Deep Dive into Autoconfiguration
- - spring-boot-autoconfigure-1.4.0.RELEASE.jar
-  - /META-INF/spring.factories
-  - Package org.springframework.boot.autoconfigure
+- spring-boot-autoconfigure-1.4.0.RELEASE.jar
+- /META-INF/spring.factories
+- Package org.springframework.boot.autoconfigure
 - Lets look at the log in debug mode!
 - Examples
- - JdbcTemplateAutoConfiguration
- - HttpMessageConvertersAutoConfiguration
-- Programming Tips 
- - Understand Design Patterns
-  - https://www.youtube.com/watch?v=Vp7q_pE7Fzg
- - Understand Modern Development Practices
-  - https://www.youtube.com/watch?v=0Kqzfyp-w4s
+- JdbcTemplateAutoConfiguration
+- HttpMessageConvertersAutoConfiguration
+- Programming Tips
+- Understand Design Patterns
+- https://www.youtube.com/watch?v=Vp7q_pE7Fzg
+- Understand Modern Development Practices
+- https://www.youtube.com/watch?v=0Kqzfyp-w4s
 
 #### Useful Snippets and References
+
 ```
         String[] beanNames = ctx.getBeanDefinitionNames();
         Arrays.sort(beanNames);
