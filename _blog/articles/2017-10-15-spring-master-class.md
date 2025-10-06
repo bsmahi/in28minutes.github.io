@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Spring Framework Tutorial For Beginners - 100 Steps
-date:       2023-03-16 12:31:19
+date:       2025-10-06 12:31:19
 summary:    Discover the secrets of the Spring Framework. From the worlds of IOC (Inversion of Control), DI (Dependency Injection), and Application Context to Spring Boot, AOP, JDBC, and JPA. Prepare for an amazing adventure.
 categories: SpringFramework
 permalink:  /spring-master-class
@@ -9,9 +9,11 @@ image: /images/spring-framework-category.png
 
 ---
 
-Discover the secrets of the Spring Framework. From the worlds of IOC (Inversion of Control), DI (Dependency Injection), and Application Context to Spring Boot, AOP, JDBC, and JPA. Prepare for an amazing adventure.
+Discover the Secrets of the Spring Framework!
 
-Spring Framework is still as popular now as it was 12 years ago when I first used it. 
+Dive into the worlds of IOC (Inversion of Control), DI (Dependency Injection), and Application Context, and explore Spring Boot, AOP, JDBC, and JPA. Prepare yourself for an exciting journey through one of the most powerful and widely used Java frameworks.
+
+Even after more than a decade, the Spring Framework remains as popular today as it was 12 years ago when I first started using it.
 
 > How is this feasible in a very dynamic environment where designs have altered dramatically?
 
@@ -20,132 +22,160 @@ Spring Framework is still as popular now as it was 12 years ago when I first use
 [![Image](/images/Course-Spring-Framework-Master-Class---Beginner-to-Expert.png "Spring Master Class - Beginner to Expert")](https://links.in28minutes.com/MISC-SPRING){:target="_blank"}
 
 
-## What You will learn
+## What You Will Learn
 
-- Spring Framework fundamentals will be covered, including Dependency Injection, IOC Container, Application Context, and Bean Factory.
-- You will be able to utilise Spring Annotations such as `@Autowired`, @Component, `@Service`, `@Repository`, `@Configuration`, `@Primary`....
-- You will get a thorough understanding of Spring MVC, including `DispatcherServlet, Model, Controllers, and ViewResolver`.
-- Spring Boot Starters such as Spring Boot Starter Web, Starter Data Jpa, and Starter Test will be used.
-- Spring Boot, Spring AOP, Spring JDBC, and JPA fundamentals will be covered.
-- You'll study the fundamentals of `Eclipse, Maven, JUnit, and Mockito`.
-- Step by step, you will create a simple Web application utilising JSP Servlets and Spring MVC.
-- You will learn to construct unit tests with XML, Java Application Contexts and Mockito.
+- **Spring Framework fundamentals**, including **Dependency Injection**, **IOC Container**, **Application Context**, and **BeanFactory**.
+- How to use essential **Spring annotations** such as `@Autowired`, `@Component`, `@Service`, `@Repository`, `@Configuration`, and `@Primary`.
+- A thorough understanding of **Spring MVC**, including **DispatcherServlet**, **Model**, **Controllers**, and **ViewResolver**.
+- How to work with **Spring Boot Starters**, including **Spring Boot Starter Web**, **Starter Data JPA**, and **Starter Test**.
+- Fundamentals of **Spring Boot**, **Spring AOP**, **Spring JDBC**, and **JPA**.
+- Basics of development tools such as **Eclipse**, **Maven**, **JUnit**, and **Mockito**.
+- Step-by-step guidance to create a simple **web application** using **JSP, Servlets, and Spring MVC**.
+- How to construct **unit tests** using **XML**, **Java Application Contexts**, and **Mockito**.
+
 
 ## Getting Started
 
 ### Installing Tools
 
-- Installation 
-	- Video : https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
-	- PDF : https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf
-	- More Details : https://github.com/in28minutes/getting-started-in-5-steps
-- Troubleshooting
-	- [A 50 page troubleshooting guide with more than 200 Errors and Questions answered](https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ)
-	
+- **Installation Resources**
+    - **Video:** [Installation Guide Video](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3)
+    - **PDF:** [Installation Guide PDF](https://github.com/in28minutes/SpringIn28Minutes/blob/master/InstallationGuide-JavaEclipseAndMaven_v2.pdf)
+    - **More Details:** [Getting Started in 5 Steps](https://github.com/in28minutes/getting-started-in-5-steps)
+
+- **Troubleshooting**
+    - [50-page Troubleshooting Guide with 200+ Errors and Questions Answered](https://github.com/in28minutes/in28minutes-initiatives/blob/master/The-in28Minutes-TroubleshootingGuide-And-FAQ)
+
 ### Running Examples
 
-- Clone the Git repository or download the zip file.
-- Unzip the zip archive (if you downloaded one)
-- Open Command Prompt and go to the folder containing pom.xml.
-- Open Eclipse 
-   - File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
-   - Select the right project
-- Search for the Spring Boot Application file (@SpringBootApplication).
-- Right-click the file and select Run as Java Program.
-- You are all Set
-- For help : use our installation guide - https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3
+1. Clone the Git repository or download the ZIP file.
+2. Unzip the archive (if you downloaded a ZIP).
+3. Open **Command Prompt** and navigate to the folder containing `pom.xml`.
+4. Open **Eclipse**:
+    - Go to **File → Import → Existing Maven Project**
+    - Navigate to the folder where you unzipped the project
+    - Select the correct project and finish the import
+5. Locate the **Spring Boot Application file** annotated with `@SpringBootApplication`.
+6. Right-click the file and select **Run as Java Program**.
+7. You are all set!
+
+- For further help, refer to the [Installation Guide Video](https://www.youtube.com/playlist?list=PLBBog2r6uMCSmMVTW_QmDLyASBvovyAO3).
+
 
 ## Spring Level 1 through Level 6 Section Overview
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring Framework in 10 Steps|Spring - Level 1|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Spring in Depth|Spring - Level 2|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Unit Testing with Spring Framework|Spring - Level 3|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
-|Spring Boot in 10 Steps|Spring - Level 4|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps){:target='_blank'}|
-|Spring AOP|Spring - Level 5|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop){:target='_blank'}|
-|Spring JDBC and JPA|Spring - Level 6|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa){:target='_blank'}|
+| Title | Category | GitHub |
+|------------------------|:------------------:|:--------------:|
+| Spring Framework in 10 Steps | Spring - Level 1 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth) |
+| Spring in Depth | Spring - Level 2 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth) |
+| Unit Testing with Spring Framework | Spring - Level 3 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth) |
+| Spring Boot in 10 Steps | Spring - Level 4 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps) |
+| Spring AOP | Spring - Level 5 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop) |
+| Spring JDBC and JPA | Spring - Level 6 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa) |
 
 ## 5 Bonus Sections - Introduction to Tools and Frameworks
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Eclipse in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps){:target='_blank'}|
-|Maven in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps){:target='_blank'}|
-|JUnit in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps){:target='_blank'}|
-|Mockito in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps){:target='_blank'}|
-|Basic Web Application with Spring MVC|Introduction|[Project Folder on Github](){:target='_blank'}|
+| Title | Category | GitHub |
+|------------------------|:------------------:|:--------------:|
+| Eclipse in 5 Steps | Introduction | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps) |
+| Maven in 5 Steps | Introduction | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps) |
+| JUnit in 5 Steps | Introduction | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps) |
+| Mockito in 5 Steps | Introduction | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps) |
+| Basic Web Application with Spring MVC | Introduction | [Project Folder on GitHub]() |
 
 ## Section Details
 
-###  Spring Level 1 - First 10 Steps in Spring
+### Spring Level 1 - First 10 Steps in Spring
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring Framework in 10 Steps|Spring - Level 1|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
+| Title | Category | GitHub |
+|------------------------|:------------------:|:--------------:|
+| Spring Framework in 10 Steps | Spring - Level 1 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth) |
 
-- Step 1 : Setting up a Spring Project using htttp://start.spring.io
-- Step 2 : Understanding Tight Coupling using the Binary Search Algorithm Example
-- Step 3 : Making the Binary Search Algorithm Example Loosely Coupled
-- Step 4 : Using Spring to Manage Dependencies - @Component, @Autowired
-- Step 5 : What is happening in the background?
-- Step 6 : Dynamic auto wiring and Troubleshooting - @Primary
-- Step 7 : Constructor and Setter Injection
-- Step 8 : Spring Modules
-- Step 9 : Spring Projects
-- Step 10 : Why is Spring Popular?
+**Steps Covered:**
 
-#### Step 1 : Setting up a Spring Project using htttp://start.spring.io
+1. Setting up a Spring Project using [start.spring.io](http://start.spring.io)
+2. Understanding Tight Coupling using the Binary Search Algorithm example
+3. Making the Binary Search Algorithm example **loosely coupled**
+4. Using Spring to manage dependencies - `@Component`, `@Autowired`
+5. Understanding what happens **in the background**
+6. Dynamic autowiring and troubleshooting - `@Primary`
+7. Constructor and Setter Injection
+8. Overview of Spring Modules
+9. Overview of Spring Projects
+10. Why is Spring popular?
 
-Dependency injection is a crucial element of the Spring Framework. The Spring framework aids in the development of loosely linked applications. To appreciate dependency injection, you must first understand tight coupling and how to build loosely linked programmes. To begin, we will construct a basic example in order to comprehend tight couplings and dependency injection. 
+#### Step 1: Setting up a Spring Project using [start.spring.io](http://start.spring.io)
 
-Making a Spring Project using Spring Initializr is a piece of cake. 
+**Dependency Injection (DI)** is a crucial element of the Spring Framework. Spring helps in developing **loosely coupled applications**, which makes your code easier to maintain and test.
 
-> Spring Initializr [http://start.spring.io/](http://start.spring.io/){:target="_blank"} is great tool to bootstrap your Spring Boot projects.
+To understand dependency injection, you first need to grasp the concept of **tight coupling** and how to build **loosely coupled programs**. We'll start with a simple example to illustrate tight coupling and the benefits of DI.
+
+Creating a Spring project using **Spring Initializr** is straightforward and quick.
+
+> **Spring Initializr** ([http://start.spring.io/](http://start.spring.io/)) is a powerful tool to **bootstrap your Spring Boot projects** with the required dependencies and project structure.
+
 
 ![Image](/images/spring-initializr-spring-in-10-steps.png "Spring Initializr")   
 
-As shown in the image above, following steps have to be done
+As shown in the image above, follow these steps to set up your Spring project:
 
-- Launch Spring Initializr and choose the following
-  - Choose `com.in28minutes.spring.basics` as Group
-  - Choose `spring-in-5-steps` as Artifact
-  - Do not choose any dependencies
-    - By default Basic Starter is included, which has the core spring framework and the spring test starter.
-- Click Generate Project.
-- Import the project into Eclipse.
-- If you want to understand all the files that are part of this project, you can go here.
+1. **Launch Spring Initializr** and configure the project:
+    - **Group:** `com.in28minutes.spring.basics`
+    - **Artifact:** `spring-in-5-steps`
+    - **Dependencies:** Do not select any dependencies
+        - By default, the **Basic Starter** is included, which contains the core Spring Framework and the Spring Test starter.
 
-#### Step 2 : Understanding Tight Coupling using the Binary Search Algorithm Example
+2. **Click "Generate Project"** to download the project archive.
 
-Create a tight coupling example using the Binary Search and Bubble Sort Algorithms, as seen in the image below.
+3. **Import the project into Eclipse or IntelliJ IDE**:
+    - Go to **File → Import → Existing Maven Project**
+    - Navigate to the folder where you downloaded/extracted the project
+    - Select the project and finish the import.
+
+4. **Optional:** If you want to understand all the files included in the project, refer to the detailed guide [here](#).
+
+
+#### Step 2: Understanding Tight Coupling using the Binary Search Algorithm Example
+
+To illustrate **tight coupling**, we will create an example using the **Binary Search** and **Bubble Sort** algorithms.
+
+In a tightly coupled design, the **Binary Search class directly depends on a specific implementation of the Bubble Sort algorithm**, making it difficult to change or test the sorting logic independently.
+
+> This example will help you understand why tight coupling is undesirable and how **Dependency Injection** in Spring can help decouple components.
+
 
 ![Image](/images/SpringIn10Steps-BinarySearchTightlyCoupleWithBubbleSort.png "Spring In 10 Steps - Tight Coupling") 
 
-Unfortunately, there is an issue with the aforementioned implementation. I'd have to update the code if we wanted to utilise binary search with a new sort technique. 
+Unfortunately, the above implementation has a limitation: **if we want to use Binary Search with a different sorting algorithm, we would need to update the code**.
 
-We wish to loosely link the binary search algorithm such that it can operate with any algorithm. 
+Our goal is to **loosely couple** the Binary Search algorithm so that it can work with **any sorting algorithm** without modifying the Binary Search class itself.
 
-> Consider about the solution before advancing to next stage!
 
-#### Step 3 : Making the Binary Search Algorithm Example Loosely Coupled
+> Consider the solution before advancing to next stage!
 
-Provide an interface to loosely tie the Binary Search to the sort algorithm.
+#### Step 3: Making the Binary Search Algorithm Example Loosely Coupled
+
+To **loosen the coupling** between the Binary Search and the sorting algorithm, we introduce an **interface** for the sorting behavior.
+
+By programming to an interface instead of a concrete class, the **Binary Search class can now work with any sorting algorithm** that implements this interface.
+
+> This is the foundation of **Dependency Injection** in Spring, allowing components to be easily replaced or tested independently.
+
 
 ```java
 package com.in28minutes.spring.basics.springin5steps;
 
 public interface SortAlgorithm {
-	public int[] sort(int[] numbers);
+	int[] sort(int[] numbers);
 }
 ```
 
 ```java
 public class BinarySearchImpl {
 
-	private SortAlgorithm sortAlgorithm;
-```	
-
+    private SortAlgorithm sortAlgorithm;
+}
+```
 
 #### Step 4 : Using Spring to Manage Dependencies - @Component, @Autowired
 
@@ -163,10 +193,10 @@ Notes
 @Component
 public class BinarySearchImpl {
 
-	@Autowired
-	private SortAlgorithm sortAlgorithm;
-```	
-
+    @Autowired
+    private SortAlgorithm sortAlgorithm;
+}
+```
 
 ```java
 @Component
@@ -178,19 +208,21 @@ public class BubbleSortAlgorithm implements SortAlgorithm {
 }
 ```
 
-#### Step 5 : What is happening in the background?
+#### Step 5: What is Happening in the Background?
 
-Activate debug logging to see what's going on in the background.
+You can activate **debug logging** to understand what Spring is doing behind the scenes.
 
-/src/main/resources/application.properties
+**Add the following to your** `/src/main/resources/application.properties`:
+
 ```properties
-logging.level.org.springframework = debug
+logging.level.org.springframework=debug
 ```
 
-- Spring does a Component scan on the parent package "com.in28minutes.spring.basics.springin5steps" to find the components - classes that have `@Component` on them.
-- It identifies components and dependencies
-- It identifies that BinarySearchImpl has a dependency SortAlgorithm
-- It identifies that SortAlgorithm does not have a dependency. So, it creates an instance of it and autowires it into an instance of BinarySearchImpl
+- Spring performs a **component scan** on the parent package `com.in28minutes.spring.basics.springin5steps` to locate all **components** — classes annotated with `@Component`.
+- It identifies all **components and their dependencies**.
+- It detects that `BinarySearchImpl` has a dependency on `SortAlgorithm`.
+- Since `SortAlgorithm` has no further dependencies, Spring **creates an instance of it** and **autowires it into `BinarySearchImpl`** automatically.
+
 
 #### Step 6 : Dynamic auto wiring and Troubleshooting - @Primary
 
@@ -210,9 +242,9 @@ public class QuickSortAlgorithm implements SortAlgorithm {
 }
 ```
 
-There are now two SortAlgorithm instances that match. Spring throws an exception because it is unsure which to utilise.
+There are now two SortAlgorithm implementations available. Spring throws an exception because it doesn’t know which one to use.
 
-We use `@Primary` to indicate which SortAlgorithm implementation is the most critical!
+We can use the @Primary annotation to tell Spring which SortAlgorithm implementation should be preferred when multiple options exist.
 
 ```java
 package com.in28minutes.spring.basics.springin5steps;
@@ -239,53 +271,55 @@ Setter Injection
  
 #### Step 8 : Spring Modules
 
-Spring is built in a very modular way and this enables use to use specific modules without using the other modules of Spring.
+Spring’s modular design lets us use only the modules we need, without depending on the rest.
 
 ![Image](/images/SpringIn10Steps-SpringModules.png "Spring In 10 Steps - Spring Modules") 
 
 #### Step 9 : Spring Projects
 
-Spring projects provide solutions for different problems faced by enterprise applications.
+The Spring projects offer comprehensive solutions to common problems encountered in enterprise application development.
 
 ![Image](/images/SpringIn10Steps-SpringProjects.png "Spring In 10 Steps - Spring Projects")
 
-What we're looking at are seven of the Spring projects that are just touching the tip of the iceberg. There are a lot of other Spring projects like Spring webservices, Spring session, Spring social, Spring mobile and Spring Android which are solving problems in various different spaces. 
+We’re looking at just seven Spring projects — that’s only the tip of the iceberg! There are many others like Spring Web Services, Spring Session, Spring Social, Spring Mobile, and Spring Android, each solving different kinds of problems.
 
-> Spring has not really restricted itself to just the Spring framework and got involved in a lot of wide variety of projects.
+> Spring has evolved beyond the core framework and now encompasses a wide range of projects addressing different aspects of application development.
 
 #### Step 10 : Why is Spring Popular?
 ![Image](/images/SpringIn10Steps-SpringPopularity.png "Spring In 10 Steps - Spring Popularity") 
 Spring is one of the very few frameworks that remains as popular today as it was 15 years back. 
 
-### Spring Level 2 - Spring in depth
+### Spring Level 2 - Spring in Depth
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring in Depth|Spring - Level 2|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
+| **Title** | **Category** | **GitHub** |
+|------------|:-------------:|------------|
+| Spring in Depth | Spring - Level 2 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth) |
 
-- Step 11 - Dependency Injection - A few more examples
-- Step 12 - Autowiring in Depth - by Name and @Primary
-- Step 13 - Autowiring in Depth - @Qualifier annotation
-- Step 14 - Scope of a Bean - Prototype and Singleton
-- Step 15 - Complex scenarios with Scope of a Spring Bean - Mix of Prototype and Singleton
-- Step 15B -  Difference Between Spring Singleton and GOF Singleton
-- Step 16 - Using Component Scan to scan for beans
-- Step 17 - Lifecycle of a Bean - @PostConstruct and @PreDestroy
-- Step 18 - Container and Dependency Injection (CDI) - @Named, @Inject
-- Step 19 - Removing Spring Boot in Basic Application
-- Step 20 - Fixing minor stuff - Add Logback and Close Application Context
-- Step 21 - Defining Spring Application Context using XML - Part 1
-- Step 22 - Defining Spring Application Context using XML - Part 2
-- Step 23 - Mixing XML Context with Component Scan for Beans defined with Annotations
-- Step 24 - IOC Container vs Application Context vs Bean Factory
-- Step 25 - @Component vs @Service vs @Repository vs @Controller
-- Step 26 - Read values from external properties file
+#### Topics Covered
+- **Step 11** – Dependency Injection: More Examples
+- **Step 12** – Autowiring in Depth: *by Name* and `@Primary`
+- **Step 13** – Autowiring in Depth: Using `@Qualifier` Annotation
+- **Step 14** – Scope of a Bean: *Prototype* and *Singleton*
+- **Step 15** – Complex Scenarios with Bean Scopes: Mixing *Prototype* and *Singleton*
+- **Step 15B** – Difference Between Spring Singleton and GoF Singleton
+- **Step 16** – Using Component Scan to Detect and Register Beans
+- **Step 17** – Lifecycle of a Bean: `@PostConstruct` and `@PreDestroy`
+- **Step 18** – Container and Dependency Injection (CDI): `@Named`, `@Inject`
+- **Step 19** – Removing Spring Boot from a Basic Application
+- **Step 20** – Fixing Minor Issues: Add Logback and Close Application Context
+- **Step 21** – Defining Spring Application Context Using XML – Part 1
+- **Step 22** – Defining Spring Application Context Using XML – Part 2
+- **Step 23** – Mixing XML Configuration with Component Scan for Annotation-Based Beans
+- **Step 24** – IoC Container vs ApplicationContext vs BeanFactory
+- **Step 25** – `@Component` vs `@Service` vs `@Repository` vs `@Controller`
+- **Step 26** – Reading Values from an External Properties File
+
 
 #### Step 11 - Dependency Injection - A few more examples
 #### Step 12 - Autowiring in Depth - by Name and @Primary
 #### Step 13 - Autowiring in Depth - @Qualifier annotation
 
-```
+```java
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
@@ -295,13 +329,13 @@ public class BinarySearchImpl {
 	private SortAlgorithm sortAlgorithm;
 ```
 
-```
+```java
 @Component
 @Qualifier("bubble")
 public class BubbleSortAlgorithm implements SortAlgorithm {
 ```
 
-```
+```java
 @Component
 @Qualifier("quick")
 public class QuickSortAlgorithm implements SortAlgorithm {
@@ -365,8 +399,7 @@ import com.in28minutes.spring.basics.springin5steps.scope.PersonDAO;
 @SpringBootApplication
 public class SpringIn5StepsScopeApplication {
 	
-	private static final Logger LOGGER = 
-			LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class); 
+	private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class); 
 	
 	public static void main(String[] args) {
 
@@ -454,11 +487,9 @@ public class SpringIn5StepsComponentScanApplication {
 	
 	public static void main(String[] args) {
 
-		var applicationContext = 
-				SpringApplication.run(SpringIn5StepsComponentScanApplication.class, args);
+		var applicationContext = SpringApplication.run(SpringIn5StepsComponentScanApplication.class, args);
 		
-		var componentDAO = 
-				applicationContext.getBean(ComponentDAO.class);
+		var componentDAO = applicationContext.getBean(ComponentDAO.class);
 		
 		LOGGER.info("{}", componentDAO);
 		
@@ -485,11 +516,12 @@ BinarySearchImpl.java
 
 /pom.xml
 ```
-<dependency>		
-	<groupId>javax.inject</groupId>
-	<artifactId>javax.inject</artifactId>
-	<version>1</version>
+<dependency>
+    <groupId>jakarta.inject</groupId>
+    <artifactId>jakarta.inject-api</artifactId>
+    <version>2.0.1</version>
 </dependency>
+
 ```
 
 ```java
@@ -525,8 +557,8 @@ public class SpringIn5StepsCdiApplication {
 ```java
 package com.in28minutes.spring.basics.springin5steps.cdi;
 
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 @Named
 public class SomeCdiBusiness {
@@ -547,7 +579,7 @@ public class SomeCdiBusiness {
 ```java
 package com.in28minutes.spring.basics.springin5steps.cdi;
 
-import javax.inject.Named;
+import jakarta.inject.Named;
 
 @Named
 public class SomeCdiDao {
@@ -703,7 +735,7 @@ public class XmlPersonDAO {
 
 #### Step 23 - Mixing XML Context with Component Scan for Beans defined with Annotations
 
-```
+```java
 public class SpringIn5StepsXMLContextApplication {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class);
@@ -717,40 +749,40 @@ public class SpringIn5StepsXMLContextApplication {
 			// [xmlJdbcConnection, xmlPersonDAO]
 ```
 
-```
+```xml
 	<context:component-scan base-package="com.in28minutes.spring.basics"/>
 ```
 
 #### Step 24 - IOC Container vs Application Context vs Bean Factory
 #### Step 25 - @Component vs @Service vs @Repository vs @Controller
 
-```
+```java
 @Repository
-public class ComponentDAO {
+public class ComponentDAO { }
 
 ```
 
-```
+```java
 @Service
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class BinarySearchImpl {
+public class BinarySearchImpl { }
 ```
 
-```
+```java
 @Service
 @Qualifier("bubble")
-public class BubbleSortAlgorithm implements SortAlgorithm {
+public class BubbleSortAlgorithm implements SortAlgorithm { }
 ```
 
-```
+```java
 @Service
 @Qualifier("quick")
-public class QuickSortAlgorithm implements SortAlgorithm {
+public class QuickSortAlgorithm implements SortAlgorithm { }
 ```
 
-```
+```java
 @Repository
-public class PersonDAO {
+public class PersonDAO { }
 ```
 #### Step 26 - Read values from external properties file
 
@@ -809,17 +841,21 @@ external.service.url=http://someserver.dev.com/service
 
 ### Spring Level 3 - Unit Testing with Spring Framework
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Unit Testing with Spring Framework|Spring - Level 3|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'}|
+### Spring Level 3 - Unit Testing with Spring Framework
 
-- Step 27 - Spring Unit Testing with a Java Context
-- Step 28 - Spring Unit Testing with an XML Context
-- Step 29 - Spring Unit Testing with Mockito
+| **Title** | **Category** | **GitHub** |
+|------------|:-------------:|------------|
+| Unit Testing with Spring Framework | Spring - Level 3 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/01-spring-in-depth){:target='_blank'} |
+
+#### Topics Covered
+- **Step 27** – Spring Unit Testing with Java-Based Configuration
+- **Step 28** – Spring Unit Testing with XML-Based Configuration
+- **Step 29** – Spring Unit Testing with Mockito
+
 
 #### Step 27 - Spring Unit Testing with a Java Context
 
-```
+```xml
 <dependency>
 	<groupId>org.springframework</groupId>
 	<artifactId>spring-test</artifactId>
@@ -830,7 +866,7 @@ external.service.url=http://someserver.dev.com/service
 </dependency>
 ```
 
-```
+```java
 @RunWith(SpringRunner.class)
 //@SpringBootTest
 public class SpringIn5StepsBasicApplicationTests {
@@ -931,7 +967,7 @@ public class BinarySearchXMLConfigurationTest {
 
 #### Step 29 - Spring Unit Testing with Mockito
 
-```
+```java
 public class SomeCdiBusiness {
 
 	// SAME OLD CODE
@@ -955,7 +991,7 @@ Add a new method
 ```java
 package com.in28minutes.spring.basics.springin5steps.cdi;
 
-import javax.inject.Named;
+import jakarta.inject.Named;
 
 @Named
 public class SomeCdiDao {
@@ -1015,7 +1051,7 @@ public class SomeCdiBusinessTest {
 
 ```
 
-```
+```xml
 <dependency>
 	<groupId>org.mockito</groupId>
 	<artifactId>mockito-core</artifactId>
@@ -1023,45 +1059,51 @@ public class SomeCdiBusinessTest {
 ```
 
 ### Spring Level 4 - Introduction To Spring Boot
+### Spring Level 4 - Spring Boot in 10 Steps
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring Boot in 10 Steps|Spring - Level 4|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps){:target='_blank'}|
+| **Title** | **Category** | **GitHub** |
+|------------|:-------------:|------------|
+| Spring Boot in 10 Steps | Spring - Level 4 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/05.Spring-Boot-Introduction-In-10-Steps) |
 
-- Step 1 : Introduction to Spring Boot - Goals and Important Features
-- Step 2 : Developing Spring Applications before Spring Boot
-- Step 3 : Using Spring Initializr to create a Spring Boot Application
-- Step 4 : Creating a Simple REST Controller
-- Step 5 : What is Spring Boot Auto Configuration?
-- Step 6 : Spring Boot vs Spring vs Spring MVC
-- Step 7 : Spring Boot Starter Projects - Starter Web and Starter JPA
-- Step 8 : Overview of different Spring Boot Starter Projects
-- Step 9 : Spring Boot Actuator
-- Step 10 : Spring Boot Developer Tools
+#### Topics Covered
+- **Step 1** – Introduction to Spring Boot: Goals and Key Features
+- **Step 2** – Developing Spring Applications Before Spring Boot
+- **Step 3** – Using Spring Initializr to Create a Spring Boot Application
+- **Step 4** – Creating a Simple REST Controller
+- **Step 5** – Understanding Spring Boot Auto-Configuration
+- **Step 6** – Spring Boot vs Spring MVC
+- **Step 7** – Spring Boot Starter Projects: *Starter Web* and *Starter JPA*
+- **Step 8** – Overview of Different Spring Boot Starter Projects
+- **Step 9** – Exploring Spring Boot Actuator
+- **Step 10** – Using Spring Boot Developer Tools
+
 
 #### Step 1 : Introduction to Spring Boot - Goals and Important Features
 
-Goals
-- Enable building production ready applications quickly
-- Provide common non-functional features 
-	- embedded servers
-	- metrics
-	- health checks
-	- externalized configuration
+### Spring Boot Overview
 
-What Spring Boot is NOT!
+#### Goals
+- Enable building production-ready applications quickly
+- Provide common non-functional features:
+    - Embedded servers
+    - Metrics
+    - Health checks
+    - Externalized configuration
+
+#### What Spring Boot is NOT
 - ZERO code generation
 - Neither an application server nor a web server
 
-Features
-- Quick Starter Projects with Auto Configuration
-	- Web
-	- JPA
-- Embedded Servers 
-	- Tomcat, Jetty or Undertow
-- Production-ready features
-	- metrics and health checks 
-	- externalized configuration
+#### Key Features
+- **Quick Starter Projects with Auto-Configuration**
+    - Web
+    - JPA
+- **Embedded Servers**
+    - Tomcat, Jetty, or Undertow
+- **Production-Ready Features**
+    - Metrics and health checks
+    - Externalized configuration
+
 
 #### Step 2 : Developing Spring Applications before Spring Boot
 
@@ -1088,7 +1130,7 @@ public class BooksController {
 	@GetMapping("/books")
 	public List<Book> getAllBooks() {
 		return List.of(
-				new Book(1l, "Mastering Spring 5.2", "Ranga Karanam"));
+				new Book(1L, "Mastering Spring 5.2", "Ranga Karanam"));
 	}
 }
 ```
@@ -1097,91 +1139,125 @@ public class BooksController {
 
 > Recommended Reading - http://www.springboottutorial.com/spring-boot-auto-configuration
 
-- Spring based applications have a lot of configuration. When we use Spring MVC, we need to configure component scan, dispatcher servlet, a view resolver, web jars(for delivering static content) among other things. When we use Hibernate/JPA, we would need to configure a datasource, an entity manager factory, a transaction manager among a host of other things. Spring Boot brings in new thought process around this - Can we bring more intelligence into this? When a spring mvc jar is added into an application, can we auto configure some beans automatically?
+Spring-based applications often require extensive configuration. For example:
 
-#### Step 6 : Spring Boot vs Spring vs Spring MVC
+When using Spring MVC, we need to configure: component scanning, DispatcherServlet, a view resolver, WebJars (for serving static content), and other components.
+
+When using Hibernate/JPA, we need to configure: a datasource, an EntityManagerFactory, a TransactionManager, among several other things.
+
+Spring Boot introduces a new approach to simplify this process. It asks: Can we make configuration smarter? For instance, when a Spring MVC jar is added to an application, can some beans be auto-configured automatically? Spring Boot provides exactly this capability, reducing the need for manual configuration.
+
+#### Step 6 : Spring Boot vs Spring MVC
 
 > Recommended Reading - http://www.springboottutorial.com/spring-boot-vs-spring-mvc-vs-spring
 
-- Spring is about Dependency Injection. It makes it easy to develop loosely coupled applications. It makes applications testable.
-- Spring MVC brings loose coupling to web mvc application development with features like Dispatcher Servlet, View Resolver etc
-- Spring Boot eliminates the need for manual configuration with Spring and Spring MVC. You can use Spring and Spring MVC without needing a lot of configuration. 
-- Spring Boot aims to enable production ready applications in quick time.
-	- Actuator : Enables Advanced Monitoring and Tracing of applications.
-	- Embedded Server Integrations - Since server is integrated into the application, I would NOT need to have a separate application server installed on the server.
-	- Default Error Handling
+### Spring, Spring MVC, and Spring Boot Overview
+
+- **Spring** is all about **Dependency Injection**.
+    - It makes it easy to develop **loosely coupled applications**.
+    - It improves **testability** of applications.
+
+- **Spring MVC** brings **loose coupling** to web application development with features like:
+    - DispatcherServlet
+    - View Resolver
+    - And other components
+
+- **Spring Boot** eliminates the need for extensive manual configuration with Spring and Spring MVC.
+    - You can use Spring and Spring MVC without writing a lot of boilerplate configuration.
+    - **Goal:** Enable **production-ready applications** quickly
+
+  Key features of Spring Boot:
+    - **Actuator** – Enables advanced monitoring and tracing of applications
+    - **Embedded Server Integrations** – Since the server is integrated into the application, there’s **no need for a separate application server**
+    - **Default Error Handling** – Provides standard error pages and exception handling
+
 
 #### Step 7 : Spring Boot Starter Projects - Starter Web and Starter JPA
 
 > Recommended Reading - http://www.springboottutorial.com/spring-boot-starter-projects
 
-- Starters are a set of convenient dependency descriptors that you can include in your application. You get a one-stop-shop for all the Spring and related technology that you need, without having to hunt through sample code and copy paste loads of dependency descriptors. For example, if you want to get started using Spring and JPA for database access, just include the spring-boot-starter-data-jpa dependency in your project, and you are good to go.
+### Spring Boot Starters
 
-#### Step 8 : Overview of different Spring Boot Starter Projects
+**Starters** are convenient sets of dependency descriptors that you can include in your application. They provide a **one-stop-shop** for all the Spring and related technologies you need, without having to hunt through sample code or manually copy multiple dependency descriptors.
 
-As we see from Spring Boot Starter Web, starter projects help us in quickly getting started with developing specific types of applications.
+For example, if you want to get started with Spring and JPA for database access, simply include the `spring-boot-starter-data-jpa` dependency in your project — and you’re ready to go.
 
-Examples
-- spring-boot-starter-web-services - SOAP Web Services
-- spring-boot-starter-web - Web & RESTful applications
-- spring-boot-starter-test - Unit testing and Integration Testing
-- spring-boot-starter-jdbc - Traditional JDBC
-- spring-boot-starter-hateoas - Add HATEOAS features to your services
-- spring-boot-starter-security - Authentication and Authorization using Spring Security
-- spring-boot-starter-data-jpa - Spring Data JPA with Hibernate
-- spring-boot-starter-cache - Enabling Spring Framework’s caching support
-- spring-boot-starter-data-rest - Expose Simple REST Services using Spring Data REST
-- spring-boot-starter-actuator - To use advanced features like monitoring & tracing to your application out of the box
-- spring-boot-starter-undertow, spring-boot-starter-jetty, spring-boot-starter-tomcat - To pick your specific choice of Embedded Servlet Container
-- spring-boot-starter-logging - For Logging using logback
-- spring-boot-starter-log4j2 - Logging using Log4j2
+---
 
-#### Step 9 : Spring Boot Actuator
+#### Step 8: Overview of Different Spring Boot Starter Projects
 
-Spring Boot starting actuator offers a plethora of REST services, all of which are compatible with the HAL specification. And we would use a hal browser to browse through the data offered by these services.
+Spring Boot starter projects help you **quickly get started** with developing specific types of applications.
 
-Spring Boot Actuator exposes a lot of data 
-> application info, metrics, dump, beans, env, config properties, audit events, heap dump, loggers, trace, health mappings and auto config.  
+**Examples of Spring Boot Starters:**
 
-Actuator provides more metadata about your application. 
+- `spring-boot-starter-web-services` – SOAP Web Services
+- `spring-boot-starter-web` – Web & RESTful applications
+- `spring-boot-starter-test` – Unit testing and integration testing
+- `spring-boot-starter-jdbc` – Traditional JDBC
+- `spring-boot-starter-hateoas` – Add HATEOAS features to your services
+- `spring-boot-starter-security` – Authentication and authorization using Spring Security
+- `spring-boot-starter-data-jpa` – Spring Data JPA with Hibernate
+- `spring-boot-starter-cache` – Enable Spring Framework’s caching support
+- `spring-boot-starter-data-rest` – Expose simple REST services using Spring Data REST
+- `spring-boot-starter-actuator` – Add monitoring and tracing capabilities out-of-the-box
+- `spring-boot-starter-undertow`, `spring-boot-starter-jetty`, `spring-boot-starter-tomcat` – Choose your embedded servlet container
+- `spring-boot-starter-logging` – Logging using Logback
+- `spring-boot-starter-log4j2` – Logging using Log4j2
 
-#### Step 10 : Spring Boot Developer Tools
-	- Why do you need to restart your server for every java and jsp change?
-	- Spring Boot Developer Tools enables dynamic reloading of modified changes.
+
+### Step 9: Spring Boot Actuator
+
+Spring Boot Actuator provides a wide range of REST endpoints, all compatible with the **HAL specification**. You can use a **HAL browser** to explore the data offered by these services.
+
+**Actuator exposes various data about your application**, including:
+
+> application info, metrics, dump, beans, environment properties, configuration properties, audit events, heap dump, loggers, trace, health mappings, and auto-configuration.
+
+In short, Actuator provides **rich metadata** to monitor and manage your Spring Boot application.
+
+---
+
+### Step 10: Spring Boot Developer Tools
+
+- Normally, you need to restart your server for every Java or JSP change.
+- **Spring Boot Developer Tools** enables **automatic reloading** of modified changes, improving development productivity.
+
 
 ### Spring Level 5 - Spring AOP
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring AOP|Spring - Level 5|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop){:target='_blank'}|
+### Spring Level 5 - Spring AOP
 
+| **Title** | **Category** | **GitHub** |
+|------------|:-------------:|------------|
+| Spring AOP | Spring - Level 5 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/03-spring-aop) |
 
-- Step 01 - Setting up AOP Example - Part 1 
-- Step 02 - Setting up AOP Example - Part 2
-- Step 03 - Defining an @Before advice
-- Step 04 - Understand AOP Terminology - Pointcut, Advice, Aspect, Join Point, Weaving and Weaver
-- Step 05 - Using @After, @AfterReturning, @AfterThrowing advices
-- Step 06 - Using @Around advice to implement performance tracing
-- Step 07 - Best Practice : Use common Pointcut Configuration
-- Step 08 - Quick summary of other Pointcuts
-- Step 09 - Creating Custom Annotation and an Aspect for Tracking Time
+#### Steps Covered
+- **Step 01** – Setting up AOP Example: Part 1
+- **Step 02** – Setting up AOP Example: Part 2
+- **Step 03** – Defining a `@Before` Advice
+- **Step 04** – Understanding AOP Terminology: Pointcut, Advice, Aspect, Join Point, Weaving, and Weaver
+- **Step 05** – Using `@After`, `@AfterReturning`, `@AfterThrowing` Advices
+- **Step 06** – Using `@Around` Advice to Implement Performance Tracing
+- **Step 07** – Best Practice: Use a Common Pointcut Configuration
+- **Step 08** – Quick Summary of Other Pointcuts
+- **Step 09** – Creating Custom Annotation and an Aspect for Tracking Execution Time
 
+### Step 01 – Setting up AOP Example: Part 1
 
-#### Step 01 - Setting up AOP Example - Part 1 
+Creating a Spring AOP project with **Spring Initializr** is straightforward.
 
-Creating a Spring AOP Project with Spring Initializr is a cake walk. 
+> **Spring Initializr**: [http://start.spring.io/](http://start.spring.io/) is a great tool to bootstrap your Spring Boot projects.
 
-> Spring Initializr [http://start.spring.io/](http://start.spring.io/){:target="_blank"} is great tool to bootstrap your Spring Boot projects.
+#### Steps
+1. Launch **Spring Initializr** and configure the project:
+    - **Group**: `com.in28minutes.spring.aop`
+    - **Artifact**: `spring-aop`
+    - **Dependencies**:
+        - AOP
+2. Click **Generate Project**.
+3. Import the generated project into **Eclipse**.
+4. (Optional) To understand all the files included in the project, refer to the Spring Initializr project structure.
 
-Notes
-- Launch Spring Initializr and choose the following
-  - Choose `com.in28minutes.spring.aop` as Group
-  - Choose `spring-aop` as Artifact
-  - Choose the following Dependencies
-    - AOP
-- Click Generate Project.
-- Import the project into Eclipse.
-- If you want to understand all the files that are part of this project, you can go here.
 
 #### Step 02 - Setting up AOP Example - Part 2
 
@@ -1262,22 +1338,23 @@ public class Dao2 {
 
 #### Step 03 - Defining an @Before advice
 
-```
+```java
 public class SpringAopApplication implements CommandLineRunner {
 
-	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Autowired
-	private Business1 business1;
+    @Autowired
+    private Business1 business1;
 
-	@Autowired
-	private Business2 business2;
-	
-	@Override
-	public void run(String... args) throws Exception {
-		logger.info(business1.calculateSomething());
-		logger.info(business2.calculateSomething());
+    @Autowired
+    private Business2 business2;
 
+    @Override
+    public void run(String... args) throws Exception {
+        logger.info(business1.calculateSomething());
+        logger.info(business2.calculateSomething());
+    }
+}
 ```
 
 ```java
@@ -1421,23 +1498,25 @@ public class CommonJoinPointConfig {
 }
 ```
 
-```
+```java
 public class MethodExecutionCalculationAspect {
 
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Around("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+    @Around("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+}
 ```
 public class AfterAopAspect
-```
+```java
 	@AfterReturning(value = "com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()", returning = "result")
 	@After(value = "com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
 ```
 
-```
+```java
 public class UserAccessAspect {
-	
-	@Before("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
+
+    @Before("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
+}
 ```
 
 #### Step 08 - Quick summary of other Pointcuts
@@ -1487,7 +1566,7 @@ public @interface TrackTime {
 ```
 
 
-```
+```java
 @Aspect
 @Configuration
 public class MethodExecutionCalculationAspect {
@@ -1496,7 +1575,7 @@ public class MethodExecutionCalculationAspect {
 	public void around(ProceedingJoinPoint joinPoint) throws Throwable {
 ```
 
-```
+```java
 public class Business1 {
 		
 	@TrackTime
@@ -1504,65 +1583,69 @@ public class Business1 {
 
 ```
 
-```
+```java
 @Repository
 public class Dao1 {
-	
-	@TrackTime
-	public String retrieveSomething(){
 
+    @TrackTime
+    public String retrieveSomething() {
+    }
+}
 ```
 
 ### Spring Level 6 - Spring JDBC and JPA
+### Spring Level 6 – Spring JDBC and JPA
 
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Spring JDBC and JPA|Spring - Level 6|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa){:target='_blank'}|
+| **Title** | **Category** | **GitHub** |
+|------------|:-------------:|------------|
+| Spring JDBC and JPA | Spring - Level 6 | [Project Folder on GitHub](https://github.com/in28minutes/spring-master-class/tree/master/04-spring-jdbc-to-jpa) |
 
-- Step 01 - Setting up a project with JDBC, JPA, H2 and Web Dependencies
-- Step 02 - Launching up H2 Console
-- Step 03 - Creating a Database Table in H2
-- Step 04 - Populate data into Person Table
-- Step 05 - Implement findAll persons Spring JDBC Query Method
-- Step 06 - Execute the findAll method using CommandLineRunner
-- Step 07 - A Quick Review - JDBC vs Spring JDBC
-- Step 08 - Whats in the background? Understanding Spring Boot Autoconfiguration
-- Step 09 - Implementing findById Spring JDBC Query Method
-- Step 10 - Implementing deleteById Spring JDBC Update Method
-- Step 11 - Implementing insert and update Spring JDBC Update Methods
-- Step 12 - Creating a custom Spring JDBC RowMapper
-- Step 13 - Quick introduction to JPA
-- Step 14 - Defining Person Entity
-- Step 15 - Implementing findById JPA Repository Method
-- Step 16 - Implementing insert and update JPA Repository Methods
-- Step 17 - Implementing deleteById JPA Repository Method
-- Step 18 - Implementing findAll using JPQL Named Query
-- Step 19 - Introduction to Spring Data JPA
-- Step 20 - Connecting to Other Databases
+#### Steps Covered
+- **Step 01** – Setting up a project with JDBC, JPA, H2, and Web dependencies
+- **Step 02** – Launching the H2 Console
+- **Step 03** – Creating a database table in H2
+- **Step 04** – Populating data into the `Person` table
+- **Step 05** – Implementing `findAll` persons Spring JDBC query method
+- **Step 06** – Executing the `findAll` method using `CommandLineRunner`
+- **Step 07** – Quick Review: JDBC vs Spring JDBC
+- **Step 08** – Understanding Spring Boot auto-configuration (What’s in the background?)
+- **Step 09** – Implementing `findById` Spring JDBC query method
+- **Step 10** – Implementing `deleteById` Spring JDBC update method
+- **Step 11** – Implementing `insert` and `update` Spring JDBC update methods
+- **Step 12** – Creating a custom Spring JDBC `RowMapper`
+- **Step 13** – Quick introduction to JPA
+- **Step 14** – Defining the `Person` entity
+- **Step 15** – Implementing `findById` JPA repository method
+- **Step 16** – Implementing `insert` and `update` JPA repository methods
+- **Step 17** – Implementing `deleteById` JPA repository method
+- **Step 18** – Implementing `findAll` using JPQL Named Query
+- **Step 19** – Introduction to Spring Data JPA
+- **Step 20** – Connecting to other databases
 
-#### Step 01 - Setting up a project with JDBC, JPA, H2 and Web Dependencies
+### Step 01 – Setting up a Project with JDBC, JPA, H2, and Web Dependencies
 
-Creating a Spring JDBC Project with Spring Initializr is a cake walk. 
+Creating a Spring JDBC project with **Spring Initializr** is straightforward.
 
-> Spring Initializr [http://start.spring.io/](http://start.spring.io/){:target="_blank"} is great tool to bootstrap your Spring Boot projects.
+> **Spring Initializr**: [http://start.spring.io/](http://start.spring.io/) is a great tool to bootstrap Spring Boot projects.
 
-Notes
-- Launch Spring Initializr and choose the following
-  - Choose `com.in28minutes.database` as Group
-  - Choose `database-demo` as Artifact
-  - Choose the following Dependencies
-    - Web
-    - JDBC
-    - JPA
-    - H2
-- Click Generate Project.
-- Import the project into Eclipse.
-- If you want to understand all the files that are part of this project, you can go here.
+#### Steps
+1. Launch **Spring Initializr** and configure the project:
+    - **Group**: `com.in28minutes.database`
+    - **Artifact**: `database-demo`
+    - **Dependencies**:
+        - Web
+        - JDBC
+        - JPA
+        - H2
+2. Click **Generate Project**.
+3. Import the generated project into **Eclipse**.
+4. (Optional) To understand all the files included in the project, refer to the Spring Initializr project structure.
+
 
 #### Step 02 - Launching up H2 Console
 
 /src/main/resources/application.properties 
-```
+```properties
 spring.h2.console.enabled=true
 ```
 
@@ -1575,7 +1658,7 @@ Launching H2
 
 /src/main/resources/data.sql
 
-```
+```sql
 create table person
 (
    id integer not null,
@@ -1673,7 +1756,7 @@ public class PersonJbdcDao {
 
 Add insert statements into data.sql
 /src/main/resources/data.sql
-```
+```sql
 INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE ) 
 VALUES(10001,  'Ranga', 'Hyderabad',CURRENT_DATE());
 INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE ) 
@@ -1683,7 +1766,7 @@ VALUES(10003,  'Pieter', 'Amsterdam',CURRENT_DATE());
 ```
 #### Step 06 - Execute the findAll method using CommandLineRunner
 
-```
+```java
 public class DatabaseDemoApplication implements CommandLineRunner {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -1697,7 +1780,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 ```
 
 Modified
-```
+```java
 @Repository
 public class PersonJbdcDao {
 	@Autowired
@@ -1711,7 +1794,7 @@ public class PersonJbdcDao {
 ```
 
 #### Step 07 - A Quick Review - JDBC vs Spring JDBC
-#### Step 08 - Whats in the background? Understanding Spring Boot Autoconfiguration
+#### Step 08 - What's in the background? Understanding Spring Boot Autoconfiguration
 #### Step 09 - Implementing findById Spring JDBC Query Method
 #### Step 10 - Implementing deleteById Spring JDBC Update Method
 
@@ -1753,14 +1836,14 @@ public class PersonJbdcDao {
 }
 ```
 DatabaseDemoApplication
-```
+```shell
 		logger.info("User id 10001 -> {}", dao.findById(10001));
 		logger.info("Deleting 10002 -> No of Rows Deleted - {}", dao.deleteById(10002));
 
 ```
 #### Step 11 - Implementing insert and update Spring JDBC Update Methods
 
-```
+```java
 	public int deleteById(int id) {
 		return jdbcTemplate.update("delete from person where id=?", new Object[] { id });
 	}
@@ -1778,7 +1861,7 @@ DatabaseDemoApplication
 	}
 ```
 
-```
+```java
 	logger.info("Deleting 10002 -> No of Rows Deleted - {}", 
 				dao.deleteById(10002));
 		
@@ -1792,7 +1875,7 @@ DatabaseDemoApplication
 #### Step 12 - Creating a custom Spring JDBC RowMapper
 
 Inner class in PersonJbdcDao
-```
+```java
 static class PersonRowMapper implements RowMapper<Person>{
 	@Override
 	public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -1931,17 +2014,17 @@ public class JpaDemoApplication implements CommandLineRunner {
 #### Step 16 - Implementing insert and update JPA Repository Methods
 #### Step 17 - Implementing deleteById JPA Repository Method
 #### Step 18 - Implementing findAll using JPQL Named Query
-```
-		logger.info("Inserting -> {}", 
-				repository.insert(new Person("Tara", "Berlin", new Date())));
-		repository.deleteById(10002);
+```java
+    logger.info("Inserting -> {}", 
+            repository.insert(new Person("Tara", "Berlin", new Date())));
+    repository.deleteById(10002);
 
 ```
 
-```
+```java
 @Entity
 @NamedQuery(name="find_all_persons", query="select p from Person p")
-public class Person
+public class Person { }
 ```
 
 ```java
@@ -1993,8 +2076,6 @@ public class PersonJpaRepository {
 
 #### Step 19 - Introduction to Spring Data JPA
 
-
-
 JpaDemoApplication - comment out @SpringBootApplication
 
 ```java
@@ -2010,7 +2091,6 @@ public interface PersonSpringDataRepository
 				extends JpaRepository<Person, Integer>{
 }
 ```
-
 
 ```java
 package com.in28minutes.database.databasedemo;
@@ -2062,7 +2142,7 @@ public class SpringDataDemoApplication implements CommandLineRunner {
 
 #### Connecting to My SQL and Other Databases
 
-Spring Boot makes it easy to switch databases! Yeah really simple.
+Spring Boot makes it easy to switch databases! Yeah, really simple.
 
 ##### Steps
 - Install MySQL and Setup Schema
@@ -2085,36 +2165,53 @@ spring.datasource.password=YOUR_PASSWORD
 
 - Restart the app and You are ready!
 
-> Spring Boot can setup the database for you using Hibernate
+> Spring Boot can set up the database for you using Hibernate
 
-Things to note:
-- Spring Boot chooses a default value for you based on whether it thinks your database is embedded (default create-drop) or not (default none).
-- ```spring.jpa.hibernate.ddl-auto``` is the setting to perform SchemaManagementTool actions automatically
-   - none : No action will be performed.
-   - create-only : Database creation will be generated.
-   - drop : Database dropping will be generated.
-   - create : Database dropping will be generated followed by database creation.
-   - validate : Validate the database schema
-   - update : Update the database schema
-- Reference : https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#configurations-hbmddl
+### Things to Note About Spring Boot JPA Schema Management
+
+- **Spring Boot chooses a default value** for `spring.jpa.hibernate.ddl-auto` based on whether your database is embedded or not:
+    - **Embedded database** → default is `create-drop`
+    - **Non-embedded database** → default is `none`
+
+- **`spring.jpa.hibernate.ddl-auto`** controls automatic schema management in Hibernate:
+    - `none` – No action will be performed
+    - `create-only` – Database creation will be generated
+    - `drop` – Database dropping will be generated
+    - `create` – Database will be dropped and then created
+    - `validate` – Validates the database schema
+    - `update` – Updates the database schema to match the entities
+
+- **Reference:** [Hibernate User Guide – Schema Management](https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#configurations-hbmddl){:target="_blank"}
 
 
 application.properties
-```
+```properties
 #none, validate, update, create, create-drop
 spring.jpa.hibernate.ddl-auto=create
 ```
 
 ##### Installing and Setting Up MySQL
 
-- Install MySQL https://dev.mysql.com/doc/en/installing.html
-  - More details - http://www.mysqltutorial.org/install-mysql/
-  - Trouble Shooting - https://dev.mysql.com/doc/refman/en/problems.html
-- Startup the Server (as a service)
-- Go to command prompt (or terminal)
-   - Execute following commands to create a database and a user
+- **Install MySQL:**
+    - Official documentation: [Installing MySQL](https://dev.mysql.com/doc/en/installing.html)
+    - Detailed tutorial: [MySQL Tutorial](http://www.mysqltutorial.org/install-mysql/)
+    - Troubleshooting guide: [MySQL Troubleshooting](https://dev.mysql.com/doc/refman/en/problems.html)
 
-```
+- **Start the MySQL server** (as a service)
+
+- **Create a database and user:**
+    1. Open **Command Prompt** (Windows) or **Terminal** (macOS/Linux)
+    2. Execute the following commands:
+       ```sql
+       -- Example commands
+       CREATE DATABASE my_database;
+       CREATE USER 'my_user'@'localhost' IDENTIFIED BY 'my_password';
+       GRANT ALL PRIVILEGES ON my_database.* TO 'my_user'@'localhost';
+       FLUSH PRIVILEGES;
+       ```
+
+
+```shell
 mysql --user=user_name --password db_name
 create database person_example;
 create user 'personuser'@'localhost' identified by 'YOUR_PASSWORD';
@@ -2148,7 +2245,7 @@ INSERT INTO PERSON (ID, NAME, LOCATION, BIRTH_DATE ) VALUES(10003,  'Pieter', 'A
 #### Notes
 
 ##### JdbcTemplate AutoConfiguration
-```
+```shell
 =========================
 AUTO-CONFIGURATION REPORT
 =========================
@@ -2173,33 +2270,41 @@ JdbcTemplateAutoConfiguration.JdbcTemplateConfiguration#jdbcTemplate matched:
 
 ```
 
-### Bonus Section - Basic Web Application
+### Bonus Section – Basic Web Application
 
-- Understand Basics of HTTP 
-- HttpRequest - GET/POST, Request Parameters
-- HTTP Response - Response Status - 404,200,500 etc
-- Introduction to JSP, Servlets,  Scriptlets and EL
-- HTML Form -  Method, Action & Form Data
-- Understand Basics of using Maven, Tomcat and Eclipse
-- Using Request Attributes for passing Model between Servlet and View
-- Step 11 : Configure application to use Spring MVC
-- Step 12 : First Spring MVC Controller, @ResponseBody, @Controller
-- Step 13 : Redirect to Login JSP - LoginController, @ResponseBody and View Resolver
-- Step 14 : DispatcherServlet and Log4j
-- Step 15 : Show userid and password on the welcome page - ModelMap and @RequestParam 
-- Step 16 : LoginService and Remove all JEE Servlets based code
-- Step 17 : Spring Auto-wiring and Dependency Management - @Autowired and @Service
+This section covers the fundamentals of building a web application using Spring MVC, JSP, and Servlets.
 
-### Step 01 : Up and running with a Web Application in Tomcat
+#### Topics Covered
+- Understand the basics of **HTTP**
+- **HTTP Requests** – GET/POST, request parameters
+- **HTTP Responses** – Status codes: 200, 404, 500, etc.
+- Introduction to **JSP**, **Servlets**, **Scriptlets**, and **EL (Expression Language)**
+- **HTML Forms** – Method, action, and form data
+- Basics of using **Maven**, **Tomcat**, and **Eclipse**
+- Using **request attributes** to pass data (model) between Servlet and view
 
-In this step, we will quickly setup a running web application.
+#### Spring MVC Steps
+- **Step 11** – Configure the application to use Spring MVC
+- **Step 12** – First Spring MVC Controller (`@Controller`, `@ResponseBody`)
+- **Step 13** – Redirect to Login JSP (`LoginController`, view resolver, `@ResponseBody`)
+- **Step 14** – DispatcherServlet configuration and Log4j integration
+- **Step 15** – Show user ID and password on the welcome page (`ModelMap`, `@RequestParam`)
+- **Step 16** – Create `LoginService` and remove all legacy JEE Servlets code
+- **Step 17** – Spring **autowiring** and dependency management (`@Autowired`, `@Service`)
 
-> Tip : This is one of the few steps where you copy code in! We would want to ensure that you have a running web application without any mistakes.
 
-You can run the project using Run as > Maven build > tomcat7:run.
+### Step 01 – Up and Running with a Web Application in Tomcat
+
+In this step, we will quickly set up a **running web application**.
+
+> **Tip:** This is one of the few steps where you copy code directly! The goal is to ensure that your web application runs correctly without errors.
+
+**Run the project**:
+- Use **Eclipse** → `Run As` → `Maven Build` → `tomcat7:run`
+
 
 You can copy code from 
-- [Step 01 on Github Repository](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step01.md)
+- [Step 01 on GitHub Repository](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step01.md)
 
 \pom.xml
 
@@ -2353,8 +2458,6 @@ My First JSP!!!
 </html>
 ```
 
-
-
 ### Step 03 : Adding a Get Parameter name
 
 [Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step03.md)
@@ -2402,7 +2505,7 @@ My First JSP!!! My name is ${name} and password is ${password}
 #### Code Snippets and Examples
 
 \src\main\java\webapp\LoginServlet.java
-```
+```java
 @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException {
@@ -2427,7 +2530,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
 ```
 
 \src\main\webapp\WEB-INF\views\welcome.jsp
-```
+```html
 <html>
 <head>
 <title>Yahoo!!</title>
@@ -2443,7 +2546,7 @@ Welcome ${name}
 [Complete code](https://github.com/in28minutes/JavaWebApplicationStepByStep/blob/master/Step06.md)
 
 \src\main\java\webapp\LoginServlet.java
-```
+```java
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException {
@@ -2453,7 +2556,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 ```
 
 \src\main\webapp\WEB-INF\views\welcome.jsp
-```
+```html
 <html>
 <head>
 <title>Yahoo!!</title>
@@ -2471,7 +2574,7 @@ Welcome ${name}
 #### Code Snippets and Examples
 
 \src\main\java\webapp\LoginService.java
-```
+```java
 public class LoginService {
 	public boolean validateUser(String user, String password) {
 		return user.equalsIgnoreCase("in28Minutes") && password.equals("dummy");
@@ -2481,7 +2584,7 @@ public class LoginService {
 ```
 
 \src\main\java\webapp\LoginServlet.java
-```
+```java
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
 		throws IOException, ServletException {
@@ -2503,7 +2606,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 ```
 
 \src\main\webapp\WEB-INF\views\login.jsp
-```
+```html
 <html>
 <head>
 <title>Yahoo!!</title>
@@ -2530,34 +2633,34 @@ Before we start with the Flows, we need to configure application to use Spring M
 
 #### Useful Snippets
 pom.xml
-```
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>6.0.6</version>
-		</dependency>
+```xml
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>6.0.6</version>
+    </dependency>
 ```
 web.xml
-```
-	    <servlet>
-	        <servlet-name>dispatcher</servlet-name>
-	        <servlet-class>
-	            org.springframework.web.servlet.DispatcherServlet
-	        </servlet-class>
-	        <init-param>
-	            <param-name>contextConfigLocation</param-name>
-	            <param-value>/WEB-INF/todo-servlet.xml</param-value>
-	        </init-param>
-	        <load-on-startup>1</load-on-startup>
-	    </servlet>
-	
-	    <servlet-mapping>
-	        <servlet-name>dispatcher</servlet-name>
-	        <url-pattern>/spring-mvc/*</url-pattern>
-	    </servlet-mapping>
+```xml
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/todo-servlet.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/spring-mvc/*</url-pattern>
+    </servlet-mapping>
 ```
 todo-servlet.xml
-```
+```xml
 	<beans xmlns="http://www.springframework.org/schema/beans"
 	    xmlns:context="http://www.springframework.org/schema/context"
 	    xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -2643,7 +2746,7 @@ todo-servlet.xml
 </project>
 ```
 ##### /src/main/java/com/in28minutes/jee/LoginService.java New
-```
+```java
 package com.in28minutes.jee;
 
 public class LoginService {
@@ -2654,16 +2757,16 @@ public class LoginService {
 }
 ```
 ##### /src/main/java/com/in28minutes/jee/LoginServlet.java New
-```
+```java
 package com.in28minutes.jee;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
@@ -2699,7 +2802,7 @@ public class LoginServlet extends HttpServlet {
 }
 ```
 ##### /src/main/webapp/WEB-INF/todo-servlet.xml New
-```
+```xml
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:context="http://www.springframework.org/schema/context"
     xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -2715,7 +2818,7 @@ public class LoginServlet extends HttpServlet {
 </beans>
 ```
 ##### /src/main/webapp/WEB-INF/views/login.jsp New
-```
+```html
 <html>
 <head>
 <title>Yahoo!!</title>
@@ -2729,7 +2832,7 @@ public class LoginServlet extends HttpServlet {
 </html>
 ```
 ##### /src/main/webapp/WEB-INF/views/welcome.jsp New
-```
+```html
 <html>
 <head>
 <title>Yahoo!!</title>
@@ -2740,7 +2843,7 @@ Welcome ${name}
 </html>
 ```
 ##### /src/main/webapp/WEB-INF/web.xml New
-```
+```xml
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     version="3.0">
@@ -2768,7 +2871,7 @@ Welcome ${name}
 
 ###  Step 12 : First Spring MVC Controller, @ResponseBody, @Controller
 
-#First Spring MVC Controller
+####  First Spring MVC Controller
 - @RequestMapping(value = "/login", method = RequestMethod.GET)
 - http://localhost:8080/spring-mvc/login
 - web.xml - <url-pattern>/spring-mvc/*</url-pattern>
@@ -2776,8 +2879,7 @@ Welcome ${name}
 - Importance of RequestMapping method
 - Can I have multiple urls rendered from Same Controller?
 
-#Snippets
-```
+```java
 package com.in28minutes.springmvc;
 
 import org.springframework.stereotype.Controller;
@@ -2799,7 +2901,7 @@ public class LoginController {
 ###  Step 13 : Redirect to Login JSP - LoginController, @ResponseBody - and View Resolver
 
 ##### /src/main/java/com/in28minutes/springmvc/login/LoginController.java New
-```
+```java
 package com.in28minutes.springmvc.login;
 
 import org.springframework.stereotype.Controller;
@@ -2816,7 +2918,7 @@ public class LoginController {
 ```
 ##### /src/main/webapp/WEB-INF/todo-servlet.xml Modified
 New Lines
-```
+```xml
     <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
@@ -2828,15 +2930,15 @@ New Lines
     </bean>
 ```
 
-#### Redirect to Login JSP
-- View Resolver in todo-servlet.xml
+#### Redirect to Log in JSP
+- View Resolver in `todo-servlet.xml`
 - Update LoginController
 - Remove @ResponseBody
 - More about View Resolver
 
 #### Snippets
 
-```
+```xml
   <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
@@ -2852,7 +2954,7 @@ New Lines
 
 ##### /pom.xml Modified
 New Lines
-```
+```xml
 <dependency>
 	<groupId>log4j</groupId>
 	<artifactId>log4j</artifactId>
@@ -2861,7 +2963,7 @@ New Lines
 ```
 
 ##### /src/main/resources/log4j.properties New
-```
+```properties
 log4j.rootLogger=TRACE, Appender1, Appender2
  
 log4j.appender.Appender1=org.apache.log4j.ConsoleAppender
@@ -2871,7 +2973,7 @@ log4j.appender.Appender1.layout.ConversionPattern=%-7p %d [%t] %c %x - %m%n
 ```
 ##### /src/main/webapp/WEB-INF/views/login.jsp Modified
 New Lines
-```
+```html
     <form action="/spring-mvc/login" method="POST">
 ```
 ##### /src/main/webapp/WEB-INF/views/welcome.jsp Modified
@@ -2879,26 +2981,48 @@ New Lines
 ```
 Welcome ${name}. 
 ```
-#### What we want to do:
-- Understand importance of DispatcherServlet.
-- Add Logging Framework Log4j to understand the flow much more. 
+### Understanding DispatcherServlet and Spring MVC Request Flow
+
+#### What We Want to Do
+- Understand the **importance of `DispatcherServlet`** in Spring MVC.
+- Add **Log4j** for logging to better understand the request flow.
 
 #### Spring MVC Request Flow
-- DispatcherServlet receives HTTP Request. 
-- DispatcherServlet identifies the right Controller based on the URL.
-- Controller executes Business Logic.
-- Controller returns a) Model b) View Name Back to DispatcherServlet.
-- DispatcherServlet identifies the correct view (ViewResolver).
-- DispatcherServlet makes the model available to view and executes it.
-- DispatcherServlet returns HTTP Response Back.
-- Flow : http://docs.spring.io/spring-framework/docs/2.0.8/reference/images/mvc.png
+1. `DispatcherServlet` receives the HTTP request.
+2. It identifies the **appropriate controller** based on the URL.
+3. Controller executes the **business logic**.
+4. Controller returns:
+    - **Model** (data)
+    - **View Name** (logical view)
+5. `DispatcherServlet` resolves the view using the **ViewResolver**.
+6. `DispatcherServlet` makes the model available to the view and executes it.
+7. `DispatcherServlet` returns the **HTTP response** back to the client.
 
-###  Step 15 : Show userid and password on the welcome page - ModelMap and @RequestParam
-- Show userid and password on the welcome page.
-- We will not use Spring Security for now.
-- ModelMap model
-- @RequestParam String name
+> Flow diagram reference: [Spring MVC Flow](http://docs.spring.io/spring-framework/docs/2.0.8/reference/images/mvc.png){:target="_blank"}
 
+---
+
+### Step 15 – Show UserID and Password on the Welcome Page (`ModelMap` and `@RequestParam`)
+
+- Display **user ID** and **password** on the welcome page (without using Spring Security).
+- Use **`ModelMap`** to pass data from controller to view.
+- Use **`@RequestParam`** to capture request parameters.
+
+#### Example Controller
+```java
+@Controller
+public class WelcomeController {
+
+    @RequestMapping(value = "/welcome", method = RequestMethod.POST)
+    public String showWelcomePage(@RequestParam String name,
+                                  @RequestParam String password,
+                                  ModelMap model) {
+        model.addAttribute("name", name);
+        model.addAttribute("password", password);
+        return "welcome"; // Returns welcome.jsp
+    }
+}
+```
 
 ##### /src/main/java/com/in28minutes/springmvc/login/LoginController.java Modified
 New Lines
@@ -2911,7 +3035,7 @@ New Lines
 		model.put("password", password);
 		return "welcome";
 	}
-}
+
 ```
 ##### /src/main/webapp/WEB-INF/views/welcome.jsp Modified
 New Lines
@@ -2933,7 +3057,8 @@ Welcome ${name}. You entered ${password}
 ##### /src/main/java/com/in28minutes/springmvc/login/LoginController.java Deleted
 
 ##### /src/main/java/com/in28minutes/login/LoginController.java New
-```
+
+```java
 package com.in28minutes.login;
 
 import org.springframework.stereotype.Controller;
@@ -2970,7 +3095,7 @@ public class LoginController {
 ```
 
 ##### /src/main/java/com/in28minutes/login/LoginService.java New
-```
+```java
 package com.in28minutes.login;
 
 public class LoginService {
@@ -2983,12 +3108,12 @@ public class LoginService {
 
 ##### /src/main/webapp/WEB-INF/views/login.jsp Modified
 New Lines
-```
+```html
     <form action="/login" method="POST">
 ```
 ##### /src/main/webapp/WEB-INF/views/welcome.jsp Modified
 New Lines
-```
+```shell
 Welcome ${name}. You are now authenticated.
 ```
 
@@ -2998,33 +3123,36 @@ New Lines
         <url-pattern>/</url-pattern>
 ```
 
-###  Step 17 : Spring Auto-wiring and Dependency Management - @Autowired and @Service
+### Step 17 – Spring Auto-wiring and Dependency Management (`@Autowired` and `@Service`)
 
-- Learn about Spring Auto-wiring and Dependency Management.
-- Use Auto-wiring to wire LoginService.
-- @Autowired, @Service
+In this step, we will learn about **Spring’s dependency injection** and how **auto-wiring** simplifies wiring of beans.
+
+#### Key Concepts
+- **Dependency Management:** Spring manages object creation and wiring, reducing boilerplate code.
+- **`@Service`:** Marks a class as a **service layer component** (Spring-managed bean).
+- **`@Autowired`:** Automatically injects dependent beans into a class.
 
 
 ##### /src/main/java/com/in28minutes/login/LoginController.java Modified
 New Lines
-```
+```java
 import org.springframework.beans.factory.annotation.Autowired;
 	@Autowired
 	private LoginService loginService;
 ```
 ##### /src/main/java/com/in28minutes/login/LoginService.java Modified
 New Lines
-```
+```java
 import org.springframework.stereotype.Service;
 @Service
-public class LoginService {
+public class LoginService { }
 ```
 
 ### Other Introduction Sections
-
-|Title|Category|Github|
-| -------------------- |:------------------:|--------------|
-|Eclipse in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps){:target='_blank'}|
-|Maven in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps){:target='_blank'}|
-|JUnit in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps){:target='_blank'}|
-|Mockito in 5 Steps|Introduction|[Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps){:target='_blank'}|
+| Title              |   Category   | Github                                                                                                                                                        |
+|--------------------|:------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Eclipse in 5 Steps | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/01.Eclipse-Introduction-in-5-steps) |
+| Maven in 5 Steps   | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/02.Maven-Introduction-In-5-Steps)   |
+| JUnit in 5 Steps   | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/03.JUnit-Introduction-In-5-Steps)   |
+| Mockito in 5 Steps | Introduction | [Project Folder on Github](https://github.com/in28minutes/spring-master-class/tree/master/00-framework-tool-introductions/04.Mockito-Introduction-In-5-Steps) |
+| IntelliJ IDEA      | Introduction | [Reference Link](https://www.jetbrains.com/help/idea/installation-guide.html)                                                                                 |
